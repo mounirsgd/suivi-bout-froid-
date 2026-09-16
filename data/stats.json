@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-09-16T07:31:33",
+ "derniere_maj": "2026-09-16T09:13:13",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-09-16"
@@ -21,480 +21,693 @@
  "targets": {
   "T0": {
    "222": 10,
-   "233": 38,
+   "233": 35,
    "235": 29,
    "232": 100,
-   "224": 33,
+   "224": 23,
    "221": 30,
    "236": 130
   },
   "T1": {
-   "221": 129,
-   "233": 146,
-   "235": 110,
-   "224": 159,
-   "232": 175,
-   "222": 151,
+   "221": 95,
+   "233": 89,
+   "235": 51,
+   "224": 109,
+   "232": 150,
+   "222": 115,
    "236": 130
   },
-  "T2": {}
+  "T2": {
+   "232": 239,
+   "233": 177,
+   "222": 355,
+   "235": 466,
+   "224": 166,
+   "221": 297
+  }
+ },
+ "effectifs": {
+  "T0": {
+   "222": {
+    "total": 3,
+    "retenues": 1
+   },
+   "233": {
+    "total": 6,
+    "retenues": 3
+   },
+   "235": {
+    "total": 4,
+    "retenues": 2
+   },
+   "232": {
+    "total": 3,
+    "retenues": 1
+   },
+   "224": {
+    "total": 7,
+    "retenues": 3
+   },
+   "221": {
+    "total": 1,
+    "retenues": 1
+   },
+   "236": {
+    "total": 1,
+    "retenues": 1
+   }
+  },
+  "T1": {
+   "221": {
+    "total": 6,
+    "retenues": 3
+   },
+   "233": {
+    "total": 11,
+    "retenues": 5
+   },
+   "235": {
+    "total": 5,
+    "retenues": 2
+   },
+   "224": {
+    "total": 11,
+    "retenues": 5
+   },
+   "232": {
+    "total": 4,
+    "retenues": 2
+   },
+   "222": {
+    "total": 4,
+    "retenues": 2
+   },
+   "236": {
+    "total": 1,
+    "retenues": 1
+   }
+  },
+  "T2": {
+   "232": {
+    "total": 3,
+    "retenues": 1
+   },
+   "233": {
+    "total": 5,
+    "retenues": 2
+   },
+   "222": {
+    "total": 2,
+    "retenues": 1
+   },
+   "235": {
+    "total": 1,
+    "retenues": 1
+   },
+   "224": {
+    "total": 3,
+    "retenues": 1
+   },
+   "221": {
+    "total": 1,
+    "retenues": 1
+   }
+  }
  },
  "mesures": [
   {
    "date": "2026-06-18",
    "ligne": "221",
    "metrique": "T1",
-   "duree_min": 150
+   "duree_min": 150,
+   "commentaire": "4 régleurs"
   },
   {
    "date": "2026-06-19",
    "ligne": "233",
    "metrique": "T1",
-   "duree_min": 150
+   "duree_min": 150,
+   "commentaire": ""
   },
   {
    "date": "2026-06-22",
    "ligne": "233",
    "metrique": "T1",
-   "duree_min": 105
+   "duree_min": 105,
+   "commentaire": ""
   },
   {
    "date": "2026-06-22",
    "ligne": "235",
    "metrique": "T1",
-   "duree_min": 135
+   "duree_min": 135,
+   "commentaire": ""
   },
   {
    "date": "2026-06-23",
    "ligne": "221",
    "metrique": "T1",
-   "duree_min": 210
+   "duree_min": 210,
+   "commentaire": ""
   },
   {
    "date": "2026-06-23",
    "ligne": "224",
    "metrique": "T1",
-   "duree_min": 240
+   "duree_min": 240,
+   "commentaire": "Intervention mécanique M.4 G"
   },
   {
    "date": "2026-06-24",
    "ligne": "232",
    "metrique": "T1",
-   "duree_min": 150
+   "duree_min": 150,
+   "commentaire": "Manque témoin machine Multi et caroussel"
   },
   {
    "date": "2026-06-24",
    "ligne": "232",
    "metrique": "T1",
-   "duree_min": 150
+   "duree_min": 150,
+   "commentaire": ""
   },
   {
    "date": "2026-06-24",
    "ligne": "232",
    "metrique": "T2",
-   "duree_min": 239
+   "duree_min": 239,
+   "commentaire": "Aligneur vide : Vide de ligne — T1 : Duree pre-reglage : Manque témoin machine Multi et caroussel — Top qualite : Top départ ok mais arrêt BC — Premier lot sorti : Premier lot sorti à 13h30 — Validation de deux lots commercialisables : Deux premiers lots livrables = 14h42"
   },
   {
    "date": "2026-06-24",
    "ligne": "232",
    "metrique": "T2",
-   "duree_min": 647
+   "duree_min": 647,
+   "commentaire": "Premier lot sorti : Premier lot sorti à 15h15 (lot 501) — Validation de deux lots commercialisables : Deux premiers lots livrables = 21h30 (lot 502 bloqué pour défaut dimensionnel). Lots 501 et 503 = OK"
   },
   {
    "date": "2026-06-25",
    "ligne": "221",
    "metrique": "T1",
-   "duree_min": 90
+   "duree_min": 90,
+   "commentaire": "Abs MEBARKI.A même mécanique de la machine reprise reglage mecanique des sgd et calibrage"
   },
   {
    "date": "2026-06-25",
    "ligne": "233",
    "metrique": "T1",
-   "duree_min": 135
+   "duree_min": 135,
+   "commentaire": "Abs MEBARKI.A"
   },
   {
    "date": "2026-06-26",
    "ligne": "224",
    "metrique": "T1",
-   "duree_min": 150
+   "duree_min": 150,
+   "commentaire": "Démontage et montage CO F+D (Manque portions COG), Démontage Montage réglage SGD"
   },
   {
    "date": "2026-06-29",
    "ligne": "224",
    "metrique": "T1",
-   "duree_min": 150
+   "duree_min": 150,
+   "commentaire": "Manque de personnel \nMatériel NOK\nCréation de fiche"
   },
   {
    "date": "2026-06-29",
    "ligne": "233",
    "metrique": "T1",
-   "duree_min": 180
+   "duree_min": 180,
+   "commentaire": "Manque de personnel \nCréation de fiche\nManque matériel"
   },
   {
    "date": "2026-06-30",
    "ligne": "221",
    "metrique": "T1",
-   "duree_min": 120
+   "duree_min": 120,
+   "commentaire": "Manque effectif automation"
   },
   {
    "date": "2026-07-01",
    "ligne": "224",
    "metrique": "T1",
-   "duree_min": 210
+   "duree_min": 210,
+   "commentaire": "Manque personnel création fiche réglage fardeleuse début réglage fardeleuse  10 heures 20, matériel non conforme"
   },
   {
    "date": "2026-07-01",
    "ligne": "235",
    "metrique": "T1",
-   "duree_min": 180
+   "duree_min": 180,
+   "commentaire": "manque personnel, matériel NOK, nouvelle production (création de toutes les fiches), Manque témoins"
   },
   {
    "date": "2026-07-02",
    "ligne": "233",
    "metrique": "T1",
-   "duree_min": 150
+   "duree_min": 150,
+   "commentaire": "Témoins = 1 glaçure bague et 2 glaçures sous bague"
   },
   {
    "date": "2026-07-02",
    "ligne": "233",
    "metrique": "T2",
-   "duree_min": 366
+   "duree_min": 366,
+   "commentaire": "Aligneur vide : RAS — T1 : Duree pre-reglage : Témoins = 1 glaçure bague et 2 glaçures sous bague — Arrivee deux sections controlables : Montage sabre NA — Arrivee de toutes sections : Arrivée flacon 12H10\nTop qualité 13H35\nEmballage 14H25\nlot 1: 17h11\nlot 2: 19h39 — Top qualite : Top Qualité = 13h37 — Premier lot sorti : Premier lot sorti à 17h11 — Validation de deux lots commercialisables : Deux premiers lots livrables à 19h39 (lots 1 et 2)"
   },
   {
    "date": "2026-07-03",
    "ligne": "221",
    "metrique": "T1",
-   "duree_min": 130
+   "duree_min": 130,
+   "commentaire": "RAS"
   },
   {
    "date": "2026-07-06",
    "ligne": "222",
    "metrique": "T0",
-   "duree_min": 35
+   "duree_min": 35,
+   "commentaire": ""
   },
   {
    "date": "2026-07-06",
    "ligne": "222",
    "metrique": "T1",
-   "duree_min": 165
+   "duree_min": 165,
+   "commentaire": "Manque personnel"
   },
   {
    "date": "2026-07-06",
    "ligne": "222",
    "metrique": "T1",
-   "duree_min": 165
+   "duree_min": 165,
+   "commentaire": "Grand manque de personnel"
   },
   {
    "date": "2026-07-06",
    "ligne": "222",
    "metrique": "T2",
-   "duree_min": 355
+   "duree_min": 355,
+   "commentaire": "Aligneur vide : RAS — T1 : Duree pre-reglage : Manque personnel — Arrivee deux sections controlables : 1 section  \nTous les flacons sont arrivés en même temps — Arrivee de toutes sections : Top qualité 13h50\nLot 1 : 16h11\nLot 2: NC\nLot 3: 18h45 — Top qualite : Top Qualité = 13h50 — Premier lot sorti : Premier lot sorti à 13h11 — Validation de deux lots commercialisables : Deux premiers lots livrables = 19h43 (lots 3 et 4). Lots précédents bloqués pour défauts verre"
   },
   {
    "date": "2026-07-06",
    "ligne": "222",
    "metrique": "T2",
-   "duree_min": 355
+   "duree_min": 355,
+   "commentaire": "Aligneur vide : RAS — T1 : Duree pre-reglage : Grand manque de personnel — Arrivee deux sections controlables : 1 section  \nTous les flacons sont arrivés en même temps — Arrivee de toutes sections : démarrage tardif \nMachine B 13H45\nLot 1 : 16h11\nLot 2: NC\nLot 3: 18h45 — Top qualite : Top Qualité = 13h50 — Premier lot sorti : Premier lot sorti à 16h13 — Validation de deux lots commercialisables : Sortie deux premiers lots livrables à 19h43"
   },
   {
    "date": "2026-07-07",
    "ligne": "233",
    "metrique": "T0",
-   "duree_min": 68
+   "duree_min": 68,
+   "commentaire": ""
   },
   {
    "date": "2026-07-07",
    "ligne": "233",
    "metrique": "T1",
-   "duree_min": 90
+   "duree_min": 90,
+   "commentaire": "Gros manque de personnel aide de la production"
   },
   {
    "date": "2026-07-07",
    "ligne": "233",
    "metrique": "T2",
-   "duree_min": 529
+   "duree_min": 529,
+   "commentaire": "Aligneur vide : RAS — T1 : Duree pre-reglage : Gros manque de personnel aide de la production — Arrivee deux sections controlables : Mise a l'arche - tout sections — Arrivee de toutes sections : Top qualité: 10h55\nTop emballage 11h05\nlot 5: 19h08\nlot 6 : 19h46 — Top qualite : Top Qualité = 10h55 — Premier lot sorti : Premier lot sorti à 14h18 — Validation de deux lots commercialisables : Sortie deux lots livrables à 19h42 / 4 premiers lots bloqués pour défaut verre (M82)"
   },
   {
    "date": "2026-07-07",
    "ligne": "235",
    "metrique": "T0",
-   "duree_min": 43
+   "duree_min": 43,
+   "commentaire": ""
   },
   {
    "date": "2026-07-07",
    "ligne": "235",
    "metrique": "T1",
-   "duree_min": 100
+   "duree_min": 100,
+   "commentaire": "Gros manque de personnel"
   },
   {
    "date": "2026-07-07",
    "ligne": "235",
    "metrique": "T2",
-   "duree_min": 466
+   "duree_min": 466,
+   "commentaire": "Aligneur vide : RAS — T1 : Duree pre-reglage : Gros manque de personnel — Arrivee deux sections controlables : Deux sections \narrivée flacon 11h23 — Arrivee de toutes sections : Top qualité: 11h40\nLot 5: 18h36\nLot 6: 19h24 — Top qualite : Top Qualité = 11h42 — Premier lot sorti : Premier lot sorti à 15h02 — Validation de deux lots commercialisables : Sortie deux premiers lots livrables à 19h24 / 3 premiers lots bloqués pour défauts verre (M82)"
   },
   {
    "date": "2026-07-08",
    "ligne": "232",
    "metrique": "T0",
-   "duree_min": 100
+   "duree_min": 100,
+   "commentaire": "Finalisé par le CE suite manque personnel BF\nFinalisation des boites bleues plus de flacon avant le 8h00"
   },
   {
    "date": "2026-07-08",
    "ligne": "232",
    "metrique": "T0",
-   "duree_min": 100
+   "duree_min": 100,
+   "commentaire": "Finalisation boite bleues après pcs par CE suite manque effectif BF"
   },
   {
    "date": "2026-07-08",
    "ligne": "232",
    "metrique": "T1",
-   "duree_min": 225
+   "duree_min": 225,
+   "commentaire": "Réglage pas encore terminé car manque de personnel \nCO centre terminé en dernier"
   },
   {
    "date": "2026-07-08",
    "ligne": "232",
    "metrique": "T2",
-   "duree_min": 597
+   "duree_min": 597,
+   "commentaire": "T0 : Nettoyage de ligne : Finalisation boite bleues après pcs par CE suite manque effectif BF — T1 : Duree pre-reglage : En cours reste CO centre — Top qualite : Top Qualité à 13h20 — Premier lot sorti : Premier lots sorti à 14h43 — Validation de deux lots commercialisables : Deux premiers lots livrables à 23h15 (10 et 11) / Lots antérieurs bloqués (M80 / M82) - Défauts verre + recyclage"
   },
   {
    "date": "2026-07-08",
    "ligne": "235",
    "metrique": "T0",
-   "duree_min": 28
+   "duree_min": 28,
+   "commentaire": ""
   },
   {
    "date": "2026-07-08",
    "ligne": "235",
    "metrique": "T1",
-   "duree_min": 2
+   "duree_min": 2,
+   "commentaire": ""
   },
   {
    "date": "2026-07-09",
    "ligne": "233",
    "metrique": "T0",
-   "duree_min": 45
+   "duree_min": 45,
+   "commentaire": "RAS"
   },
   {
    "date": "2026-07-09",
    "ligne": "233",
    "metrique": "T1",
-   "duree_min": 240
+   "duree_min": 240,
+   "commentaire": "Manque de personnel \nCO centre terminer en dernier"
   },
   {
    "date": "2026-07-09",
    "ligne": "233",
    "metrique": "T2",
-   "duree_min": 221
+   "duree_min": 221,
+   "commentaire": "Aligneur vide : RAS — T0 : Nettoyage de ligne : RAS — T1 : Duree pre-reglage : Manque de personnel \nCO centre terminer en dernier — Arrivee deux sections controlables : RAS — Top qualite : Top qualité 10h00 — Premier lot sorti : Premier lot sorti à 12h19 — Validation de deux lots commercialisables : Sortie deux premiers lots livrables à 13h39"
   },
   {
    "date": "2026-07-10",
    "ligne": "224",
    "metrique": "T0",
-   "duree_min": 25
+   "duree_min": 25,
+   "commentaire": "RAS"
   },
   {
    "date": "2026-07-10",
    "ligne": "224",
    "metrique": "T1",
-   "duree_min": 150
+   "duree_min": 150,
+   "commentaire": "Symplex brins gauche régler en dernier car manque de personnel"
   },
   {
    "date": "2026-07-10",
    "ligne": "224",
    "metrique": "T2",
-   "duree_min": 166
+   "duree_min": 166,
+   "commentaire": "Aligneur vide : RAS — T0 : Nettoyage de ligne : RAS — T1 : Duree pre-reglage : Symplex brins gauche régler en dernier car manque de personnel — Arrivee deux sections controlables : 08h15 toutes les sections sont dans l'arche — Top qualite : Top qualité = 09h05 — Premier lot sorti : Premier lot sorti à 10h32 — Validation de deux lots commercialisables : Sortie deux premiers lots livrables à 11h49"
   },
   {
    "date": "2026-07-15",
    "ligne": "224",
    "metrique": "T0",
-   "duree_min": 50
+   "duree_min": 50,
+   "commentaire": "Fin de nettoyage ligne a 08h"
   },
   {
    "date": "2026-07-15",
    "ligne": "224",
    "metrique": "T1",
-   "duree_min": 165
+   "duree_min": 165,
+   "commentaire": "Symplex brins gauche réglages terminer en dernier a 09h15 \nManque de personnel"
   },
   {
    "date": "2026-07-15",
    "ligne": "224",
    "metrique": "T2",
-   "duree_min": 293
+   "duree_min": 293,
+   "commentaire": "Aligneur vide : Fin de production a 06h20 — T0 : Nettoyage de ligne : Fin de nettoyage ligne a 08h — T1 : Duree pre-reglage : Symplex brins gauche réglages terminer en dernier a 09h15 \nManque de personnel — Arrivee deux sections controlables : Arriver deux sections a 12h00 \nToutes les sections sont dans l'arche a 12h20 — Arrivee de toutes sections : Pas de top qualité pour l'instant, démarrage tardif — Top qualite : Top qualité a 15h20 — Premier lot sorti : Premier lots sorti à 18h23 / Démarrage tardif — Validation de deux lots commercialisables : Sortie deux premiers lots livrables à 20h11 / Démarrage tardif / Échantillonnage"
   },
   {
    "date": "2026-07-16",
    "ligne": "222",
    "metrique": "T0",
-   "duree_min": 30
+   "duree_min": 30,
+   "commentaire": "Fin de nettoyage ligne 09h00"
   },
   {
    "date": "2026-07-16",
    "ligne": "222",
    "metrique": "T1",
-   "duree_min": 65
+   "duree_min": 65,
+   "commentaire": "Reprise témoins glaçure fond CO centre et CO gauche \nReprise témoins corps sur les trois MCAL"
   },
   {
    "date": "2026-07-17",
    "ligne": "224",
    "metrique": "T0",
-   "duree_min": 30
+   "duree_min": 30,
+   "commentaire": "RAS"
   },
   {
    "date": "2026-07-17",
    "ligne": "224",
    "metrique": "T1",
-   "duree_min": 150
+   "duree_min": 150,
+   "commentaire": "Manque de personnel"
   },
   {
    "date": "2026-07-20",
    "ligne": "224",
    "metrique": "T0",
-   "duree_min": 45
+   "duree_min": 45,
+   "commentaire": "RAS"
   },
   {
    "date": "2026-07-20",
    "ligne": "224",
    "metrique": "T1",
-   "duree_min": 105
+   "duree_min": 105,
+   "commentaire": "Manque de personnel"
   },
   {
    "date": "2026-07-20",
    "ligne": "224",
    "metrique": "T2",
-   "duree_min": 407
+   "duree_min": 407,
+   "commentaire": "Aligneur vide : RAS — T0 : Nettoyage de ligne : RAS — T1 : Duree pre-reglage : Manque de personnel — Arrivee deux sections controlables : 10h55 : 2 sections dans l'arche — Top qualite : Top qualité à 12h00 — Premier lot sorti : Premier lot sorti à 16h54 — Validation de deux lots commercialisables : Deux premiers lots livrables à 18h45"
   },
   {
    "date": "2026-07-20",
    "ligne": "235",
    "metrique": "T0",
-   "duree_min": 30
+   "duree_min": 30,
+   "commentaire": "RAS"
   },
   {
    "date": "2026-07-20",
    "ligne": "235",
    "metrique": "T1",
-   "duree_min": 135
+   "duree_min": 135,
+   "commentaire": "CO brins gauche réglage terminer en dernier pour manque de personnel"
   },
   {
    "date": "2026-07-21",
    "ligne": "221",
    "metrique": "T0",
-   "duree_min": 30
+   "duree_min": 30,
+   "commentaire": "RAS"
   },
   {
    "date": "2026-07-21",
    "ligne": "221",
    "metrique": "T1",
-   "duree_min": 75
+   "duree_min": 75,
+   "commentaire": "Manque de personnel"
   },
   {
    "date": "2026-07-21",
    "ligne": "221",
    "metrique": "T2",
-   "duree_min": 297
+   "duree_min": 297,
+   "commentaire": "Aligneur vide : Arrêt bout chaud a 06h30 \nAligneur vide a 07h10 — T0 : Nettoyage de ligne : RAS — T1 : Duree pre-reglage : Manque de personnel — Arrivee deux sections controlables : 10h30: 5 sections dans l'arche\n11h15 arrêt bout chaud de 10 min — Top qualite : 11h30 top qualité — Premier lot sorti : Premier lot sorti à 14h46 — Validation de deux lots commercialisables : Deux premiers lots livrables = 16h25 / Premier lot bloqué-M51"
   },
   {
    "date": "2026-07-21",
    "ligne": "233",
    "metrique": "T0",
-   "duree_min": 30
+   "duree_min": 30,
+   "commentaire": "RAS"
   },
   {
    "date": "2026-07-21",
    "ligne": "233",
    "metrique": "T1",
-   "duree_min": 110
+   "duree_min": 110,
+   "commentaire": "Manque de personnel"
   },
   {
    "date": "2026-07-21",
    "ligne": "233",
    "metrique": "T2",
-   "duree_min": 142
+   "duree_min": 142,
+   "commentaire": "Aligneur vide : Arrêt bout chaud a 07h50\nAligneur vide a 08h30 — T0 : Nettoyage de ligne : RAS — T1 : Duree pre-reglage : Manque de personnel — Arrivee deux sections controlables : 3 sections dans l'arche a 10h40 — Top qualite : Top Qualité = 11h20 — Premier lot sorti : Premier lots sorti à 12h39 — Validation de deux lots commercialisables : Deux premiers lots livrables = 13h40 (premier lot bloqué-M51)"
   },
   {
    "date": "2026-09-07",
    "ligne": "224",
    "metrique": "T0",
-   "duree_min": 60
+   "duree_min": 60,
+   "commentaire": ""
   },
   {
    "date": "2026-09-07",
    "ligne": "224",
    "metrique": "T1",
-   "duree_min": 150
+   "duree_min": 150,
+   "commentaire": ""
   },
   {
    "date": "2026-09-08",
    "ligne": "233",
    "metrique": "T0",
-   "duree_min": 60
+   "duree_min": 60,
+   "commentaire": "Manque de personnel"
   },
   {
    "date": "2026-09-08",
    "ligne": "233",
    "metrique": "T1",
-   "duree_min": 155
+   "duree_min": 155,
+   "commentaire": "Nettoyage (débris verre) | Témoins NOK | Témoins NOK : problème de teinte entre les témoins et la production montante"
   },
   {
    "date": "2026-09-09",
    "ligne": "222",
    "metrique": "T0",
-   "duree_min": 10
+   "duree_min": 10,
+   "commentaire": ""
   },
   {
    "date": "2026-09-09",
    "ligne": "222",
    "metrique": "T1",
-   "duree_min": 210
+   "duree_min": 210,
+   "commentaire": "Matériel NOK"
   },
   {
    "date": "2026-09-10",
    "ligne": "233",
    "metrique": "T0",
-   "duree_min": 67
+   "duree_min": 67,
+   "commentaire": ""
   },
   {
    "date": "2026-09-10",
    "ligne": "233",
    "metrique": "T1",
-   "duree_min": 140
+   "duree_min": 140,
+   "commentaire": "Intervention maintenance | Four rétractation"
   },
   {
    "date": "2026-09-10",
    "ligne": "233",
    "metrique": "T2",
-   "duree_min": 212
+   "duree_min": 212,
+   "commentaire": "T1 : Duree pre-reglage : Intervention maintenance | Four rétractation — Arrivee deux sections controlables : Quelques tombés — Premier lot sorti : Premier lot sorti à 12h46 (bloqué en M51 - Maxi corps) — Validation de deux lots commercialisables : Deux lots commercialisables : 14h40 (2 et 3)"
   },
   {
    "date": "2026-09-14",
    "ligne": "224",
    "metrique": "T0",
-   "duree_min": 50
+   "duree_min": 50,
+   "commentaire": ""
   },
   {
    "date": "2026-09-14",
    "ligne": "224",
    "metrique": "T1",
-   "duree_min": 120
+   "duree_min": 120,
+   "commentaire": "Création fiche"
   },
   {
    "date": "2026-09-14",
    "ligne": "236",
    "metrique": "T0",
-   "duree_min": 130
+   "duree_min": 130,
+   "commentaire": ""
   },
   {
    "date": "2026-09-14",
    "ligne": "236",
    "metrique": "T1",
-   "duree_min": 130
+   "duree_min": 130,
+   "commentaire": "Intervention TIAMA IA"
   },
   {
    "date": "2026-09-15",
    "ligne": "235",
    "metrique": "T0",
-   "duree_min": 70
+   "duree_min": 70,
+   "commentaire": ""
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "224",
+   "metrique": "T0",
+   "duree_min": 15,
+   "commentaire": ""
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "224",
+   "metrique": "T1",
+   "duree_min": 20,
+   "commentaire": ""
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "232",
+   "metrique": "T0",
+   "duree_min": 220,
+   "commentaire": "Nettoyage non terminé | Manque de personnel | Pas d'informations"
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "232",
+   "metrique": "T1",
+   "duree_min": 187,
+   "commentaire": "Nettoyage (débris verre) | Manque de personnel | Chariot film NOK"
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "233",
+   "metrique": "T0",
+   "duree_min": 30,
+   "commentaire": ""
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "233",
+   "metrique": "T1",
+   "duree_min": 5,
+   "commentaire": "Réglages robot palettiseur"
   }
  ]
 }
