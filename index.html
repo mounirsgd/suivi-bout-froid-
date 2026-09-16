@@ -144,12 +144,6 @@
     position: absolute; left: 0; top: 0; bottom: 0;
     background: var(--bleu); border-radius: 5px; opacity: .88;
   }
-  .points { position: absolute; left: 0; right: 0; top: 0; bottom: 0; }
-  .point {
-    position: absolute; top: 50%; width: 7px; height: 7px;
-    margin: -3.5px 0 0 -3.5px; border-radius: 50%;
-    background: #fff; border: 1.5px solid var(--navy); box-shadow: 0 0 0 1px #fff;
-  }
   .valeur-mois {
     font-size: 13px; font-weight: 600; color: var(--titre);
     white-space: nowrap; text-align: right; min-width: 108px;
@@ -160,11 +154,6 @@
   .en-baisse { color: var(--vert); }
   .en-hausse { color: var(--saumon); }
   .stable    { color: var(--muted); }
-  .repere-obj {
-    position: absolute; top: -2px; bottom: -2px; width: 2px;
-    background: var(--vert);
-  }
-  .note-evo { margin: 14px 0 0; font-size: 12px; color: var(--muted); }
 
   /* ── Tableau des causes ───────────────────────────────────────────────── */
   .causes { margin-top: 18px; }
@@ -187,11 +176,6 @@
   td.fois { font-weight: 600; color: var(--titre); width: 58px; }
   td.pct { width: 140px; white-space: nowrap; }
   .pct-val { display: block; text-align: right; font-weight: 600; color: var(--titre); }
-  .piste {
-    display: block; height: 5px; border-radius: 3px;
-    background: #e6eaf1; margin-top: 4px; overflow: hidden;
-  }
-  .jauge { display: block; height: 100%; border-radius: 3px; background: var(--bleu); }
 
   .etat {
     background: var(--surface); border: 1px solid var(--rule);
@@ -605,8 +589,7 @@
 
     var sous = document.createElement("p");
     sous.className = "sous";
-    sous.textContent = "Plus la barre est courte, plus le temps est bon. " +
-                       "Tous les mois disponibles, independamment du filtre.";
+    sous.textContent = "Plus la barre est courte, plus le temps est bon.";
     panneau.appendChild(sous);
 
     Object.keys(donnees.metriques).forEach(function (code) {
@@ -616,10 +599,7 @@
 
       // echelle commune aux mois de cet indicateur
       var maxi = 0;
-      presents.forEach(function (r) {
-        if (r.moyenne > maxi) maxi = r.moyenne;
-        r.lignes.forEach(function (l) { if (l.valeur > maxi) maxi = l.valeur; });
-      });
+      presents.forEach(function (r) { if (r.moyenne > maxi) maxi = r.moyenne; });
       maxi = maxi * 1.06 || 1;
 
       var bloc = document.createElement("div");
@@ -653,19 +633,6 @@
           barre.style.width = (r.moyenne / maxi * 100) + "%";
           piste.appendChild(barre);
 
-          // une pastille par ligne de fabrication, a sa position
-          var points = document.createElement("div");
-          points.className = "points";
-          r.lignes.forEach(function (l) {
-            var pt = document.createElement("span");
-            pt.className = "point";
-            pt.style.left = (l.valeur / maxi * 100) + "%";
-            pt.title = "Ligne " + l.ligne + " : " + formater(l.valeur) +
-                       (l.objectif != null
-                          ? " (objectif " + formater(l.objectif) + ")" : "");
-            points.appendChild(pt);
-          });
-          piste.appendChild(points);
         }
         rang.appendChild(piste);
 
@@ -699,13 +666,6 @@
 
       panneau.appendChild(bloc);
     });
-
-    var note = document.createElement("p");
-    note.className = "note-evo";
-    note.textContent = "Chaque pastille est une ligne de fabrication, placee a son " +
-                       "propre temps moyen : plus elles sont groupees, plus le parc " +
-                       "est homogene.";
-    panneau.appendChild(note);
 
     hote.appendChild(panneau);
   }
@@ -749,7 +709,6 @@
       "<thead><tr><th>Cause</th><th>Fois</th><th>Part</th><th>Dates</th></tr></thead>";
 
     var corps = document.createElement("tbody");
-    var maxPart = res.liste[0].part;
 
     res.liste.forEach(function (c, i) {
       var tr = document.createElement("tr");
@@ -778,13 +737,7 @@
       var val = document.createElement("span");
       val.className = "pct-val";
       val.textContent = c.part.toFixed(1).replace(".", ",") + " %";
-      var piste = document.createElement("span");
-      piste.className = "piste";
-      var jauge = document.createElement("span");
-      jauge.className = "jauge";
-      jauge.style.width = Math.max(3, c.part / maxPart * 100) + "%";
-      piste.appendChild(jauge);
-      td3.appendChild(val); td3.appendChild(piste);
+      td3.appendChild(val);
       tr.appendChild(td3);
 
       var td4 = document.createElement("td");
