@@ -27,33 +27,43 @@ from firebase_admin import credentials, db
 
 DATABASE_URL = "https://gantt-sgd-default-rtdb.europe-west1.firebasedatabase.app"
 
-# Debut de la periode de reference pour le calcul des targets (fixe)
+# Debut de la periode de reference pour le calcul des objectifs (fixe)
 TARGET_DEBUT = date(2026, 6, 1)
 
-# Fichier de sortie
 SORTIE = os.path.join("data", "stats.json")
 
-# Identifiants des taches Bout Froid utilisees (cf. TASKS_BOUT_FROID dans app.js)
+# Identifiants des taches Bout Froid (cf. TASKS_BOUT_FROID dans app.js)
 TACHE_T0 = "bf_5"   # T0 : Nettoyage de ligne
 TACHE_T1 = "bf_2"   # T1 : Duree pre-reglage
-TACHE_TQ = "bf_6"   # Top qualite            -> debut du calcul T2
-TACHE_VAL = "bf_8"  # Validation de deux lots -> fin du calcul T2
+TACHE_TQ = "bf_6"   # Top qualite             -> debut de la fenetre T2
+TACHE_VAL = "bf_8"  # Validation de deux lots -> fin de la fenetre T2
 
-# Libelles affiches dans le dashboard
+# Toutes les taches Bout Froid, dans l'ordre du formulaire.
+# Sert a rassembler les commentaires pour T2, qui couvre toute la sequence.
+TACHES_BOUT_FROID = [
+    ("bf_1",  "Aligneur vide"),
+    ("bf_5",  "T0 : Nettoyage de ligne"),
+    ("bf_2",  "T1 : Duree pre-reglage"),
+    ("bf_4",  "Arrivee deux sections controlables"),
+    ("bf_3",  "Arrivee de toutes sections"),
+    ("bf_6",  "Top qualite"),
+    ("bf_9",  "Montee en regime"),
+    ("bf_10", "Premiere palette sortie"),
+    ("bf_7",  "Premier lot sorti"),
+    ("bf_11", "Top emballage"),
+    ("bf_8",  "Validation de deux lots commercialisables"),
+]
+
 METRIQUES = {
     "T0": "Temps vide de ligne",
     "T1": "Temps pre-reglage",
     "T2": "Temps de fabrication de 2 lots commercialisables",
 }
 
-# Regles de calcul des targets :
-#   "moitie"  -> on garde la moitie des valeurs les plus rapides (arrondi bas)
-#   ("top", N) -> on garde les N valeurs les plus rapides
-REGLES_TARGET = {
-    "T0": "moitie",
-    "T1": ("top", 10),
-    # T2 : regle non definie pour l'instant, pas de target calculee
-}
+# Objectif : pour chaque ligne, on trie ses durees et on fait la moyenne
+# de la moitie la plus rapide (arrondi a l'entier inferieur).
+# Meme regle pour les trois indicateurs.
+PART_RETENUE = 0.5
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -69,9 +79,9 @@ def normaliser_ligne(machine):
     "Machine 232"     -> "232"
     "232 A/B"         -> "232"
     "Machine 21"      -> "221"
-    "Machine 232 - X" -> "232"   (on ne prend que le premier groupe de chiffres)
+    "Machine 232 - X" -> "232"   (seul le premier groupe de chiffres compte)
 
-    Retourne None si aucun chiffre n'est trouve.
+    Retourne None si aucun chiffre exploitable.
     """
     if not machine:
         return None
@@ -80,16 +90,14 @@ def normaliser_ligne(machine):
         return None
     chiffres = trouve.group()
     if len(chiffres) == 2:
-        # forme courte : on rajoute le prefixe "2" comme dans Power BI
-        return "2" + chiffres
+        return "2" + chiffres      # forme courte : prefixe "2", comme Power BI
     if len(chiffres) == 3:
         return chiffres
-    # longueur inattendue (1 chiffre, ou 4 et plus) : on ne devine pas
     return None
 
 
 def heure_vers_minutes(h, m):
-    """Convertit une paire (heure, minute) en minutes depuis minuit. None si vide."""
+    """Convertit une paire (heure, minute) en minutes depuis minuit."""
     if h is None or m is None:
         return None
     h, m = str(h).strip(), str(m).strip()
@@ -114,14 +122,15 @@ def horodatage(jour_str, minutes, decalage_jour=0):
 
 def lire_creneau(tache):
     """
-    Lit le creneau 1 d'une tache et retourne (debut_min, fin_min).
-    Les creneaux 2 a 4 sont volontairement ignores (comme a l'export).
+    Lit le creneau 1 d'une tache : (debut_min, fin_min, commentaire).
+    Les creneaux 2 a 4 sont volontairement ignores, comme a l'export.
     """
     if not isinstance(tache, dict):
-        return None, None
+        return None, None, ""
     debut = heure_vers_minutes(tache.get("sh"), tache.get("sm"))
     fin = heure_vers_minutes(tache.get("eh"), tache.get("em"))
-    return debut, fin
+    commentaire = (tache.get("comment") or "").strip()
+    return debut, fin, commentaire
 
 
 def duree_minutes(debut_min, fin_min):
@@ -134,12 +143,27 @@ def duree_minutes(debut_min, fin_min):
     return duree
 
 
+def commentaires_bout_froid(taches):
+    """
+    Rassemble les commentaires non vides de toutes les taches Bout Froid
+    d'une session, prefixes du nom de la tache. Utilise pour T2, qui couvre
+    l'ensemble de la sequence et dont la cause peut venir de n'importe
+    quelle etape intermediaire.
+    """
+    morceaux = []
+    for id_tache, libelle in TACHES_BOUT_FROID:
+        _, _, commentaire = lire_creneau(taches.get(id_tache))
+        if commentaire:
+            morceaux.append(libelle + " : " + commentaire)
+    return " — ".join(morceaux)
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # EXTRACTION
 # ─────────────────────────────────────────────────────────────────────────────
 
 def connecter_firebase():
-    """Initialise Firebase en lecture seule via la cle de compte de service."""
+    """Initialise Firebase via la cle de compte de service."""
     cle_json = os.environ.get("FIREBASE_SERVICE_ACCOUNT")
     if not cle_json:
         sys.exit("Erreur : le secret FIREBASE_SERVICE_ACCOUNT est absent.")
@@ -152,7 +176,7 @@ def connecter_firebase():
 
 
 def charger_sessions():
-    """Recupere toutes les sessions depuis Firebase."""
+    """Recupere toutes les sessions. Lecture seule."""
     sessions = db.reference("sessions").get()
     return sessions or {}
 
@@ -160,7 +184,8 @@ def charger_sessions():
 def extraire_mesures(sessions):
     """
     Transforme les sessions brutes en une liste plate de mesures :
-        {"date": "2026-09-14", "ligne": "221", "metrique": "T0", "duree_min": 33}
+        {"date": "2026-09-14", "ligne": "221", "metrique": "T0",
+         "duree_min": 33, "commentaire": "Manque de personnel"}
     """
     mesures = []
 
@@ -175,9 +200,9 @@ def extraire_mesures(sessions):
 
         taches = (session.get("ganttData") or {}).get("tasks") or {}
 
-        # ── T0 et T1 : duree simple de la tache ──────────────────────────────
+        # ── T0 et T1 : duree de la tache elle-meme ───────────────────────────
         for code, id_tache in (("T0", TACHE_T0), ("T1", TACHE_T1)):
-            debut, fin = lire_creneau(taches.get(id_tache))
+            debut, fin, commentaire = lire_creneau(taches.get(id_tache))
             duree = duree_minutes(debut, fin)
             if duree is not None and duree > 0:
                 mesures.append({
@@ -185,14 +210,14 @@ def extraire_mesures(sessions):
                     "ligne": ligne,
                     "metrique": code,
                     "duree_min": duree,
+                    "commentaire": commentaire,
                 })
 
-        # ── T2 : de Top qualite (debut) a Validation 2 lots (fin) ────────────
-        debut_tq, _ = lire_creneau(taches.get(TACHE_TQ))
-        debut_val, fin_val = lire_creneau(taches.get(TACHE_VAL))
+        # ── T2 : du debut de Top qualite a la fin de Validation 2 lots ───────
+        debut_tq, _, _ = lire_creneau(taches.get(TACHE_TQ))
+        debut_val, fin_val, _ = lire_creneau(taches.get(TACHE_VAL))
 
         depart = horodatage(jour, debut_tq)
-        # la fin de Validation peut basculer au lendemain (passage minuit)
         decalage = 1 if (debut_val is not None and fin_val is not None
                          and fin_val < debut_val) else 0
         arrivee = horodatage(jour, fin_val, decalage)
@@ -204,6 +229,7 @@ def extraire_mesures(sessions):
                 "ligne": ligne,
                 "metrique": "T2",
                 "duree_min": round(ecart),
+                "commentaire": commentaires_bout_froid(taches),
             })
 
     mesures.sort(key=lambda m: (m["date"], m["ligne"], m["metrique"]))
@@ -211,20 +237,22 @@ def extraire_mesures(sessions):
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# TARGETS
+# OBJECTIFS
 # ─────────────────────────────────────────────────────────────────────────────
 
 def calculer_targets(mesures, aujourdhui):
     """
-    Calcule la target de chaque ligne, par metrique.
+    Objectif de chaque ligne, pour chaque indicateur.
 
-    Periode fixe : du 1er juin a aujourd'hui, independante des filtres
-    du dashboard. On garde les valeurs les plus rapides selon la regle
-    de la metrique, puis on en fait la moyenne.
+    Periode fixe du 1er juin a aujourd'hui, independante des filtres de la
+    page. On trie les durees de la ligne et on fait la moyenne de la moitie
+    la plus rapide : 6 valeurs -> 3, 20 valeurs -> 10, 21 valeurs -> 10.
+    Une seule valeur disponible : elle sert d'objectif.
     """
     targets = {}
+    effectifs = {}
 
-    for code, regle in REGLES_TARGET.items():
+    for code in METRIQUES:
         par_ligne = {}
 
         for mesure in mesures:
@@ -239,27 +267,20 @@ def calculer_targets(mesures, aujourdhui):
             par_ligne.setdefault(mesure["ligne"], []).append(mesure["duree_min"])
 
         resultat = {}
+        compte = {}
         for ligne, valeurs in par_ligne.items():
             valeurs.sort()
-            if regle == "moitie":
-                garde = len(valeurs) // 2
-            else:
-                garde = min(regle[1], len(valeurs))
-            # si le calcul ne retient rien, on retombe sur la valeur unique
+            garde = int(len(valeurs) * PART_RETENUE)
             if garde < 1:
-                garde = len(valeurs)
-            if garde < 1:
-                continue
+                garde = len(valeurs)       # une seule saisie : on la garde
             retenues = valeurs[:garde]
             resultat[ligne] = round(sum(retenues) / len(retenues))
+            compte[ligne] = {"total": len(valeurs), "retenues": garde}
 
         targets[code] = resultat
+        effectifs[code] = compte
 
-    # metriques sans regle definie : target vide
-    for code in METRIQUES:
-        targets.setdefault(code, {})
-
-    return targets
+    return targets, effectifs
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -276,11 +297,12 @@ def main():
     mesures = extraire_mesures(sessions)
     print("Mesures extraites : %d" % len(mesures))
 
-    targets = calculer_targets(mesures, aujourdhui)
-    for code, valeurs in targets.items():
-        print("Target %s : %d ligne(s)" % (code, len(valeurs)))
+    avec_commentaire = sum(1 for m in mesures if m["commentaire"])
+    print("Dont avec commentaire : %d" % avec_commentaire)
 
-    lignes = sorted({m["ligne"] for m in mesures})
+    targets, effectifs = calculer_targets(mesures, aujourdhui)
+    for code in METRIQUES:
+        print("Objectif %s : %d ligne(s)" % (code, len(targets[code])))
 
     sortie = {
         "derniere_maj": datetime.now().isoformat(timespec="seconds"),
@@ -289,8 +311,9 @@ def main():
             "fin": aujourdhui.isoformat(),
         },
         "metriques": METRIQUES,
-        "lignes": lignes,
+        "lignes": sorted({m["ligne"] for m in mesures}),
         "targets": targets,
+        "effectifs": effectifs,
         "mesures": mesures,
     }
 
