@@ -54,6 +54,79 @@ TACHES_BOUT_FROID = [
     ("bf_8",  "Validation de deux lots commercialisables"),
 ]
 
+# Motifs proposes par l'application (CAUSES_BOUT_FROID_DICT dans app.js).
+# Sert a distinguer un motif coche d'un texte saisi a la main.
+MOTIFS_CONNUS = {
+    "Manque de personnel", "Vide de l'arche BF", "Vide de la ligne entiere",
+    "Vide de la ligne entière",
+    "Nettoyage non termine", "Nettoyage non terminé",
+    "Temoins NOK", "Témoins NOK", "Chariot film NOK", "Materiel NOK", "Matériel NOK",
+    "Nettoyage (debris verre)", "Nettoyage (débris verre)",
+    "Intervention maintenance", "Reglage non termine", "Réglage non terminé",
+    "Creation fiche", "Création fiche", "Formation",
+    "Retard arrivee sections", "Retard arrivée sections", "Recuit NOK",
+    "Reglage equipement BF", "Réglage équipement BF",
+    "Retard demarrage", "Retard démarrage", "Top Qualite retarde", "Top Qualité retardé",
+    "Top Emballage retarde", "Top Emballage retardé",
+    "Tombees sur arche", "Tombées sur arche", "Reglage BF", "Réglage BF",
+    "Demarrage tardif", "Démarrage tardif", "SAP",
+    "Cadence non atteinte", "Probleme mecanique", "Problème mécanique",
+    "Probleme reglage", "Problème réglage",
+    "Lot bloque", "Lot bloqué", "Defaut qualite", "Défaut qualité",
+    "Defaut palettisation", "Défaut palettisation", "SAP - etiquette", "SAP - étiquette",
+    "Validation retardee", "Validation retardée",
+}
+MOTIFS_NORMALISES = {m.lower() for m in MOTIFS_CONNUS}
+
+# Formules signalant qu'il n'y a rien a signaler
+FORMULES_RAS = {"ras", "r.a.s", "rien a signaler", "rien à signaler",
+                "neant", "néant", "aucun", "aucune"}
+
+# Reperage des simples releves d'horaires et de numeros de lots
+_HEURE = re.compile(r"\d{1,2}\s*[h:]\s*\d{2}")
+_LOT = re.compile(r"\blots?\b\s*\d|\bM\d{2,}\b")
+_MOTS_POINTAGE = {
+    "a", "à", "de", "des", "du", "le", "la", "les", "et", "en", "au", "aux", "sur",
+    "top", "qualite", "qualité", "lot", "lots", "premier", "premiers", "deux",
+    "sections", "section", "toutes", "tous", "arche", "emballage", "sorti",
+    "sortie", "livrables", "commercialisables", "validation", "h", "min",
+    "palette", "premiere", "première", "vide", "aligneur", "demarrage", "départ",
+}
+
+
+def classer_cause(texte):
+    """
+    Nature d'un morceau de commentaire :
+      "motif"  : coche dans la liste de l'application
+      "ras"    : rien a signaler
+      "releve" : simple releve d'heure ou de numero de lot, pas une cause
+      "libre"  : cause reelle, ecrite a la main
+    """
+    s = (texte or "").strip()
+    if not s:
+        return "releve"
+
+    if s.lower() in MOTIFS_NORMALISES:
+        return "motif"
+    if s.lower().strip(".") in FORMULES_RAS:
+        return "ras"
+
+    if _HEURE.search(s) or _LOT.search(s):
+        reste = _HEURE.sub(" ", s)
+        reste = re.sub(r"[0-9()/\-=,.:;+]", " ", reste)
+        mots = [m for m in re.split(r"\s+", reste.lower()) if m]
+        utiles = [m for m in mots if m not in _MOTS_POINTAGE and len(m) > 2]
+        if not utiles:
+            return "releve"
+
+    return "libre"
+
+
+LIBELLES = {
+    "T0": "T0 : Nettoyage de ligne",
+    "T1": "T1 : Duree pre-reglage",
+}
+
 METRIQUES = {
     "T0": "Temps vide de ligne",
     "T1": "Temps pre-reglage",
@@ -179,24 +252,25 @@ def extraire_causes(sessions):
                     "ligne": ligne,
                     "tache": libelle,
                     "cause": cause,
+                    "type": classer_cause(cause),
                 })
     causes.sort(key=lambda c: (c["date"], c["ligne"]))
     return causes
 
 
-def commentaires_bout_froid(taches):
+def details_bout_froid(taches):
     """
-    Rassemble les commentaires non vides de toutes les taches Bout Froid
-    d'une session, prefixes du nom de la tache. Utilise pour T2, qui couvre
-    l'ensemble de la sequence et dont la cause peut venir de n'importe
-    quelle etape intermediaire.
+    Commentaires non vides de toutes les taches Bout Froid d'une session,
+    sous forme de liste [{"tache": ..., "texte": ...}]. Utilise pour T2, qui
+    couvre l'ensemble de la sequence : la cause peut venir de n'importe
+    quelle etape intermediaire. La page les affiche tache par tache.
     """
-    morceaux = []
+    details = []
     for id_tache, libelle in TACHES_BOUT_FROID:
         _, _, commentaire = lire_creneau(taches.get(id_tache))
         if commentaire:
-            morceaux.append(libelle + " : " + commentaire)
-    return " — ".join(morceaux)
+            details.append({"tache": libelle, "texte": commentaire})
+    return details
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -251,7 +325,8 @@ def extraire_mesures(sessions):
                     "ligne": ligne,
                     "metrique": code,
                     "duree_min": duree,
-                    "commentaire": commentaire,
+                    "details": ([{"tache": LIBELLES[code], "texte": commentaire}]
+                                if commentaire else []),
                 })
 
         # ── T2 : du debut de Top qualite a la fin de Validation 2 lots ───────
@@ -270,7 +345,7 @@ def extraire_mesures(sessions):
                 "ligne": ligne,
                 "metrique": "T2",
                 "duree_min": round(ecart),
-                "commentaire": commentaires_bout_froid(taches),
+                "details": details_bout_froid(taches),
             })
 
     mesures.sort(key=lambda m: (m["date"], m["ligne"], m["metrique"]))
@@ -338,12 +413,20 @@ def main():
     mesures = extraire_mesures(sessions)
     print("Mesures extraites : %d" % len(mesures))
 
-    avec_commentaire = sum(1 for m in mesures if m["commentaire"])
+    avec_commentaire = sum(1 for m in mesures if m["details"])
     print("Dont avec commentaire : %d" % avec_commentaire)
 
     causes = extraire_causes(sessions)
-    distinctes = len({c["cause"] for c in causes})
-    print("Causes citees : %d (%d distinctes)" % (len(causes), distinctes))
+    from collections import Counter
+    repartition = Counter(c["type"] for c in causes)
+    retenues = [c for c in causes if c["type"] in ("motif", "libre")]
+    print("Causes citees : %d" % len(causes))
+    print("  motifs coches  : %d" % repartition["motif"])
+    print("  causes libres  : %d" % repartition["libre"])
+    print("  releves ecartes: %d" % repartition["releve"])
+    print("  RAS            : %d" % repartition["ras"])
+    print("  -> Pareto sur %d causes, %d distinctes"
+          % (len(retenues), len({c["cause"] for c in retenues})))
 
     targets, effectifs = calculer_targets(mesures, aujourdhui)
     for code in METRIQUES:
