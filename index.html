@@ -113,7 +113,19 @@
   tbody tr:last-child td { border-bottom: none; }
   td.num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
   td.ligne { font-weight: 600; color: var(--titre); }
-  td.cmt { color: var(--cmt); min-width: 180px; }
+  td.cmt { color: var(--cmt); min-width: 200px; }
+  .cmt-bloc + .cmt-bloc { margin-top: 7px; }
+  .cmt-tache {
+    display: block; font-weight: 600; color: var(--titre);
+    font-size: 12px; margin-bottom: 1px;
+  }
+  .cmt-texte { display: block; }
+  td.dates { color: var(--muted); font-size: 12px; min-width: 140px; }
+  .hors-pareto {
+    margin: 10px 0 0; font-size: 12.5px; color: var(--muted);
+    background: #f6f8fa; border: 1px solid var(--rule);
+    border-radius: 7px; padding: 8px 11px;
+  }
   .plus-lent { color: var(--saumon); font-weight: 600; }
   .plus-vite { color: var(--vert); font-weight: 600; }
 
@@ -358,7 +370,8 @@
       ctx.fillStyle = "#0d1520";
       ctx.textBaseline = "bottom";
       b.data.forEach(function (el, i) {
-        ctx.fillText(barres[i].nb, el.x, el.y - 6);
+        var c = barres[i];
+        ctx.fillText(c.nb + "  ·  " + c.part.toFixed(0) + " %", el.x, el.y - 6);
       });
 
       var p = chart.getDatasetMeta(1);
@@ -441,8 +454,21 @@
 
       var td5 = document.createElement("td");
       td5.className = "cmt";
-      td5.textContent = m.commentaire || "—";
-      if (m.commentaire) td5.title = m.commentaire;
+      var details = m.details || [];
+      if (!details.length) {
+        td5.textContent = "—";
+      } else {
+        details.forEach(function (d) {
+          var bloc = document.createElement("div");
+          bloc.className = "cmt-bloc";
+          var nom = document.createElement("span");
+          nom.className = "cmt-tache"; nom.textContent = d.tache;
+          var txt = document.createElement("span");
+          txt.className = "cmt-texte"; txt.textContent = d.texte;
+          bloc.appendChild(nom); bloc.appendChild(txt);
+          td5.appendChild(bloc);
+        });
+      }
       tr.appendChild(td5);
 
       corps.appendChild(tr);
@@ -460,15 +486,34 @@
   var MAX_BARRES = 8;   // causes affichees dans le graphe
 
   function comptageCauses() {
-    var causes = (donnees.causes || []).filter(function (c) {
+    var periodeCauses = (donnees.causes || []).filter(function (c) {
       return cleDe(c.date) === periode;
     });
-    var compte = {};
-    causes.forEach(function (c) { compte[c.cause] = (compte[c.cause] || 0) + 1; });
 
-    var total = causes.length;
+    // Motifs coches et causes ecrites a la main comptent pareil.
+    // Les releves d'horaires et les RAS sortent du classement.
+    var retenues = periodeCauses.filter(function (c) {
+      return c.type === "motif" || c.type === "libre";
+    });
+    var nbRas = periodeCauses.filter(function (c) { return c.type === "ras"; }).length;
+    var nbReleves = periodeCauses.filter(function (c) { return c.type === "releve"; }).length;
+
+    var compte = {};
+    retenues.forEach(function (c) {
+      if (!compte[c.cause]) compte[c.cause] = { nb: 0, dates: {}, type: c.type };
+      compte[c.cause].nb += 1;
+      compte[c.cause].dates[c.date] = true;
+    });
+
+    var total = retenues.length;
     var liste = Object.keys(compte).map(function (nom) {
-      return { cause: nom, nb: compte[nom], part: total ? compte[nom]/total*100 : 0 };
+      return {
+        cause: nom,
+        nb: compte[nom].nb,
+        type: compte[nom].type,
+        dates: Object.keys(compte[nom].dates).sort(),
+        part: total ? compte[nom].nb/total*100 : 0
+      };
     }).sort(function (a, b) {
       return b.nb - a.nb || a.cause.localeCompare(b.cause);
     });
@@ -476,7 +521,7 @@
     var cumul = 0;
     liste.forEach(function (c) { cumul += c.part; c.cumul = cumul; });
 
-    return { liste: liste, total: total };
+    return { liste: liste, total: total, ras: nbRas, releves: nbReleves };
   }
 
   function raccourcir(texte, max) {
@@ -503,7 +548,7 @@
     sous.className = "sous";
     sous.textContent = res.total + " cause" + (res.total > 1 ? "s" : "") +
       " citee" + (res.total > 1 ? "s" : "") + " sur " + libelleDe(periode) +
-      " — motifs de la liste et commentaires libres confondus.";
+      " — motifs coches et causes ecrites a la main comptent pareil.";
     panneau.appendChild(sous);
 
     var toile = document.createElement("div");
@@ -511,6 +556,19 @@
     var canvas = document.createElement("canvas");
     toile.appendChild(canvas);
     panneau.appendChild(toile);
+
+    // ce qui est sorti du classement, dit explicitement
+    if (res.ras || res.releves) {
+      var hors = document.createElement("p");
+      hors.className = "hors-pareto";
+      var bouts = [];
+      if (res.ras) bouts.push(res.ras + " saisie" + (res.ras > 1 ? "s" : "") +
+                              " sans probleme signale (RAS)");
+      if (res.releves) bouts.push(res.releves + " releve" + (res.releves > 1 ? "s" : "") +
+                                  " d'horaire ou de numero de lot");
+      hors.textContent = "Hors classement : " + bouts.join(", ") + ".";
+      panneau.appendChild(hors);
+    }
 
     // tableau complet, sans rien ecarter
     var detail = document.createElement("div");
@@ -528,7 +586,7 @@
     cadre.className = "cadre";
     var table = document.createElement("table");
     table.innerHTML = "<thead><tr><th>Cause</th><th>Occurrences</th>" +
-                      "<th>Part</th><th>Cumul</th></tr></thead>";
+                      "<th>Part</th><th>Cumul</th><th>Dates</th></tr></thead>";
     var corps = document.createElement("tbody");
 
     res.liste.forEach(function (c) {
@@ -552,6 +610,11 @@
       var td4 = document.createElement("td");
       td4.className = "pct"; td4.textContent = c.cumul.toFixed(1).replace(".", ",") + " %";
       tr.appendChild(td4);
+
+      var td5 = document.createElement("td");
+      td5.className = "dates";
+      td5.textContent = c.dates.map(jourCourt).join(", ");
+      tr.appendChild(td5);
 
       corps.appendChild(tr);
     });
@@ -579,7 +642,7 @@
 
     graphes.pareto = new Chart(canvas.getContext("2d"), {
       data: {
-        labels: barres.map(function (c) { return raccourcir(c.cause, 22); }),
+        labels: barres.map(function (c) { return raccourcir(c.cause, 30); }),
         datasets: [
           { type: "bar", label: "Occurrences", data: barres.map(function (c) { return c.nb; }),
             backgroundColor: BLEU, borderRadius: 2, maxBarThickness: 54,
