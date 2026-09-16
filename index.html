@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suivi Bout Froid — SGD Pharma</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:    #1a3a6b;
+    --navy-d:  #12233f;
+    --bar:     #2e86ab;
+    --bar-l:   #dbeaf2;
+    --target:  #1f9d55;
+    --over:    #c0392b;
+    --bg:      #eceff4;
+    --surface: #ffffff;
+    --rule:    #d7dde5;
+    --text:    #1c2733;
+    --muted:   #5c6a7a;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "IBM Plex Sans", "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ── En-tete ──────────────────────────────────────────────────────────── */
+  header {
+    background: var(--navy);
+    color: #fff;
+    padding: 18px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 18px;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: .2px;
+  }
+  header .site { color: #a9c4e4; font-size: 14px; }
+  header .maj  { color: #a9c4e4; font-size: 13px; margin-left: auto; }
+
+  main { padding: 20px 24px 48px; max-width: 1360px; margin: 0 auto; }
+
+  /* ── Barre de filtres ─────────────────────────────────────────────────── */
+  .filtres {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    align-items: flex-start;
+  }
+  .groupe { display: flex; flex-direction: column; gap: 7px; min-width: 0; }
+  .groupe > span { font-size: 12.5px; color: var(--muted); font-weight: 500; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+
+  button.chip {
+    font: inherit;
+    font-size: 13px;
+    padding: 6px 13px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: #f6f8fa;
+    color: var(--text);
+    cursor: pointer;
+  }
+  button.chip:hover { border-color: var(--bar); }
+  button.chip[aria-pressed="true"] {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: #fff;
+  }
+  button.chip:focus-visible { outline: 3px solid #7fb2dd; outline-offset: 2px; }
+
+  .periodes { max-height: 104px; overflow-y: auto; padding-right: 4px; }
+
+  /* ── Panneaux de graphes ──────────────────────────────────────────────── */
+  .grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 18px;
+  }
+  .panneau {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 16px 18px 20px;
+    min-width: 0;
+  }
+  .panneau h2 {
+    margin: 0 0 2px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--navy-d);
+  }
+  .panneau .sous {
+    margin: 0 0 14px;
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+  .toile { position: relative; height: 290px; }
+  .vide {
+    height: 290px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+    background: #f8fafb;
+    border: 1px dashed var(--rule);
+    border-radius: 8px;
+    padding: 0 20px;
+  }
+
+  .legende {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+  .legende i {
+    display: inline-block;
+    width: 22px; height: 3px;
+    vertical-align: middle;
+    margin-right: 7px;
+    border-radius: 2px;
+  }
+  .legende .b { background: var(--bar); height: 11px; width: 11px; border-radius: 2px; }
+  .legende .t { background: var(--target); }
+
+  .etat {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 28px;
+    text-align: center;
+    color: var(--muted);
+  }
+
+  @media (max-width: 560px) {
+    header, main { padding-left: 14px; padding-right: 14px; }
+    header .maj { margin-left: 0; width: 100%; }
+    .grille { grid-template-columns: 1fr; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Suivi Bout Froid</h1>
+  <span class="site">SGD Pharma — Sucy-en-Brie</span>
+  <span class="maj" id="maj"></span>
+</header>
+
+<main>
+  <div class="filtres" id="filtres" hidden>
+    <div class="groupe">
+      <span>Periode</span>
+      <div class="chips" id="mode"></div>
+    </div>
+    <div class="groupe" style="flex:1">
+      <span id="label-periode">Mois</span>
+      <div class="chips periodes" id="periodes"></div>
+    </div>
+    <div class="groupe">
+      <span>Unite</span>
+      <div class="chips" id="unite"></div>
+    </div>
+  </div>
+
+  <div class="etat" id="etat">Chargement des donnees…</div>
+  <div class="grille" id="grille" hidden></div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var MOIS = ["janvier","fevrier","mars","avril","mai","juin",
+              "juillet","aout","septembre","octobre","novembre","decembre"];
+
+  var donnees = null;      // contenu de stats.json
+  var mode = "mois";       // "mois" ou "semaine"
+  var periode = null;      // cle de la periode selectionnee
+  var unite = "min";       // "min" ou "h"
+  var graphes = {};        // instances Chart.js, par metrique
+
+  // ── Outils de date ────────────────────────────────────────────────────────
+
+  function versDate(iso) {
+    var p = iso.split("-");
+    return new Date(+p[0], +p[1] - 1, +p[2]);
+  }
+
+  function cleMois(iso) {
+    return iso.slice(0, 7);                        // "2026-09"
+  }
+
+  function libelleMois(cle) {
+    var p = cle.split("-");
+    return MOIS[+p[1] - 1] + " " + p[0];
+  }
+
+  // Lundi de la semaine contenant cette date
+  function lundi(d) {
+    var j = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    var decalage = (j.getDay() + 6) % 7;           // lundi = 0
+    j.setDate(j.getDate() - decalage);
+    return j;
+  }
+
+  function isoDate(d) {
+    var m = String(d.getMonth() + 1).padStart(2, "0");
+    var j = String(d.getDate()).padStart(2, "0");
+    return d.getFullYear() + "-" + m + "-" + j;
+  }
+
+  function cleSemaine(iso) {
+    return isoDate(lundi(versDate(iso)));           // date du lundi
+  }
+
+  function libelleSemaine(cle) {
+    var debut = versDate(cle);
+    var fin = new Date(debut.getFullYear(), debut.getMonth(), debut.getDate() + 6);
+    var court = function (d) { return d.getDate() + " " + MOIS[d.getMonth()].slice(0, 4); };
+    return court(debut) + " – " + court(fin);
+  }
+
+  function cleDe(iso) {
+    return mode === "mois" ? cleMois(iso) : cleSemaine(iso);
+  }
+
+  function libelleDe(cle) {
+    return mode === "mois" ? libelleMois(cle) : libelleSemaine(cle);
+  }
+
+  // ── Mise en forme des durees ──────────────────────────────────────────────
+
+  function formater(minutes) {
+    if (minutes === null || minutes === undefined) return "";
+    if (unite === "min") return Math.round(minutes) + " min";
+    var total = Math.round(minutes);
+    var h = Math.floor(total / 60);
+    var m = total % 60;
+    return h === 0 ? m + "m" : h + "h " + String(m).padStart(2, "0") + "m";
+  }
+
+  function convertir(minutes) {
+    return unite === "min" ? Math.round(minutes) : Math.round(minutes / 6) / 10;
+  }
+
+  // ── Construction des filtres ──────────────────────────────────────────────
+
+  function periodesDisponibles() {
+    var vues = {};
+    donnees.mesures.forEach(function (m) { vues[cleDe(m.date)] = true; });
+    return Object.keys(vues).sort();
+  }
+
+  function periodeParDefaut(liste) {
+    var courante = cleDe(isoDate(new Date()));
+    if (liste.indexOf(courante) > -1) return courante;
+    return liste.length ? liste[liste.length - 1] : null;
+  }
+
+  function faireChips(hote, options, actif, auClic) {
+    hote.innerHTML = "";
+    options.forEach(function (opt) {
+      var b = document.createElement("button");
+      b.className = "chip";
+      b.type = "button";
+      b.textContent = opt.libelle;
+      b.setAttribute("aria-pressed", opt.valeur === actif ? "true" : "false");
+      b.addEventListener("click", function () { auClic(opt.valeur); });
+      hote.appendChild(b);
+    });
+  }
+
+  function dessinerFiltres() {
+    faireChips(
+      document.getElementById("mode"),
+      [{ valeur: "mois", libelle: "Mois" }, { valeur: "semaine", libelle: "Semaine" }],
+      mode,
+      function (v) {
+        if (v === mode) return;
+        mode = v;
+        document.getElementById("label-periode").textContent =
+          mode === "mois" ? "Mois" : "Semaine";
+        periode = periodeParDefaut(periodesDisponibles());
+        dessinerFiltres();
+        dessinerGraphes();
+      }
+    );
+
+    var liste = periodesDisponibles();
+    faireChips(
+      document.getElementById("periodes"),
+      liste.map(function (c) { return { valeur: c, libelle: libelleDe(c) }; }),
+      periode,
+      function (v) { periode = v; dessinerFiltres(); dessinerGraphes(); }
+    );
+
+    faireChips(
+      document.getElementById("unite"),
+      [{ valeur: "min", libelle: "Minutes" }, { valeur: "h", libelle: "Heures" }],
+      unite,
+      function (v) { unite = v; dessinerFiltres(); dessinerGraphes(); }
+    );
+
+    document.getElementById("filtres").hidden = false;
+  }
+
+  // ── Calcul des moyennes affichees ─────────────────────────────────────────
+
+  function moyennesParLigne(metrique) {
+    var cumuls = {};
+    donnees.mesures.forEach(function (m) {
+      if (m.metrique !== metrique) return;
+      if (cleDe(m.date) !== periode) return;
+      if (!cumuls[m.ligne]) cumuls[m.ligne] = { somme: 0, nb: 0 };
+      cumuls[m.ligne].somme += m.duree_min;
+      cumuls[m.ligne].nb += 1;
+    });
+
+    return Object.keys(cumuls).map(function (ligne) {
+      return { ligne: ligne, valeur: cumuls[ligne].somme / cumuls[ligne].nb };
+    }).sort(function (a, b) { return a.valeur - b.valeur; });
+  }
+
+  // ── Graphes ───────────────────────────────────────────────────────────────
+
+  function dessinerGraphes() {
+    var grille = document.getElementById("grille");
+    grille.innerHTML = "";
+    grille.hidden = false;
+    document.getElementById("etat").hidden = true;
+
+    Object.keys(graphes).forEach(function (k) { graphes[k].destroy(); });
+    graphes = {};
+
+    Object.keys(donnees.metriques).forEach(function (code) {
+      var lignes = moyennesParLigne(code);
+      var targets = donnees.targets[code] || {};
+      var aDesTargets = lignes.some(function (l) { return targets[l.ligne] != null; });
+
+      var panneau = document.createElement("section");
+      panneau.className = "panneau";
+
+      var titre = document.createElement("h2");
+      titre.textContent = donnees.metriques[code];
+      panneau.appendChild(titre);
+
+      var sous = document.createElement("p");
+      sous.className = "sous";
+      sous.textContent = "Moyenne par ligne — " + libelleDe(periode);
+      panneau.appendChild(sous);
+
+      if (!lignes.length) {
+        var vide = document.createElement("div");
+        vide.className = "vide";
+        vide.textContent = "Aucune saisie pour cette periode. Choisissez une autre periode.";
+        panneau.appendChild(vide);
+        grille.appendChild(panneau);
+        return;
+      }
+
+      var toile = document.createElement("div");
+      toile.className = "toile";
+      var canvas = document.createElement("canvas");
+      toile.appendChild(canvas);
+      panneau.appendChild(toile);
+
+      var legende = document.createElement("div");
+      legende.className = "legende";
+      legende.innerHTML =
+        '<span><i class="b"></i>Temps reel</span>' +
+        (aDesTargets ? '<span><i class="t"></i>Objectif</span>' : '');
+      panneau.appendChild(legende);
+
+      grille.appendChild(panneau);
+
+      var etiquettes = lignes.map(function (l) { return l.ligne; });
+      var reels = lignes.map(function (l) { return convertir(l.valeur); });
+      var objectifs = lignes.map(function (l) {
+        return targets[l.ligne] != null ? convertir(targets[l.ligne]) : null;
+      });
+
+      // barre rouge quand la ligne depasse son objectif
+      var couleurs = lignes.map(function (l) {
+        var t = targets[l.ligne];
+        return (t != null && l.valeur > t) ? "#c0392b" : "#2e86ab";
+      });
+
+      var jeux = [{
+        type: "bar",
+        label: "Temps reel",
+        data: reels,
+        backgroundColor: couleurs,
+        borderRadius: 2,
+        maxBarThickness: 58,
+        order: 2
+      }];
+
+      if (aDesTargets) {
+        jeux.push({
+          type: "line",
+          label: "Objectif",
+          data: objectifs,
+          borderColor: "#1f9d55",
+          backgroundColor: "#1f9d55",
+          borderWidth: 2.5,
+          pointRadius: 3,
+          spanGaps: true,
+          order: 1
+        });
+      }
+
+      graphes[code] = new Chart(canvas.getContext("2d"), {
+        data: { labels: etiquettes, datasets: jeux },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          animation: false,
+          layout: { padding: { top: 18 } },
+          scales: {
+            x: {
+              title: { display: true, text: "Lignes de fabrication", color: "#5c6a7a" },
+              grid: { display: false },
+              ticks: { color: "#1c2733", font: { size: 13, weight: "600" } }
+            },
+            y: {
+              beginAtZero: true,
+              title: { display: true, text: unite === "min" ? "Minutes" : "Heures", color: "#5c6a7a" },
+              grid: { color: "#e8edf2" },
+              ticks: { color: "#5c6a7a" }
+            }
+          },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: function (ctx) {
+                  var brut = ctx.dataset.type === "line"
+                    ? targets[ctx.label]
+                    : lignes[ctx.dataIndex].valeur;
+                  return ctx.dataset.label + " : " + formater(brut);
+                },
+                afterBody: function (items) {
+                  var ligne = items[0].label;
+                  var t = targets[ligne];
+                  if (t == null) return "";
+                  var reel = lignes[items[0].dataIndex].valeur;
+                  var ecart = Math.round(reel - t);
+                  if (ecart === 0) return "A l'objectif";
+                  return ecart > 0
+                    ? "Retard de " + formater(ecart)
+                    : "Avance de " + formater(-ecart);
+                }
+              }
+            }
+          }
+        }
+      });
+    });
+  }
+
+  // ── Demarrage ─────────────────────────────────────────────────────────────
+
+  function erreur(message) {
+    var etat = document.getElementById("etat");
+    etat.hidden = false;
+    etat.textContent = message;
+    document.getElementById("grille").hidden = true;
+  }
+
+  fetch("data/stats.json?" + Date.now())
+    .then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      return r.json();
+    })
+    .then(function (json) {
+      donnees = json;
+
+      if (!donnees.mesures || !donnees.mesures.length) {
+        erreur("Aucune donnee disponible pour le moment.");
+        return;
+      }
+
+      var maj = new Date(donnees.derniere_maj);
+      document.getElementById("maj").textContent =
+        "Mis a jour le " + maj.toLocaleDateString("fr-FR") +
+        " a " + maj.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" });
+
+      periode = periodeParDefaut(periodesDisponibles());
+      dessinerFiltres();
+      dessinerGraphes();
+    })
+    .catch(function () {
+      erreur("Les donnees n'ont pas pu etre chargees. Le calcul quotidien n'a peut-etre pas encore tourne.");
+    });
+})();
+</script>
+</body>
+</html>
