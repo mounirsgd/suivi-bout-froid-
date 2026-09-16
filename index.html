@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>Suivi Bout Froid — SGD Pharma</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,7 +13,8 @@
 <style>
   :root {
     --bleu:     #143FF2;   /* barres */
-    --bleu-f:   #0b2ba8;   /* bleu fonce : ecart defavorable */
+    --saumon:   #d9614a;   /* ecart defavorable */
+    --cmt:      #33404f;   /* texte des commentaires */
     --vert:     #158f4a;   /* objectif, ecart favorable */
     --navy:     #14264a;   /* bandeau */
     --titre:    #0d1520;   /* titres de panneau */
@@ -109,9 +113,21 @@
   tbody tr:last-child td { border-bottom: none; }
   td.num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
   td.ligne { font-weight: 600; color: var(--titre); }
-  td.cmt { color: var(--muted); min-width: 180px; }
-  .plus-lent { color: var(--bleu-f); font-weight: 600; }
+  td.cmt { color: var(--cmt); min-width: 180px; }
+  .plus-lent { color: var(--saumon); font-weight: 600; }
   .plus-vite { color: var(--vert); font-weight: 600; }
+
+  /* ── Pareto ───────────────────────────────────────────────────────────── */
+  .pareto { margin-top: 18px; }
+  .pareto .toile { height: 360px; }
+  .pareto .cadre { max-height: 300px; }
+  .pareto table { font-size: 13px; }
+  td.cause { color: var(--texte); }
+  td.pct { text-align: right; white-space: nowrap; }
+  .barre-pct {
+    display: block; height: 4px; border-radius: 2px;
+    background: var(--bleu); margin-top: 3px;
+  }
 
   .etat {
     background: var(--surface); border: 1px solid var(--rule);
@@ -152,6 +168,7 @@
 
   <div class="etat" id="etat">Chargement des donnees…</div>
   <div class="grille" id="grille" hidden></div>
+  <div id="pareto" hidden></div>
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
@@ -162,7 +179,7 @@
   var MOIS = ["janvier","fevrier","mars","avril","mai","juin",
               "juillet","aout","septembre","octobre","novembre","decembre"];
 
-  var BLEU = "#143FF2", VERT = "#158f4a";
+  var BLEU = "#143FF2", VERT = "#158f4a", SAUMON = "#d9614a";
 
   var donnees = null;
   var mode = "mois";
@@ -284,6 +301,7 @@
   var etiquettes = {
     id: "etiquettes",
     afterDatasetsDraw: function (chart, args, opts) {
+      if (!opts || !opts.lignes) return;      // ne concerne pas le Pareto
       var ctx = chart.ctx;
       var lignes = opts.lignes, targets = opts.targets;
 
@@ -326,6 +344,35 @@
     }
   };
   Chart.register(etiquettes);
+
+  var etiquettesPareto = {
+    id: "etiquettesPareto",
+    afterDatasetsDraw: function (chart, args, opts) {
+      if (!opts || !opts.barres) return;
+      var ctx = chart.ctx, barres = opts.barres;
+      ctx.save();
+      ctx.textAlign = "center";
+
+      var b = chart.getDatasetMeta(0);
+      ctx.font = "600 12.5px 'IBM Plex Sans', Arial, sans-serif";
+      ctx.fillStyle = "#0d1520";
+      ctx.textBaseline = "bottom";
+      b.data.forEach(function (el, i) {
+        ctx.fillText(barres[i].nb, el.x, el.y - 6);
+      });
+
+      var p = chart.getDatasetMeta(1);
+      ctx.font = "600 11px 'IBM Plex Sans', Arial, sans-serif";
+      ctx.fillStyle = VERT;
+      p.data.forEach(function (el, i) {
+        var t = barres[i].cumul.toFixed(0) + " %";
+        ctx.textBaseline = "bottom";
+        ctx.fillText(t, el.x, el.y - 8);
+      });
+      ctx.restore();
+    }
+  };
+  Chart.register(etiquettesPareto);
 
   // ── Tableau de detail ─────────────────────────────────────────────────────
 
@@ -405,6 +452,175 @@
     cadre.appendChild(table);
     bloc.appendChild(cadre);
     return bloc;
+  }
+
+
+  // ── Pareto des causes ─────────────────────────────────────────────────────
+
+  var MAX_BARRES = 8;   // causes affichees dans le graphe
+
+  function comptageCauses() {
+    var causes = (donnees.causes || []).filter(function (c) {
+      return cleDe(c.date) === periode;
+    });
+    var compte = {};
+    causes.forEach(function (c) { compte[c.cause] = (compte[c.cause] || 0) + 1; });
+
+    var total = causes.length;
+    var liste = Object.keys(compte).map(function (nom) {
+      return { cause: nom, nb: compte[nom], part: total ? compte[nom]/total*100 : 0 };
+    }).sort(function (a, b) {
+      return b.nb - a.nb || a.cause.localeCompare(b.cause);
+    });
+
+    var cumul = 0;
+    liste.forEach(function (c) { cumul += c.part; c.cumul = cumul; });
+
+    return { liste: liste, total: total };
+  }
+
+  function raccourcir(texte, max) {
+    return texte.length > max ? texte.slice(0, max - 1) + "…" : texte;
+  }
+
+  function dessinerPareto() {
+    var hote = document.getElementById("pareto");
+    hote.innerHTML = "";
+    if (graphes.pareto) { graphes.pareto.destroy(); delete graphes.pareto; }
+
+    var res = comptageCauses();
+    if (!res.total) { hote.hidden = true; return; }
+    hote.hidden = false;
+
+    var panneau = document.createElement("section");
+    panneau.className = "panneau pareto";
+
+    var titre = document.createElement("h2");
+    titre.textContent = "Causes de pertes";
+    panneau.appendChild(titre);
+
+    var sous = document.createElement("p");
+    sous.className = "sous";
+    sous.textContent = res.total + " cause" + (res.total > 1 ? "s" : "") +
+      " citee" + (res.total > 1 ? "s" : "") + " sur " + libelleDe(periode) +
+      " — motifs de la liste et commentaires libres confondus.";
+    panneau.appendChild(sous);
+
+    var toile = document.createElement("div");
+    toile.className = "toile";
+    var canvas = document.createElement("canvas");
+    toile.appendChild(canvas);
+    panneau.appendChild(toile);
+
+    // tableau complet, sans rien ecarter
+    var detail = document.createElement("div");
+    detail.className = "detail";
+    var h3 = document.createElement("h3");
+    h3.textContent = "Toutes les causes citees";
+    detail.appendChild(h3);
+    var aide = document.createElement("p");
+    aide.className = "aide";
+    aide.textContent = res.liste.length + " cause" + (res.liste.length > 1 ? "s" : "") +
+                       " distincte" + (res.liste.length > 1 ? "s" : "") + ", de la plus frequente a la plus rare.";
+    detail.appendChild(aide);
+
+    var cadre = document.createElement("div");
+    cadre.className = "cadre";
+    var table = document.createElement("table");
+    table.innerHTML = "<thead><tr><th>Cause</th><th>Occurrences</th>" +
+                      "<th>Part</th><th>Cumul</th></tr></thead>";
+    var corps = document.createElement("tbody");
+
+    res.liste.forEach(function (c) {
+      var tr = document.createElement("tr");
+
+      var td1 = document.createElement("td");
+      td1.className = "cause"; td1.textContent = c.cause; tr.appendChild(td1);
+
+      var td2 = document.createElement("td");
+      td2.className = "num"; td2.textContent = c.nb; tr.appendChild(td2);
+
+      var td3 = document.createElement("td");
+      td3.className = "pct";
+      td3.textContent = c.part.toFixed(1).replace(".", ",") + " %";
+      var jauge = document.createElement("span");
+      jauge.className = "barre-pct";
+      jauge.style.width = Math.max(2, c.part) + "%";
+      td3.appendChild(jauge);
+      tr.appendChild(td3);
+
+      var td4 = document.createElement("td");
+      td4.className = "pct"; td4.textContent = c.cumul.toFixed(1).replace(".", ",") + " %";
+      tr.appendChild(td4);
+
+      corps.appendChild(tr);
+    });
+
+    table.appendChild(corps);
+    cadre.appendChild(table);
+    detail.appendChild(cadre);
+    panneau.appendChild(detail);
+    hote.appendChild(panneau);
+
+    // ── graphe : les principales causes, le reste regroupe ──────────────────
+    var tete = res.liste.slice(0, MAX_BARRES);
+    var reste = res.liste.slice(MAX_BARRES);
+    var barres = tete.slice();
+
+    if (reste.length) {
+      var nbReste = reste.reduce(function (s, c) { return s + c.nb; }, 0);
+      barres.push({
+        cause: "Autres (" + reste.length + ")",
+        nb: nbReste,
+        part: nbReste / res.total * 100,
+        cumul: 100
+      });
+    }
+
+    graphes.pareto = new Chart(canvas.getContext("2d"), {
+      data: {
+        labels: barres.map(function (c) { return raccourcir(c.cause, 22); }),
+        datasets: [
+          { type: "bar", label: "Occurrences", data: barres.map(function (c) { return c.nb; }),
+            backgroundColor: BLEU, borderRadius: 2, maxBarThickness: 54,
+            yAxisID: "y", order: 2 },
+          { type: "line", label: "Cumul", data: barres.map(function (c) { return +c.cumul.toFixed(1); }),
+            borderColor: VERT, backgroundColor: VERT, borderWidth: 2.5,
+            pointRadius: 3.5, yAxisID: "y2", order: 1 }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false, animation: false,
+        layout: { padding: { top: 26 } },
+        scales: {
+          x: { grid: { display: false },
+               ticks: { color: "#0d1520", font: { size: 12 }, maxRotation: 38, minRotation: 0 } },
+          y: { beginAtZero: true, position: "left",
+               title: { display: true, text: "Occurrences", color: "#5c6a7a" },
+               grid: { color: "#e8edf2" }, ticks: { color: "#5c6a7a", precision: 0 } },
+          y2: { beginAtZero: true, max: 100, position: "right",
+                title: { display: true, text: "Cumul (%)", color: "#5c6a7a" },
+                grid: { display: false },
+                ticks: { color: "#5c6a7a", callback: function (v) { return v + " %"; } } }
+        },
+        plugins: {
+          legend: { display: false },
+          etiquettesPareto: { barres: barres },
+          tooltip: {
+            callbacks: {
+              title: function (items) { return barres[items[0].dataIndex].cause; },
+              label: function (ctx) {
+                var c = barres[ctx.dataIndex];
+                if (ctx.dataset.type === "line")
+                  return "Cumul : " + c.cumul.toFixed(1).replace(".", ",") + " %";
+                return c.nb + " occurrence" + (c.nb > 1 ? "s" : "") +
+                       " — " + c.part.toFixed(1).replace(".", ",") + " %";
+              }
+            }
+          }
+        }
+      }
+    });
   }
 
   // ── Rendu ─────────────────────────────────────────────────────────────────
@@ -527,6 +743,8 @@
         }
       });
     });
+
+    dessinerPareto();
   }
 
   // ── Demarrage ─────────────────────────────────────────────────────────────
