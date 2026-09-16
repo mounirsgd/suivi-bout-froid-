@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-09-16T09:13:13",
+ "derniere_maj": "2026-09-16T11:36:24",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-09-16"
@@ -708,6 +708,1448 @@
    "metrique": "T1",
    "duree_min": 5,
    "commentaire": "Réglages robot palettiseur"
+  }
+ ],
+ "causes": [
+  {
+   "date": "2026-06-18",
+   "ligne": "221",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "4 régleurs"
+  },
+  {
+   "date": "2026-06-18",
+   "ligne": "221",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Beaucoup de tomber sur arche"
+  },
+  {
+   "date": "2026-06-22",
+   "ligne": "235",
+   "tache": "Arrivee de toutes sections",
+   "cause": "7 numéro en éjection Gl sbg, Gl Col, Ebreche."
+  },
+  {
+   "date": "2026-06-23",
+   "ligne": "221",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Mise à la trappe pas de LNM"
+  },
+  {
+   "date": "2026-06-23",
+   "ligne": "224",
+   "tache": "Aligneur vide",
+   "cause": "Ligne à l'arrêt manque de personnel"
+  },
+  {
+   "date": "2026-06-23",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Intervention mécanique M.4 G"
+  },
+  {
+   "date": "2026-06-24",
+   "ligne": "232",
+   "tache": "Aligneur vide",
+   "cause": "Vide de ligne"
+  },
+  {
+   "date": "2026-06-24",
+   "ligne": "232",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque témoin machine Multi et caroussel"
+  },
+  {
+   "date": "2026-06-24",
+   "ligne": "232",
+   "tache": "Top qualite",
+   "cause": "Top départ ok mais arrêt BC"
+  },
+  {
+   "date": "2026-06-24",
+   "ligne": "232",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 13h30"
+  },
+  {
+   "date": "2026-06-24",
+   "ligne": "232",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Deux premiers lots livrables = 14h42"
+  },
+  {
+   "date": "2026-06-24",
+   "ligne": "232",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 15h15 (lot 501)"
+  },
+  {
+   "date": "2026-06-24",
+   "ligne": "232",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Deux premiers lots livrables = 21h30 (lot 502 bloqué pour défaut dimensionnel). Lots 501 et 503 = OK"
+  },
+  {
+   "date": "2026-06-25",
+   "ligne": "221",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Abs MEBARKI.A même mécanique de la machine reprise reglage mecanique des sgd et calibrage"
+  },
+  {
+   "date": "2026-06-25",
+   "ligne": "221",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Blocage lot 1 pour épaule def (1 lot = 4 palette)"
+  },
+  {
+   "date": "2026-06-25",
+   "ligne": "221",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 13h34"
+  },
+  {
+   "date": "2026-06-25",
+   "ligne": "221",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Deux premiers lots livrables = 15h04 (lots 2 et 3). Lot 1 bloqué pour défauts verre"
+  },
+  {
+   "date": "2026-06-25",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Abs MEBARKI.A"
+  },
+  {
+   "date": "2026-06-25",
+   "ligne": "233",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Blocage pour bague déformé (2palette, 1 palette = 1 lot))"
+  },
+  {
+   "date": "2026-06-25",
+   "ligne": "233",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 14h25"
+  },
+  {
+   "date": "2026-06-25",
+   "ligne": "233",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Deux premiers lots livrables = 17h27 (lots 3 et 4). Lots 1 et 2 bloqués pour défauts verre"
+  },
+  {
+   "date": "2026-06-26",
+   "ligne": "224",
+   "tache": "Aligneur vide",
+   "cause": "Chariot de bobines non sortie"
+  },
+  {
+   "date": "2026-06-26",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Démontage et montage CO F+D (Manque portions COG), Démontage Montage réglage SGD"
+  },
+  {
+   "date": "2026-06-26",
+   "ligne": "224",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Réglage CO G+D, Réglage Symplex, Guidages"
+  },
+  {
+   "date": "2026-06-26",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 15h20"
+  },
+  {
+   "date": "2026-06-26",
+   "ligne": "224",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Deux premiers lots livrables = 19h27 (lots 3 et 4). Lots 1 et 2 bloqués pour défauts verre"
+  },
+  {
+   "date": "2026-06-26",
+   "ligne": "232",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 10h28"
+  },
+  {
+   "date": "2026-06-26",
+   "ligne": "232",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Deux premiers lots livrables = 17h21 (lots 503 et 504). Lots 501 et 502 bloqués pour défauts verre"
+  },
+  {
+   "date": "2026-06-29",
+   "ligne": "224",
+   "tache": "Aligneur vide",
+   "cause": "Manque de personnel mise au calcin 4h40"
+  },
+  {
+   "date": "2026-06-29",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel \nMatériel NOK\nCréation de fiche"
+  },
+  {
+   "date": "2026-06-29",
+   "ligne": "224",
+   "tache": "Arrivee de toutes sections",
+   "cause": "2 premiers lot bloqué glaçures épaules + arrachement fond brillant\n1er lot 5 commercialisable 23h02 \n2eme lot 6 commercialisable 00h38"
+  },
+  {
+   "date": "2026-06-29",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 15h42"
+  },
+  {
+   "date": "2026-06-29",
+   "ligne": "224",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Deux premiers lots livrables à J+1 (03h23) lots 5 et 8. Lots 1; 2; 3; 4; 6; 7 bloqués pour défauts verre"
+  },
+  {
+   "date": "2026-06-29",
+   "ligne": "233",
+   "tache": "Aligneur vide",
+   "cause": "RAS"
+  },
+  {
+   "date": "2026-06-29",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel \nCréation de fiche\nManque matériel"
+  },
+  {
+   "date": "2026-06-29",
+   "ligne": "233",
+   "tache": "Arrivee de toutes sections",
+   "cause": "lot 1/1 à 14h00\nlot 2/1 a 14h25"
+  },
+  {
+   "date": "2026-06-29",
+   "ligne": "233",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 14h00"
+  },
+  {
+   "date": "2026-06-29",
+   "ligne": "233",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Deux premiers lots livrables à 14h25 (lot 1 et 2)"
+  },
+  {
+   "date": "2026-06-30",
+   "ligne": "221",
+   "tache": "Aligneur vide",
+   "cause": "Mise au calcin manque effectif exploitation"
+  },
+  {
+   "date": "2026-06-30",
+   "ligne": "221",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque effectif automation"
+  },
+  {
+   "date": "2026-06-30",
+   "ligne": "221",
+   "tache": "Arrivee de toutes sections",
+   "cause": "11h15 top emballage\nLot 1 15h00\nLot 2 17h34"
+  },
+  {
+   "date": "2026-06-30",
+   "ligne": "221",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 15h00"
+  },
+  {
+   "date": "2026-06-30",
+   "ligne": "221",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Deux premiers lots livrables = 17h34 (lots 1 et 2)"
+  },
+  {
+   "date": "2026-07-01",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque personnel création fiche réglage fardeleuse début réglage fardeleuse  10 heures 20, matériel non conforme"
+  },
+  {
+   "date": "2026-07-01",
+   "ligne": "224",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Recuit nok"
+  },
+  {
+   "date": "2026-07-01",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 14h33"
+  },
+  {
+   "date": "2026-07-01",
+   "ligne": "224",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Deux premiers lots livrables à 16h29 (lots 1 et 2)"
+  },
+  {
+   "date": "2026-07-01",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "manque personnel, matériel NOK, nouvelle production (création de toutes les fiches), Manque témoins"
+  },
+  {
+   "date": "2026-07-01",
+   "ligne": "235",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 16h34"
+  },
+  {
+   "date": "2026-07-01",
+   "ligne": "235",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lot 1 à casser (trop de défauts verre). Lots suivants en attente résultat PDS"
+  },
+  {
+   "date": "2026-07-02",
+   "ligne": "233",
+   "tache": "Aligneur vide",
+   "cause": "RAS"
+  },
+  {
+   "date": "2026-07-02",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Témoins = 1 glaçure bague et 2 glaçures sous bague"
+  },
+  {
+   "date": "2026-07-02",
+   "ligne": "233",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Montage sabre NA"
+  },
+  {
+   "date": "2026-07-02",
+   "ligne": "233",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Arrivée flacon 12H10\nTop qualité 13H35\nEmballage 14H25\nlot 1: 17h11\nlot 2: 19h39"
+  },
+  {
+   "date": "2026-07-02",
+   "ligne": "233",
+   "tache": "Top qualite",
+   "cause": "Top Qualité = 13h37"
+  },
+  {
+   "date": "2026-07-02",
+   "ligne": "233",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 17h11"
+  },
+  {
+   "date": "2026-07-02",
+   "ligne": "233",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Deux premiers lots livrables à 19h39 (lots 1 et 2)"
+  },
+  {
+   "date": "2026-07-03",
+   "ligne": "221",
+   "tache": "Aligneur vide",
+   "cause": "07h20 Nettoyage convoyeurs"
+  },
+  {
+   "date": "2026-07-03",
+   "ligne": "221",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "RAS"
+  },
+  {
+   "date": "2026-07-03",
+   "ligne": "221",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "3 sections dans l'arche"
+  },
+  {
+   "date": "2026-07-03",
+   "ligne": "221",
+   "tache": "Arrivee de toutes sections",
+   "cause": "NA, pas de top qualité pour l'instant"
+  },
+  {
+   "date": "2026-07-03",
+   "ligne": "221",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 19h29"
+  },
+  {
+   "date": "2026-07-03",
+   "ligne": "221",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Deux premiers lots livrables à J+1 15h21 (lots 6 et 7). Lots précédents bloqués pour défauts verre"
+  },
+  {
+   "date": "2026-07-03",
+   "ligne": "224",
+   "tache": "Aligneur vide",
+   "cause": "09h20 Nettoyage convoyeurs \n09h30 Nettoyage plaques de transfert \n09h45 Changement des chiffons"
+  },
+  {
+   "date": "2026-07-03",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "réglages pas encore terminer"
+  },
+  {
+   "date": "2026-07-03",
+   "ligne": "224",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Pas de sections dans l'arche"
+  },
+  {
+   "date": "2026-07-03",
+   "ligne": "224",
+   "tache": "Arrivee de toutes sections",
+   "cause": "pas de top qualité (pas de flacons dans l'arche)"
+  },
+  {
+   "date": "2026-07-03",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 13h29"
+  },
+  {
+   "date": "2026-07-03",
+   "ligne": "224",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "J0 = 17 lots bloqués en M90. Pas de livrables"
+  },
+  {
+   "date": "2026-07-06",
+   "ligne": "222",
+   "tache": "Aligneur vide",
+   "cause": "RAS"
+  },
+  {
+   "date": "2026-07-06",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque personnel"
+  },
+  {
+   "date": "2026-07-06",
+   "ligne": "222",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "1 section  \nTous les flacons sont arrivés en même temps"
+  },
+  {
+   "date": "2026-07-06",
+   "ligne": "222",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Top qualité 13h50\nLot 1 : 16h11\nLot 2: NC\nLot 3: 18h45"
+  },
+  {
+   "date": "2026-07-06",
+   "ligne": "222",
+   "tache": "Top qualite",
+   "cause": "Top Qualité = 13h50"
+  },
+  {
+   "date": "2026-07-06",
+   "ligne": "222",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 13h11"
+  },
+  {
+   "date": "2026-07-06",
+   "ligne": "222",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Deux premiers lots livrables = 19h43 (lots 3 et 4). Lots précédents bloqués pour défauts verre"
+  },
+  {
+   "date": "2026-07-06",
+   "ligne": "222",
+   "tache": "Aligneur vide",
+   "cause": "RAS"
+  },
+  {
+   "date": "2026-07-06",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Grand manque de personnel"
+  },
+  {
+   "date": "2026-07-06",
+   "ligne": "222",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "1 section  \nTous les flacons sont arrivés en même temps"
+  },
+  {
+   "date": "2026-07-06",
+   "ligne": "222",
+   "tache": "Arrivee de toutes sections",
+   "cause": "démarrage tardif \nMachine B 13H45\nLot 1 : 16h11\nLot 2: NC\nLot 3: 18h45"
+  },
+  {
+   "date": "2026-07-06",
+   "ligne": "222",
+   "tache": "Top qualite",
+   "cause": "Top Qualité = 13h50"
+  },
+  {
+   "date": "2026-07-06",
+   "ligne": "222",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 16h13"
+  },
+  {
+   "date": "2026-07-06",
+   "ligne": "222",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Sortie deux premiers lots livrables à 19h43"
+  },
+  {
+   "date": "2026-07-07",
+   "ligne": "233",
+   "tache": "Aligneur vide",
+   "cause": "RAS"
+  },
+  {
+   "date": "2026-07-07",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Gros manque de personnel aide de la production"
+  },
+  {
+   "date": "2026-07-07",
+   "ligne": "233",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Mise a l'arche - tout sections"
+  },
+  {
+   "date": "2026-07-07",
+   "ligne": "233",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Top qualité: 10h55\nTop emballage 11h05\nlot 5: 19h08\nlot 6 : 19h46"
+  },
+  {
+   "date": "2026-07-07",
+   "ligne": "233",
+   "tache": "Top qualite",
+   "cause": "Top Qualité = 10h55"
+  },
+  {
+   "date": "2026-07-07",
+   "ligne": "233",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 14h18"
+  },
+  {
+   "date": "2026-07-07",
+   "ligne": "233",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Sortie deux lots livrables à 19h42 / 4 premiers lots bloqués pour défaut verre (M82)"
+  },
+  {
+   "date": "2026-07-07",
+   "ligne": "235",
+   "tache": "Aligneur vide",
+   "cause": "RAS"
+  },
+  {
+   "date": "2026-07-07",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Gros manque de personnel"
+  },
+  {
+   "date": "2026-07-07",
+   "ligne": "235",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Deux sections \narrivée flacon 11h23"
+  },
+  {
+   "date": "2026-07-07",
+   "ligne": "235",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Top qualité: 11h40\nLot 5: 18h36\nLot 6: 19h24"
+  },
+  {
+   "date": "2026-07-07",
+   "ligne": "235",
+   "tache": "Top qualite",
+   "cause": "Top Qualité = 11h42"
+  },
+  {
+   "date": "2026-07-07",
+   "ligne": "235",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 15h02"
+  },
+  {
+   "date": "2026-07-07",
+   "ligne": "235",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Sortie deux premiers lots livrables à 19h24 / 3 premiers lots bloqués pour défauts verre (M82)"
+  },
+  {
+   "date": "2026-07-08",
+   "ligne": "232",
+   "tache": "Aligneur vide",
+   "cause": "RAS"
+  },
+  {
+   "date": "2026-07-08",
+   "ligne": "232",
+   "tache": "T0 : Nettoyage de ligne",
+   "cause": "Finalisé par le CE suite manque personnel BF\nFinalisation des boites bleues plus de flacon avant le 8h00"
+  },
+  {
+   "date": "2026-07-08",
+   "ligne": "232",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Réglage pas encore terminé car manque de personnel \nCO centre terminé en dernier"
+  },
+  {
+   "date": "2026-07-08",
+   "ligne": "232",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "08h40 3 sections"
+  },
+  {
+   "date": "2026-07-08",
+   "ligne": "232",
+   "tache": "Top qualite",
+   "cause": "Top qualité: 13h20"
+  },
+  {
+   "date": "2026-07-08",
+   "ligne": "232",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 17h39"
+  },
+  {
+   "date": "2026-07-08",
+   "ligne": "232",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Deux premiers lots livrables à 05h35 à J+1 (505 et 506) lots antérieurs bloqués pour défauts verre"
+  },
+  {
+   "date": "2026-07-08",
+   "ligne": "232",
+   "tache": "T0 : Nettoyage de ligne",
+   "cause": "Finalisation boite bleues après pcs par CE suite manque effectif BF"
+  },
+  {
+   "date": "2026-07-08",
+   "ligne": "232",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "En cours reste CO centre"
+  },
+  {
+   "date": "2026-07-08",
+   "ligne": "232",
+   "tache": "Top qualite",
+   "cause": "Top Qualité à 13h20"
+  },
+  {
+   "date": "2026-07-08",
+   "ligne": "232",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lots sorti à 14h43"
+  },
+  {
+   "date": "2026-07-08",
+   "ligne": "232",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Deux premiers lots livrables à 23h15 (10 et 11) / Lots antérieurs bloqués (M80 / M82) - Défauts verre + recyclage"
+  },
+  {
+   "date": "2026-07-08",
+   "ligne": "235",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Mise a l'arche - tout sections"
+  },
+  {
+   "date": "2026-07-08",
+   "ligne": "235",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Pas de top qualité en changement indice\nLot 02: 11h58\nLot 04: 13h43\nRéglages machines BF : (MCAL*2) + (MX4*2) + (MULTI*2) + fiche robot à créer"
+  },
+  {
+   "date": "2026-07-08",
+   "ligne": "235",
+   "tache": "Top qualite",
+   "cause": "Lots en double dans SAP / À traiter spécifiquement"
+  },
+  {
+   "date": "2026-07-08",
+   "ligne": "235",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 10h57"
+  },
+  {
+   "date": "2026-07-08",
+   "ligne": "235",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Deux premiers lots livrables = 15h32 (lots 6 et 7). Lots antérieurs bloqués pour défauts verre"
+  },
+  {
+   "date": "2026-07-09",
+   "ligne": "233",
+   "tache": "Aligneur vide",
+   "cause": "RAS"
+  },
+  {
+   "date": "2026-07-09",
+   "ligne": "233",
+   "tache": "T0 : Nettoyage de ligne",
+   "cause": "RAS"
+  },
+  {
+   "date": "2026-07-09",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel \nCO centre terminer en dernier"
+  },
+  {
+   "date": "2026-07-09",
+   "ligne": "233",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "RAS"
+  },
+  {
+   "date": "2026-07-09",
+   "ligne": "233",
+   "tache": "Top qualite",
+   "cause": "Top qualité 10h00"
+  },
+  {
+   "date": "2026-07-09",
+   "ligne": "233",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 12h19"
+  },
+  {
+   "date": "2026-07-09",
+   "ligne": "233",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Sortie deux premiers lots livrables à 13h39"
+  },
+  {
+   "date": "2026-07-10",
+   "ligne": "224",
+   "tache": "Aligneur vide",
+   "cause": "RAS"
+  },
+  {
+   "date": "2026-07-10",
+   "ligne": "224",
+   "tache": "T0 : Nettoyage de ligne",
+   "cause": "RAS"
+  },
+  {
+   "date": "2026-07-10",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Symplex brins gauche régler en dernier car manque de personnel"
+  },
+  {
+   "date": "2026-07-10",
+   "ligne": "224",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "08h15 toutes les sections sont dans l'arche"
+  },
+  {
+   "date": "2026-07-10",
+   "ligne": "224",
+   "tache": "Top qualite",
+   "cause": "Top qualité = 09h05"
+  },
+  {
+   "date": "2026-07-10",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 10h32"
+  },
+  {
+   "date": "2026-07-10",
+   "ligne": "224",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Sortie deux premiers lots livrables à 11h49"
+  },
+  {
+   "date": "2026-07-15",
+   "ligne": "224",
+   "tache": "Aligneur vide",
+   "cause": "Fin de production a 06h20"
+  },
+  {
+   "date": "2026-07-15",
+   "ligne": "224",
+   "tache": "T0 : Nettoyage de ligne",
+   "cause": "Fin de nettoyage ligne a 08h"
+  },
+  {
+   "date": "2026-07-15",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Symplex brins gauche réglages terminer en dernier a 09h15 \nManque de personnel"
+  },
+  {
+   "date": "2026-07-15",
+   "ligne": "224",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Arriver deux sections a 12h00 \nToutes les sections sont dans l'arche a 12h20"
+  },
+  {
+   "date": "2026-07-15",
+   "ligne": "224",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Pas de top qualité pour l'instant, démarrage tardif"
+  },
+  {
+   "date": "2026-07-15",
+   "ligne": "224",
+   "tache": "Top qualite",
+   "cause": "Top qualité a 15h20"
+  },
+  {
+   "date": "2026-07-15",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lots sorti à 18h23 / Démarrage tardif"
+  },
+  {
+   "date": "2026-07-15",
+   "ligne": "224",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Sortie deux premiers lots livrables à 20h11 / Démarrage tardif / Échantillonnage"
+  },
+  {
+   "date": "2026-07-16",
+   "ligne": "222",
+   "tache": "Aligneur vide",
+   "cause": "Arrêt total bout chaud 08h00 Changement \nAligneur vide a 08h30"
+  },
+  {
+   "date": "2026-07-16",
+   "ligne": "222",
+   "tache": "T0 : Nettoyage de ligne",
+   "cause": "Fin de nettoyage ligne 09h00"
+  },
+  {
+   "date": "2026-07-16",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Reprise témoins glaçure fond CO centre et CO gauche \nReprise témoins corps sur les trois MCAL"
+  },
+  {
+   "date": "2026-07-16",
+   "ligne": "222",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Toutes les sections sont dans l'arche \nLes deux machines sont dans l'arche"
+  },
+  {
+   "date": "2026-07-16",
+   "ligne": "222",
+   "tache": "Top qualite",
+   "cause": "Top qualité a 11h10"
+  },
+  {
+   "date": "2026-07-16",
+   "ligne": "222",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 13h01"
+  },
+  {
+   "date": "2026-07-16",
+   "ligne": "222",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Pas de livrables. Nombreux lots bloqués pour défauts verre + défauts palettisation (M68 / M50)"
+  },
+  {
+   "date": "2026-07-17",
+   "ligne": "224",
+   "tache": "Aligneur vide",
+   "cause": "Arrêt total bout chaud a 06h15"
+  },
+  {
+   "date": "2026-07-17",
+   "ligne": "224",
+   "tache": "T0 : Nettoyage de ligne",
+   "cause": "RAS"
+  },
+  {
+   "date": "2026-07-17",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel"
+  },
+  {
+   "date": "2026-07-17",
+   "ligne": "224",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Deux sections a 09h15\n11h00 3 sections dans l'arche \n11h25 toutes les sections sont dans l'arche"
+  },
+  {
+   "date": "2026-07-17",
+   "ligne": "224",
+   "tache": "Arrivee de toutes sections",
+   "cause": "11h00 Pas de top qualité pour l'instant"
+  },
+  {
+   "date": "2026-07-17",
+   "ligne": "224",
+   "tache": "Top qualite",
+   "cause": "Top qualité a 13h30"
+  },
+  {
+   "date": "2026-07-17",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 14h53 (1 palette / manque 3 palette). Lot 2 complet à 17h53"
+  },
+  {
+   "date": "2026-07-17",
+   "ligne": "224",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lots en attente résultats PDS"
+  },
+  {
+   "date": "2026-07-20",
+   "ligne": "224",
+   "tache": "Aligneur vide",
+   "cause": "RAS"
+  },
+  {
+   "date": "2026-07-20",
+   "ligne": "224",
+   "tache": "T0 : Nettoyage de ligne",
+   "cause": "RAS"
+  },
+  {
+   "date": "2026-07-20",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel"
+  },
+  {
+   "date": "2026-07-20",
+   "ligne": "224",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "10h55 : 2 sections dans l'arche"
+  },
+  {
+   "date": "2026-07-20",
+   "ligne": "224",
+   "tache": "Top qualite",
+   "cause": "Top qualité à 12h00"
+  },
+  {
+   "date": "2026-07-20",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 16h54"
+  },
+  {
+   "date": "2026-07-20",
+   "ligne": "224",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Deux premiers lots livrables à 18h45"
+  },
+  {
+   "date": "2026-07-20",
+   "ligne": "235",
+   "tache": "Aligneur vide",
+   "cause": "RAS"
+  },
+  {
+   "date": "2026-07-20",
+   "ligne": "235",
+   "tache": "T0 : Nettoyage de ligne",
+   "cause": "RAS"
+  },
+  {
+   "date": "2026-07-20",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "CO brins gauche réglage terminer en dernier pour manque de personnel"
+  },
+  {
+   "date": "2026-07-20",
+   "ligne": "235",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "11h10 deux sections dans l'arche"
+  },
+  {
+   "date": "2026-07-20",
+   "ligne": "235",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Top qualité a 13h55"
+  },
+  {
+   "date": "2026-07-20",
+   "ligne": "235",
+   "tache": "Top qualite",
+   "cause": "Top qualité a 13h55"
+  },
+  {
+   "date": "2026-07-20",
+   "ligne": "235",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 17h15"
+  },
+  {
+   "date": "2026-07-20",
+   "ligne": "235",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Pas de livrables au 20/07/26"
+  },
+  {
+   "date": "2026-07-21",
+   "ligne": "221",
+   "tache": "Aligneur vide",
+   "cause": "Arrêt bout chaud a 06h30 \nAligneur vide a 07h10"
+  },
+  {
+   "date": "2026-07-21",
+   "ligne": "221",
+   "tache": "T0 : Nettoyage de ligne",
+   "cause": "RAS"
+  },
+  {
+   "date": "2026-07-21",
+   "ligne": "221",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel"
+  },
+  {
+   "date": "2026-07-21",
+   "ligne": "221",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "10h30: 5 sections dans l'arche\n11h15 arrêt bout chaud de 10 min"
+  },
+  {
+   "date": "2026-07-21",
+   "ligne": "221",
+   "tache": "Top qualite",
+   "cause": "11h30 top qualité"
+  },
+  {
+   "date": "2026-07-21",
+   "ligne": "221",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 14h46"
+  },
+  {
+   "date": "2026-07-21",
+   "ligne": "221",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Deux premiers lots livrables = 16h25 / Premier lot bloqué-M51"
+  },
+  {
+   "date": "2026-07-21",
+   "ligne": "233",
+   "tache": "Aligneur vide",
+   "cause": "Arrêt bout chaud a 07h50\nAligneur vide a 08h30"
+  },
+  {
+   "date": "2026-07-21",
+   "ligne": "233",
+   "tache": "T0 : Nettoyage de ligne",
+   "cause": "RAS"
+  },
+  {
+   "date": "2026-07-21",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel"
+  },
+  {
+   "date": "2026-07-21",
+   "ligne": "233",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "3 sections dans l'arche a 10h40"
+  },
+  {
+   "date": "2026-07-21",
+   "ligne": "233",
+   "tache": "Top qualite",
+   "cause": "Top Qualité = 11h20"
+  },
+  {
+   "date": "2026-07-21",
+   "ligne": "233",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lots sorti à 12h39"
+  },
+  {
+   "date": "2026-07-21",
+   "ligne": "233",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Deux premiers lots livrables = 13h40 (premier lot bloqué-M51)"
+  },
+  {
+   "date": "2026-09-07",
+   "ligne": "224",
+   "tache": "Top qualite",
+   "cause": "Démarrage tardif"
+  },
+  {
+   "date": "2026-09-07",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué"
+  },
+  {
+   "date": "2026-09-07",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Démarrage tardif"
+  },
+  {
+   "date": "2026-09-07",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à J+1 (02h24). Lot bloqué en M51 (à retrier)"
+  },
+  {
+   "date": "2026-09-07",
+   "ligne": "224",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lot bloqué"
+  },
+  {
+   "date": "2026-09-07",
+   "ligne": "224",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "2 premiers lots commercialisables = lots 9 et 10 à J+1 (19h13)"
+  },
+  {
+   "date": "2026-09-08",
+   "ligne": "233",
+   "tache": "Aligneur vide",
+   "cause": "Manque de personnel"
+  },
+  {
+   "date": "2026-09-08",
+   "ligne": "233",
+   "tache": "T0 : Nettoyage de ligne",
+   "cause": "Manque de personnel"
+  },
+  {
+   "date": "2026-09-08",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Nettoyage (débris verre)"
+  },
+  {
+   "date": "2026-09-08",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Témoins NOK"
+  },
+  {
+   "date": "2026-09-08",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Témoins NOK : problème de teinte entre les témoins et la production montante"
+  },
+  {
+   "date": "2026-09-08",
+   "ligne": "233",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Beaucoup de tombés"
+  },
+  {
+   "date": "2026-09-08",
+   "ligne": "233",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué"
+  },
+  {
+   "date": "2026-09-08",
+   "ligne": "233",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot bloqué en M55 (packs déformés)"
+  },
+  {
+   "date": "2026-09-08",
+   "ligne": "233",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lot bloqué"
+  },
+  {
+   "date": "2026-09-08",
+   "ligne": "233",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "2 lots commercialisables : J+1 (06h26) > lots 4 et 7"
+  },
+  {
+   "date": "2026-09-09",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Matériel NOK"
+  },
+  {
+   "date": "2026-09-09",
+   "ligne": "222",
+   "tache": "Montee en regime",
+   "cause": "2 brins sur 3 réglé correctement suite à une qualification sur le brins centre Qualité/Tiama."
+  },
+  {
+   "date": "2026-09-09",
+   "ligne": "222",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué"
+  },
+  {
+   "date": "2026-09-09",
+   "ligne": "222",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot à 17h01 (bloqué en M99)"
+  },
+  {
+   "date": "2026-09-09",
+   "ligne": "222",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Pas de lots commercialisables à J+1 (10h40)"
+  },
+  {
+   "date": "2026-09-10",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Intervention maintenance"
+  },
+  {
+   "date": "2026-09-10",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Four rétractation"
+  },
+  {
+   "date": "2026-09-10",
+   "ligne": "233",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Quelques tombés"
+  },
+  {
+   "date": "2026-09-10",
+   "ligne": "233",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à 12h46 (bloqué en M51 - Maxi corps)"
+  },
+  {
+   "date": "2026-09-10",
+   "ligne": "233",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Deux lots commercialisables : 14h40 (2 et 3)"
+  },
+  {
+   "date": "2026-09-14",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Création fiche"
+  },
+  {
+   "date": "2026-09-14",
+   "ligne": "224",
+   "tache": "Montee en regime",
+   "cause": "13 numéro en éjection"
+  },
+  {
+   "date": "2026-09-14",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué"
+  },
+  {
+   "date": "2026-09-14",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Défaut qualité"
+  },
+  {
+   "date": "2026-09-14",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué en M51 : à retrier (4 moules en filet déformé)"
+  },
+  {
+   "date": "2026-09-14",
+   "ligne": "224",
+   "tache": "Top emballage",
+   "cause": "11 moules en éjection au moment du top emballage"
+  },
+  {
+   "date": "2026-09-14",
+   "ligne": "224",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Pas de livrables à J+1 : 08h50 (E91-Attente contrôle laboratoire)"
+  },
+  {
+   "date": "2026-09-14",
+   "ligne": "236",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Intervention TIAMA IA"
+  },
+  {
+   "date": "2026-09-14",
+   "ligne": "236",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Beaucoup de tombés"
+  },
+  {
+   "date": "2026-09-14",
+   "ligne": "236",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué"
+  },
+  {
+   "date": "2026-09-14",
+   "ligne": "236",
+   "tache": "Premier lot sorti",
+   "cause": "Défaut qualité"
+  },
+  {
+   "date": "2026-09-14",
+   "ligne": "236",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué en M51 : à retrier (4 moules en verticalité)"
+  },
+  {
+   "date": "2026-09-14",
+   "ligne": "236",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Pas de lots livrables à J+1 - 15h40 (E94-assurance super contrôle Qualité)"
+  },
+  {
+   "date": "2026-09-15",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Matériel NOK"
+  },
+  {
+   "date": "2026-09-15",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Réglage non terminé"
+  },
+  {
+   "date": "2026-09-15",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Intervention maintenance"
+  },
+  {
+   "date": "2026-09-15",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Témoins NOK"
+  },
+  {
+   "date": "2026-09-15",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Calibrage Mx D en réglage, Panne Multi D"
+  },
+  {
+   "date": "2026-09-15",
+   "ligne": "235",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Recuit NOK"
+  },
+  {
+   "date": "2026-09-15",
+   "ligne": "235",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Risque de casse sur ligne"
+  },
+  {
+   "date": "2026-09-15",
+   "ligne": "235",
+   "tache": "Top qualite",
+   "cause": "Démarrage tardif"
+  },
+  {
+   "date": "2026-09-15",
+   "ligne": "235",
+   "tache": "Top qualite",
+   "cause": "Pas de top Qualité à 15h40. Verticalité, glaçures, casse, mauvaise répartition"
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "232",
+   "tache": "Aligneur vide",
+   "cause": "Manque de personnel"
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "232",
+   "tache": "T0 : Nettoyage de ligne",
+   "cause": "Nettoyage non terminé"
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "232",
+   "tache": "T0 : Nettoyage de ligne",
+   "cause": "Manque de personnel"
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "232",
+   "tache": "T0 : Nettoyage de ligne",
+   "cause": "Pas d'informations"
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "232",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Nettoyage (débris verre)"
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "232",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel"
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "232",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Chariot film NOK"
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "232",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Beaucoup de tombées"
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "232",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Tombées sur arche"
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "232",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Pas de série contrôlable Cf SQ A.C 11h27"
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "232",
+   "tache": "Montee en regime",
+   "cause": "12 numéro en éjection"
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Réglages robot palettiseur"
   }
  ]
 }
