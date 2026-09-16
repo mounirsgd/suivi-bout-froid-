@@ -1,0 +1,44 @@
+name: Calcul des stats Bout Froid
+
+on:
+  schedule:
+    # 06:07 UTC = 08:07 heure de Paris en ete, 07:07 en hiver.
+    # Minute decalee volontairement : GitHub retarde les crons a l'heure ronde.
+    - cron: '7 6 * * *'
+  workflow_dispatch:        # permet aussi de lancer le calcul a la main
+
+permissions:
+  contents: write
+
+jobs:
+  calcul:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Recuperer le depot
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installer les dependances
+        run: pip install firebase-admin
+
+      - name: Calculer les statistiques
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: python scripts/calcul_stats.py
+
+      - name: Publier le resultat
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add data/stats.json
+          if git diff --staged --quiet; then
+            echo "Aucun changement, rien a publier."
+          else
+            git commit -m "Stats Bout Froid du $(date -u +%Y-%m-%d)"
+            git push
+          fi
