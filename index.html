@@ -360,9 +360,13 @@
       var barres = chart.getDatasetMeta(0);
       ctx.font = "600 12.5px 'IBM Plex Sans', Arial, sans-serif";
       ctx.fillStyle = "#0d1520";
+      var zones = [];          // place prise par chaque chiffre de barre
       barres.data.forEach(function (el, i) {
+        var t = opts.formater(lignes[i].valeur);
         ctx.textBaseline = "bottom";
-        ctx.fillText(opts.formater(lignes[i].valeur), el.x, el.y - 6);
+        ctx.fillText(t, el.x, el.y - 6);
+        var demi = ctx.measureText(t).width / 2 + 3;
+        zones.push({ x1: el.x - demi, x2: el.x + demi, y1: el.y - 20, y2: el.y - 3 });
       });
 
       // valeurs sur la ligne d'objectif, dans une pastille
@@ -375,10 +379,43 @@
         var texte = opts.formater(brut);
         var l = ctx.measureText(texte).width + 12;
         var h = 18;
-        // sous le point si la barre est au-dessus, au-dessus sinon
-        var hautBarre = barres.data[i].y;
-        var y = (el.y > hautBarre + 22) ? el.y + 8 : el.y - h - 8;
-        var x = el.x - l/2;
+
+        // la pastille ne doit croiser aucun chiffre de barre deja ecrit
+        var chevauche = function (x, y) {
+          for (var k = 0; k < zones.length; k++) {
+            var z = zones[k];
+            if (x < z.x2 && x + l > z.x1 && y < z.y2 && y + h > z.y1) return true;
+          }
+          return false;
+        };
+
+        var haut = chart.chartArea.top, bas = chart.chartArea.bottom;
+        var gauche = chart.chartArea.left, droite = chart.chartArea.right;
+
+        // positions essayees dans l'ordre : dessous, dessus, puis decalees
+        var essais = [
+          [el.x - l/2, el.y + 9],
+          [el.x - l/2, el.y - h - 9],
+          [el.x + 9,   el.y - h/2],
+          [el.x - l - 9, el.y - h/2],
+          [el.x - l/2, el.y + h + 14],
+          [el.x - l/2, el.y - 2*h - 14]
+        ];
+
+        var x = essais[0][0], y = essais[0][1], trouve = false;
+        for (var e = 0; e < essais.length; e++) {
+          var ex = Math.min(Math.max(essais[e][0], gauche + 2), droite - l - 2);
+          var ey = essais[e][1];
+          if (ey < haut + 1 || ey + h > bas - 1) continue;
+          if (!chevauche(ex, ey)) { x = ex; y = ey; trouve = true; break; }
+        }
+        if (!trouve) {
+          x = Math.min(Math.max(el.x - l/2, gauche + 2), droite - l - 2);
+          y = Math.min(Math.max(el.y + 9, haut + 1), bas - h - 1);
+        }
+
+        // la pastille posee devient a son tour une zone a eviter
+        zones.push({ x1: x, x2: x + l, y1: y, y2: y + h });
         ctx.fillStyle = "#ffffff";
         ctx.strokeStyle = VERT;
         ctx.lineWidth = 1;
