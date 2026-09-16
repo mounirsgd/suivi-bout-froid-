@@ -129,35 +129,42 @@
   .plus-lent { color: var(--saumon); font-weight: 600; }
   .plus-vite { color: var(--vert); font-weight: 600; }
 
-  /* ── Grille d'evolution ───────────────────────────────────────────────── */
-  .evolution table { border-collapse: separate; border-spacing: 3px; width: 100%; }
-  .evolution th {
-    position: static; background: none; padding: 4px 6px;
-    font-size: 12px; color: var(--muted); font-weight: 600; border: none;
+  /* ── Evolution mois par mois ──────────────────────────────────────────── */
+  .evolution .bloc + .bloc { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--rule); }
+  .evolution .nom {
+    font-size: 13.5px; font-weight: 600; color: var(--titre); margin-bottom: 10px;
   }
-  .evolution thead th { text-align: center; }
-  .evolution th.indic {
-    text-align: left; color: var(--titre); font-weight: 600;
-    font-size: 13px; white-space: normal; min-width: 116px; padding-right: 10px;
+  .mois-ligne {
+    display: grid; grid-template-columns: 42px 1fr auto;
+    align-items: center; gap: 10px; margin-bottom: 8px;
   }
-  .case {
-    text-align: center; padding: 11px 6px; border-radius: 7px;
-    font-weight: 600; font-size: 14px; color: var(--titre);
-    background: #f1f3f7; line-height: 1.25;
+  .mois-nom { font-size: 12.5px; color: var(--muted); font-weight: 500; }
+  .piste-mois { position: relative; height: 26px; background: #f1f3f7; border-radius: 5px; }
+  .barre-mois {
+    position: absolute; left: 0; top: 0; bottom: 0;
+    background: var(--bleu); border-radius: 5px; opacity: .88;
   }
-  .case small {
-    display: block; font-size: 11px; font-weight: 500;
-    opacity: .8; margin-top: 2px;
+  .points { position: absolute; left: 0; right: 0; top: 0; bottom: 0; }
+  .point {
+    position: absolute; top: 50%; width: 7px; height: 7px;
+    margin: -3.5px 0 0 -3.5px; border-radius: 50%;
+    background: #fff; border: 1.5px solid var(--navy); box-shadow: 0 0 0 1px #fff;
   }
-  .case.absent { background: #f7f8fa; color: #b6bfca; font-weight: 500; }
-  .echelle {
-    display: flex; align-items: center; gap: 9px; flex-wrap: wrap;
-    margin-top: 12px; font-size: 12px; color: var(--muted);
+  .valeur-mois {
+    font-size: 13px; font-weight: 600; color: var(--titre);
+    white-space: nowrap; text-align: right; min-width: 108px;
   }
-  .echelle .bande {
-    display: inline-block; width: 128px; height: 9px; border-radius: 5px;
-    background: linear-gradient(90deg, #1f9d55 0%, #c9dfd2 46%, #f0cdc4 54%, #d9614a 100%);
+  .valeur-mois em {
+    font-style: normal; font-weight: 600; font-size: 12px; margin-left: 7px;
   }
+  .en-baisse { color: var(--vert); }
+  .en-hausse { color: var(--saumon); }
+  .stable    { color: var(--muted); }
+  .repere-obj {
+    position: absolute; top: -2px; bottom: -2px; width: 2px;
+    background: var(--vert);
+  }
+  .note-evo { margin: 14px 0 0; font-size: 12px; color: var(--muted); }
 
   /* ── Tableau des causes ───────────────────────────────────────────────── */
   .causes { margin-top: 18px; }
@@ -552,34 +559,36 @@
     return Object.keys(v).sort();
   }
 
-  function moyenneMois(metrique, mois) {
-    var somme = 0, nb = 0, objectifs = 0, nbObj = 0;
-    var vues = {};
+  function resumeMois(metrique, mois) {
+    var somme = 0, nb = 0, parLigne = {};
     donnees.mesures.forEach(function (m) {
       if (m.metrique !== metrique || m.date.slice(0, 7) !== mois) return;
       somme += m.duree_min; nb += 1;
-      vues[m.ligne] = true;
+      if (!parLigne[m.ligne]) parLigne[m.ligne] = { somme: 0, nb: 0 };
+      parLigne[m.ligne].somme += m.duree_min;
+      parLigne[m.ligne].nb += 1;
     });
     if (!nb) return null;
-    // objectif de reference : moyenne des objectifs des lignes actives ce mois
-    var targets = donnees.targets[metrique] || {};
-    Object.keys(vues).forEach(function (l) {
-      if (targets[l] != null) { objectifs += targets[l]; nbObj += 1; }
-    });
-    return {
-      valeur: somme / nb,
-      nb: nb,
-      objectif: nbObj ? objectifs / nbObj : null
-    };
-  }
 
-  // Du vert (sous l'objectif) au saumon (au-dessus), selon l'ecart relatif.
-  function teinte(ecartRelatif) {
-    var e = Math.max(-0.4, Math.min(0.4, ecartRelatif)) / 0.4;   // -1 .. 1
-    var force = Math.abs(e);
-    var fond = e < 0 ? [31, 157, 85] : [217, 97, 74];
-    var melange = function (c) { return Math.round(255 - (255 - c) * (0.12 + force * 0.78)); };
-    return "rgb(" + fond.map(melange).join(",") + ")";
+    var targets = donnees.targets[metrique] || {};
+    var lignes = Object.keys(parLigne).map(function (l) {
+      return {
+        ligne: l,
+        valeur: parLigne[l].somme / parLigne[l].nb,
+        nb: parLigne[l].nb,
+        objectif: targets[l] != null ? targets[l] : null
+      };
+    }).sort(function (a, b) { return a.valeur - b.valeur; });
+
+    var tenus = lignes.filter(function (l) {
+      return l.objectif != null && l.valeur <= l.objectif;
+    }).length;
+    var evalues = lignes.filter(function (l) { return l.objectif != null; }).length;
+
+    return {
+      moyenne: somme / nb, nb: nb, lignes: lignes,
+      tenus: tenus, evalues: evalues
+    };
   }
 
   function dessinerEvolution() {
@@ -596,77 +605,107 @@
 
     var sous = document.createElement("p");
     sous.className = "sous";
-    sous.textContent = "Tous les mois disponibles, independamment du filtre ci-dessus.";
+    sous.textContent = "Plus la barre est courte, plus le temps est bon. " +
+                       "Tous les mois disponibles, independamment du filtre.";
     panneau.appendChild(sous);
 
-    var enveloppe = document.createElement("div");
-    enveloppe.style.overflowX = "auto";
-    var table = document.createElement("table");
-
-    var thead = document.createElement("thead");
-    var trh = document.createElement("tr");
-    var coin = document.createElement("th");
-    coin.className = "indic"; coin.textContent = "";
-    trh.appendChild(coin);
-    mois.forEach(function (m) {
-      var th = document.createElement("th");
-      var p = m.split("-");
-      th.textContent = MOIS[+p[1] - 1].slice(0, 4) + " " + p[0].slice(2);
-      trh.appendChild(th);
-    });
-    thead.appendChild(trh);
-    table.appendChild(thead);
-
-    var corps = document.createElement("tbody");
-
     Object.keys(donnees.metriques).forEach(function (code) {
-      var tr = document.createElement("tr");
-      var th = document.createElement("th");
-      th.className = "indic"; th.textContent = donnees.metriques[code];
-      tr.appendChild(th);
+      var resumes = mois.map(function (m) { return resumeMois(code, m); });
+      var presents = resumes.filter(Boolean);
+      if (!presents.length) return;
 
-      mois.forEach(function (m) {
-        var td = document.createElement("td");
-        var res = moyenneMois(code, m);
+      // echelle commune aux mois de cet indicateur
+      var maxi = 0;
+      presents.forEach(function (r) {
+        if (r.moyenne > maxi) maxi = r.moyenne;
+        r.lignes.forEach(function (l) { if (l.valeur > maxi) maxi = l.valeur; });
+      });
+      maxi = maxi * 1.06 || 1;
 
-        if (!res) {
-          td.className = "case absent";
-          td.textContent = "—";
-          tr.appendChild(td);
-          return;
+      var bloc = document.createElement("div");
+      bloc.className = "bloc";
+
+      var nom = document.createElement("div");
+      nom.className = "nom";
+      nom.textContent = donnees.metriques[code];
+      bloc.appendChild(nom);
+
+      var precedente = null;
+
+      mois.forEach(function (m, i) {
+        var r = resumes[i];
+
+        var rang = document.createElement("div");
+        rang.className = "mois-ligne";
+
+        var etiquette = document.createElement("span");
+        etiquette.className = "mois-nom";
+        var p = m.split("-");
+        etiquette.textContent = MOIS[+p[1] - 1].slice(0, 4);
+        rang.appendChild(etiquette);
+
+        var piste = document.createElement("div");
+        piste.className = "piste-mois";
+
+        if (r) {
+          var barre = document.createElement("div");
+          barre.className = "barre-mois";
+          barre.style.width = (r.moyenne / maxi * 100) + "%";
+          piste.appendChild(barre);
+
+          // une pastille par ligne de fabrication, a sa position
+          var points = document.createElement("div");
+          points.className = "points";
+          r.lignes.forEach(function (l) {
+            var pt = document.createElement("span");
+            pt.className = "point";
+            pt.style.left = (l.valeur / maxi * 100) + "%";
+            pt.title = "Ligne " + l.ligne + " : " + formater(l.valeur) +
+                       (l.objectif != null
+                          ? " (objectif " + formater(l.objectif) + ")" : "");
+            points.appendChild(pt);
+          });
+          piste.appendChild(points);
         }
+        rang.appendChild(piste);
 
-        td.className = "case";
-        td.appendChild(document.createTextNode(formater(res.valeur)));
-
-        var bas = document.createElement("small");
-        if (res.objectif != null) {
-          var ecart = res.valeur - res.objectif;
-          td.style.background = teinte(ecart / res.objectif);
-          bas.textContent = (ecart > 0 ? "+" : ecart < 0 ? "-" : "")
-                          + formater(Math.abs(ecart)) + " vs objectif";
-          td.title = res.nb + " saisie" + (res.nb > 1 ? "s" : "") +
-                     " — objectif moyen " + formater(res.objectif);
+        var val = document.createElement("span");
+        val.className = "valeur-mois";
+        if (!r) {
+          val.innerHTML = '<span class="stable">pas de saisie</span>';
         } else {
-          bas.textContent = res.nb + " saisie" + (res.nb > 1 ? "s" : "");
+          val.appendChild(document.createTextNode(formater(r.moyenne)));
+          var ecart = document.createElement("em");
+          if (precedente === null) {
+            ecart.className = "stable";
+            ecart.textContent = "—";
+          } else {
+            var d = r.moyenne - precedente;
+            if (Math.abs(d) < 0.5) { ecart.className = "stable"; ecart.textContent = "stable"; }
+            else if (d < 0) { ecart.className = "en-baisse"; ecart.textContent = "-" + formater(-d); }
+            else { ecart.className = "en-hausse"; ecart.textContent = "+" + formater(d); }
+          }
+          val.appendChild(ecart);
+          val.title = r.nb + " saisie" + (r.nb > 1 ? "s" : "") + " sur " +
+                      r.lignes.length + " ligne" + (r.lignes.length > 1 ? "s" : "") +
+                      (r.evalues ? " — " + r.tenus + "/" + r.evalues +
+                                   " a l'objectif" : "");
+          precedente = r.moyenne;
         }
-        td.appendChild(bas);
-        tr.appendChild(td);
+        rang.appendChild(val);
+
+        bloc.appendChild(rang);
       });
 
-      corps.appendChild(tr);
+      panneau.appendChild(bloc);
     });
 
-    table.appendChild(corps);
-    enveloppe.appendChild(table);
-    panneau.appendChild(enveloppe);
-
-    var echelle = document.createElement("div");
-    echelle.className = "echelle";
-    echelle.innerHTML = "<span>Plus rapide que l'objectif</span>" +
-                        "<span class=\"bande\"></span>" +
-                        "<span>Plus lent</span>";
-    panneau.appendChild(echelle);
+    var note = document.createElement("p");
+    note.className = "note-evo";
+    note.textContent = "Chaque pastille est une ligne de fabrication, placee a son " +
+                       "propre temps moyen : plus elles sont groupees, plus le parc " +
+                       "est homogene.";
+    panneau.appendChild(note);
 
     hote.appendChild(panneau);
   }
