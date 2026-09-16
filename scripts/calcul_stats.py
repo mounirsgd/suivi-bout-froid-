@@ -143,6 +143,47 @@ def duree_minutes(debut_min, fin_min):
     return duree
 
 
+def decouper_causes(commentaire):
+    """
+    Decoupe un commentaire en causes elementaires.
+    L'application enregistre les motifs coches et le texte libre dans le
+    meme champ, separes par " | ". Motifs et texte libre sont traites de
+    la meme facon : chaque morceau non vide compte pour une cause.
+    """
+    if not commentaire:
+        return []
+    return [p.strip() for p in commentaire.split("|") if p.strip()]
+
+
+def extraire_causes(sessions):
+    """
+    Une entree par cause citee, pour le Pareto :
+        {"date": "2026-09-14", "ligne": "221",
+         "tache": "T0 : Nettoyage de ligne", "cause": "Manque de personnel"}
+    Chaque commentaire n'est compte qu'une fois, sur sa propre tache.
+    """
+    causes = []
+    for _, session in sessions.items():
+        if not isinstance(session, dict):
+            continue
+        jour = session.get("date")
+        ligne = normaliser_ligne(session.get("machine"))
+        if not jour or not ligne:
+            continue
+        taches = (session.get("ganttData") or {}).get("tasks") or {}
+        for id_tache, libelle in TACHES_BOUT_FROID:
+            _, _, commentaire = lire_creneau(taches.get(id_tache))
+            for cause in decouper_causes(commentaire):
+                causes.append({
+                    "date": jour,
+                    "ligne": ligne,
+                    "tache": libelle,
+                    "cause": cause,
+                })
+    causes.sort(key=lambda c: (c["date"], c["ligne"]))
+    return causes
+
+
 def commentaires_bout_froid(taches):
     """
     Rassemble les commentaires non vides de toutes les taches Bout Froid
@@ -300,6 +341,10 @@ def main():
     avec_commentaire = sum(1 for m in mesures if m["commentaire"])
     print("Dont avec commentaire : %d" % avec_commentaire)
 
+    causes = extraire_causes(sessions)
+    distinctes = len({c["cause"] for c in causes})
+    print("Causes citees : %d (%d distinctes)" % (len(causes), distinctes))
+
     targets, effectifs = calculer_targets(mesures, aujourdhui)
     for code in METRIQUES:
         print("Objectif %s : %d ligne(s)" % (code, len(targets[code])))
@@ -315,6 +360,7 @@ def main():
         "targets": targets,
         "effectifs": effectifs,
         "mesures": mesures,
+        "causes": causes,
     }
 
     os.makedirs(os.path.dirname(SORTIE), exist_ok=True)
