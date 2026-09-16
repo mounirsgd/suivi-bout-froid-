@@ -16,10 +16,10 @@ jobs:
 
     steps:
       - name: Recuperer le depot
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Installer Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
@@ -36,9 +36,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add data/stats.json
-          if git diff --staged --quiet; then
-            echo "Aucun changement, rien a publier."
-          else
-            git commit -m "Stats Bout Froid du $(date -u +%Y-%m-%d)"
-            git push
-          fi
+          git commit -m "Stats Bout Froid du $(date -u +%Y-%m-%d)" --allow-empty
+          git push
