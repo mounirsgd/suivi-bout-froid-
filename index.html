@@ -140,6 +140,10 @@
   }
   .mois-nom { font-size: 12.5px; color: var(--muted); font-weight: 500; }
   .piste-mois { position: relative; height: 26px; background: #f1f3f7; border-radius: 5px; }
+  .repere-obj {
+    position: absolute; top: -3px; bottom: -3px; width: 2px;
+    background: var(--vert); border-radius: 1px;
+  }
   .barre-mois {
     position: absolute; left: 0; top: 0; bottom: 0;
     background: var(--bleu); border-radius: 5px; opacity: .88;
@@ -341,7 +345,7 @@
     });
     return Object.keys(cumuls).map(function (l) {
       return { ligne:l, valeur:cumuls[l].somme/cumuls[l].nb, nb:cumuls[l].nb };
-    }).sort(function (a,b) { return a.valeur - b.valeur; });
+    }).sort(function (a,b) { return (+a.ligne) - (+b.ligne); });
   }
 
   // ── Etiquettes dessinees sur le graphe ────────────────────────────────────
@@ -452,13 +456,13 @@
     bloc.className = "detail";
 
     var h3 = document.createElement("h3");
-    h3.textContent = "Detail des saisies";
+    h3.textContent = "Detail des changements";
     bloc.appendChild(h3);
 
     var aide = document.createElement("p");
     aide.className = "aide";
-    aide.textContent = lignes.length + " saisie" + (lignes.length > 1 ? "s" : "") +
-                       " sur la periode, de la plus lente a la plus rapide.";
+    aide.textContent = lignes.length + " changement" + (lignes.length > 1 ? "s" : "") +
+                       " sur la periode, du plus lent au plus rapide.";
     bloc.appendChild(aide);
 
     var cadre = document.createElement("div");
@@ -542,9 +546,10 @@
 
     var compte = {};
     retenues.forEach(function (c) {
-      if (!compte[c.cause]) compte[c.cause] = { nb: 0, dates: {}, type: c.type };
+      if (!compte[c.cause]) compte[c.cause] = { nb: 0, dates: {}, lignes: {}, type: c.type };
       compte[c.cause].nb += 1;
       compte[c.cause].dates[c.date] = true;
+      compte[c.cause].lignes[c.ligne] = true;
     });
 
     var total = retenues.length;   // base du pourcentage : toutes les causes
@@ -554,6 +559,7 @@
         nb: compte[nom].nb,
         type: compte[nom].type,
         dates: Object.keys(compte[nom].dates).sort(),
+        lignes: Object.keys(compte[nom].lignes).sort(function (a, b) { return (+a) - (+b); }),
         part: total ? compte[nom].nb / total * 100 : 0
       };
     }).sort(function (a, b) {
@@ -606,8 +612,12 @@
     }).length;
     var evalues = lignes.filter(function (l) { return l.objectif != null; }).length;
 
+    var sommeObj = 0;
+    lignes.forEach(function (l) { if (l.objectif != null) sommeObj += l.objectif; });
+
     return {
       moyenne: somme / nb, nb: nb, lignes: lignes,
+      objectif: evalues ? sommeObj / evalues : null,
       tenus: tenus, evalues: evalues
     };
   }
@@ -626,7 +636,7 @@
 
     var sous = document.createElement("p");
     sous.className = "sous";
-    sous.textContent = "Plus la barre est courte, plus le temps est bon.";
+    sous.textContent = "Chaque mois face a son objectif — le trait vert.";
     panneau.appendChild(sous);
 
     Object.keys(donnees.metriques).forEach(function (code) {
@@ -636,7 +646,10 @@
 
       // echelle commune aux mois de cet indicateur
       var maxi = 0;
-      presents.forEach(function (r) { if (r.moyenne > maxi) maxi = r.moyenne; });
+      presents.forEach(function (r) {
+        if (r.moyenne > maxi) maxi = r.moyenne;
+        if (r.objectif != null && r.objectif > maxi) maxi = r.objectif;
+      });
       maxi = maxi * 1.06 || 1;
 
       var bloc = document.createElement("div");
@@ -646,8 +659,6 @@
       nom.className = "nom";
       nom.textContent = donnees.metriques[code];
       bloc.appendChild(nom);
-
-      var precedente = null;
 
       mois.forEach(function (m, i) {
         var r = resumes[i];
@@ -668,7 +679,19 @@
           var barre = document.createElement("div");
           barre.className = "barre-mois";
           barre.style.width = (r.moyenne / maxi * 100) + "%";
+          if (r.objectif != null && r.moyenne > r.objectif) {
+            barre.style.background = "var(--saumon)";
+          }
           piste.appendChild(barre);
+
+          // repere de l'objectif sur la piste
+          if (r.objectif != null) {
+            var rep = document.createElement("span");
+            rep.className = "repere-obj";
+            rep.style.left = (r.objectif / maxi * 100) + "%";
+            rep.title = "Objectif : " + formater(r.objectif);
+            piste.appendChild(rep);
+          }
 
         }
         rang.appendChild(piste);
@@ -676,25 +699,24 @@
         var val = document.createElement("span");
         val.className = "valeur-mois";
         if (!r) {
-          val.innerHTML = '<span class="stable">pas de saisie</span>';
+          val.innerHTML = '<span class="stable">pas de changement</span>';
         } else {
           val.appendChild(document.createTextNode(formater(r.moyenne)));
           var ecart = document.createElement("em");
-          if (precedente === null) {
+          if (r.objectif == null) {
             ecart.className = "stable";
             ecart.textContent = "—";
           } else {
-            var d = r.moyenne - precedente;
-            if (Math.abs(d) < 0.5) { ecart.className = "stable"; ecart.textContent = "stable"; }
+            var d = r.moyenne - r.objectif;
+            if (Math.abs(d) < 0.5) { ecart.className = "stable"; ecart.textContent = "a l'objectif"; }
             else if (d < 0) { ecart.className = "en-baisse"; ecart.textContent = "-" + formater(-d); }
             else { ecart.className = "en-hausse"; ecart.textContent = "+" + formater(d); }
           }
           val.appendChild(ecart);
-          val.title = r.nb + " saisie" + (r.nb > 1 ? "s" : "") + " sur " +
+          val.title = r.nb + " changement" + (r.nb > 1 ? "s" : "") + " sur " +
                       r.lignes.length + " ligne" + (r.lignes.length > 1 ? "s" : "") +
                       (r.evalues ? " — " + r.tenus + "/" + r.evalues +
                                    " a l'objectif" : "");
-          precedente = r.moyenne;
         }
         rang.appendChild(val);
 
@@ -742,8 +764,10 @@
     cadre.className = "cadre";
     var table = document.createElement("table");
     table.className = "tab-causes";
+    var avecLignes = (mode === "semaine");
     table.innerHTML =
-      "<thead><tr><th>Cause</th><th>Fois</th><th>Part</th><th>Dates</th></tr></thead>";
+      "<thead><tr><th>Cause</th><th>Fois</th><th>Part</th>" +
+      (avecLignes ? "<th>Lignes</th>" : "") + "<th>Dates</th></tr></thead>";
 
     var corps = document.createElement("tbody");
 
@@ -760,7 +784,7 @@
       if (c.type === "libre") {
         var marque = document.createElement("span");
         marque.className = "marque";
-        marque.textContent = "saisie libre";
+        marque.textContent = "texte libre";
         marque.title = "Texte ecrit a la main, pas un motif de la liste";
         td1.appendChild(marque);
       }
@@ -776,6 +800,13 @@
       val.textContent = c.part.toFixed(1).replace(".", ",") + " %";
       td3.appendChild(val);
       tr.appendChild(td3);
+
+      if (avecLignes) {
+        var tdL = document.createElement("td");
+        tdL.className = "dates";
+        tdL.textContent = c.lignes.join(", ");
+        tr.appendChild(tdL);
+      }
 
       var td4 = document.createElement("td");
       td4.className = "dates";
@@ -842,7 +873,7 @@
       if (!lignes.length) {
         var vide = document.createElement("div");
         vide.className = "vide";
-        vide.textContent = "Aucune saisie pour cette periode. Choisissez une autre periode.";
+        vide.textContent = "Aucun changement sur cette periode. Choisissez une autre periode.";
         panneau.appendChild(vide);
         grille.appendChild(panneau);
         return;
@@ -885,7 +916,7 @@
       graphes[code] = new Chart(canvas.getContext("2d"), {
         data: {
           labels: lignes.map(function (l) {
-            return [l.ligne, l.nb + (l.nb > 1 ? " saisies" : " saisie")];
+            return [l.ligne, l.nb + (l.nb > 1 ? " changements" : " changement")];
           }),
           datasets: jeux
         },
