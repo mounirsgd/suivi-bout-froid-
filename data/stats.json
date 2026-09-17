@@ -1,13 +1,13 @@
 {
- "derniere_maj": "2026-09-16T12:38:13",
+ "derniere_maj": "2026-09-17T07:29:20",
  "periode_target": {
   "debut": "2026-06-01",
-  "fin": "2026-09-16"
+  "fin": "2026-09-17"
  },
  "metriques": {
   "T0": "Temps vide de ligne",
   "T1": "Temps pre-reglage",
-  "T2": "Temps de fabrication de 2 lots commercialisables"
+  "T2": "Montée en régime"
  },
  "lignes": [
   "221",
@@ -21,7 +21,7 @@
  "targets": {
   "T0": {
    "222": 10,
-   "233": 35,
+   "233": 33,
    "235": 29,
    "232": 100,
    "224": 23,
@@ -31,7 +31,7 @@
   "T1": {
    "221": 95,
    "233": 89,
-   "235": 51,
+   "235": 79,
    "224": 109,
    "232": 150,
    "222": 115,
@@ -53,7 +53,7 @@
     "retenues": 1
    },
    "233": {
-    "total": 6,
+    "total": 7,
     "retenues": 3
    },
    "235": {
@@ -87,8 +87,8 @@
     "retenues": 5
    },
    "235": {
-    "total": 5,
-    "retenues": 2
+    "total": 6,
+    "retenues": 3
    },
    "224": {
     "total": 11,
@@ -1279,6 +1279,18 @@
    "details": []
   },
   {
+   "date": "2026-09-15",
+   "ligne": "235",
+   "metrique": "T1",
+   "duree_min": 213,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Matériel NOK | Réglage non terminé | Intervention maintenance | Témoins NOK | Calibrage Mx D en réglage, Panne Multi D"
+    }
+   ]
+  },
+  {
    "date": "2026-09-16",
    "ligne": "224",
    "metrique": "T0",
@@ -1334,6 +1346,13 @@
      "texte": "Réglages robot palettiseur"
     }
    ]
+  },
+  {
+   "date": "2026-09-17",
+   "ligne": "233",
+   "metrique": "T0",
+   "duree_min": 40,
+   "details": []
   }
  ],
  "causes": [
@@ -1872,22 +1891,8 @@
   {
    "date": "2026-07-06",
    "ligne": "222",
-   "tache": "Aligneur vide",
-   "cause": "RAS",
-   "type": "ras"
-  },
-  {
-   "date": "2026-07-06",
-   "ligne": "222",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Grand manque de personnel",
-   "type": "libre"
-  },
-  {
-   "date": "2026-07-06",
-   "ligne": "222",
-   "tache": "Arrivee deux sections controlables",
-   "cause": "1 section  \nTous les flacons sont arrivés en même temps",
    "type": "libre"
   },
   {
@@ -1896,13 +1901,6 @@
    "tache": "Arrivee de toutes sections",
    "cause": "démarrage tardif \nMachine B 13H45\nLot 1 : 16h11\nLot 2: NC\nLot 3: 18h45",
    "type": "libre"
-  },
-  {
-   "date": "2026-07-06",
-   "ligne": "222",
-   "tache": "Top qualite",
-   "cause": "Top Qualité = 13h50",
-   "type": "releve"
   },
   {
    "date": "2026-07-06",
@@ -2145,23 +2143,9 @@
   {
    "date": "2026-07-09",
    "ligne": "233",
-   "tache": "T0 : Nettoyage de ligne",
-   "cause": "RAS",
-   "type": "ras"
-  },
-  {
-   "date": "2026-07-09",
-   "ligne": "233",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque de personnel \nCO centre terminer en dernier",
    "type": "libre"
-  },
-  {
-   "date": "2026-07-09",
-   "ligne": "233",
-   "tache": "Arrivee deux sections controlables",
-   "cause": "RAS",
-   "type": "ras"
   },
   {
    "date": "2026-07-09",
@@ -2188,13 +2172,6 @@
    "date": "2026-07-10",
    "ligne": "224",
    "tache": "Aligneur vide",
-   "cause": "RAS",
-   "type": "ras"
-  },
-  {
-   "date": "2026-07-10",
-   "ligne": "224",
-   "tache": "T0 : Nettoyage de ligne",
    "cause": "RAS",
    "type": "ras"
   },
@@ -2404,13 +2381,6 @@
   {
    "date": "2026-07-20",
    "ligne": "224",
-   "tache": "T0 : Nettoyage de ligne",
-   "cause": "RAS",
-   "type": "ras"
-  },
-  {
-   "date": "2026-07-20",
-   "ligne": "224",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque de personnel",
    "type": "motif"
@@ -2453,13 +2423,6 @@
   {
    "date": "2026-07-20",
    "ligne": "235",
-   "tache": "T0 : Nettoyage de ligne",
-   "cause": "RAS",
-   "type": "ras"
-  },
-  {
-   "date": "2026-07-20",
-   "ligne": "235",
    "tache": "T1 : Duree pre-reglage",
    "cause": "CO brins gauche réglage terminer en dernier pour manque de personnel",
    "type": "libre"
@@ -2475,13 +2438,6 @@
    "date": "2026-07-20",
    "ligne": "235",
    "tache": "Arrivee de toutes sections",
-   "cause": "Top qualité a 13h55",
-   "type": "releve"
-  },
-  {
-   "date": "2026-07-20",
-   "ligne": "235",
-   "tache": "Top qualite",
    "cause": "Top qualité a 13h55",
    "type": "releve"
   },
@@ -2615,22 +2571,8 @@
    "date": "2026-09-07",
    "ligne": "224",
    "tache": "Premier lot sorti",
-   "cause": "Démarrage tardif",
-   "type": "motif"
-  },
-  {
-   "date": "2026-09-07",
-   "ligne": "224",
-   "tache": "Premier lot sorti",
    "cause": "Premier lot sorti à J+1 (02h24). Lot bloqué en M51 (à retrier)",
    "type": "libre"
-  },
-  {
-   "date": "2026-09-07",
-   "ligne": "224",
-   "tache": "Validation de deux lots commercialisables",
-   "cause": "Lot bloqué",
-   "type": "motif"
   },
   {
    "date": "2026-09-07",
@@ -2643,13 +2585,6 @@
    "date": "2026-09-08",
    "ligne": "233",
    "tache": "Aligneur vide",
-   "cause": "Manque de personnel",
-   "type": "motif"
-  },
-  {
-   "date": "2026-09-08",
-   "ligne": "233",
-   "tache": "T0 : Nettoyage de ligne",
    "cause": "Manque de personnel",
    "type": "motif"
   },
@@ -2694,13 +2629,6 @@
    "tache": "Premier lot sorti",
    "cause": "Premier lot bloqué en M55 (packs déformés)",
    "type": "libre"
-  },
-  {
-   "date": "2026-09-08",
-   "ligne": "233",
-   "tache": "Validation de deux lots commercialisables",
-   "cause": "Lot bloqué",
-   "type": "motif"
   },
   {
    "date": "2026-09-08",
@@ -2930,7 +2858,35 @@
    "date": "2026-09-15",
    "ligne": "235",
    "tache": "Top qualite",
-   "cause": "Pas de top Qualité à 15h40. Verticalité, glaçures, casse, mauvaise répartition",
+   "cause": "Top Qualité retardé",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-15",
+   "ligne": "235",
+   "tache": "Top qualite",
+   "cause": "Pas de top Qualité à 15h40. Verticalité, glaçures, casse, mauvaise répartition >> Top Q + Top E = J+1",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-15",
+   "ligne": "235",
+   "tache": "Premiere palette sortie",
+   "cause": "Pas de palette existante à J+1 (15h00)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot bloqué en M51 (à retrier)",
    "type": "libre"
   },
   {
@@ -2951,13 +2907,6 @@
    "date": "2026-09-16",
    "ligne": "232",
    "tache": "T0 : Nettoyage de ligne",
-   "cause": "Manque de personnel",
-   "type": "motif"
-  },
-  {
-   "date": "2026-09-16",
-   "ligne": "232",
-   "tache": "T0 : Nettoyage de ligne",
    "cause": "Pas d'informations",
    "type": "libre"
   },
@@ -2966,13 +2915,6 @@
    "ligne": "232",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Nettoyage (débris verre)",
-   "type": "motif"
-  },
-  {
-   "date": "2026-09-16",
-   "ligne": "232",
-   "tache": "T1 : Duree pre-reglage",
-   "cause": "Manque de personnel",
    "type": "motif"
   },
   {
@@ -3019,9 +2961,58 @@
   },
   {
    "date": "2026-09-16",
+   "ligne": "232",
+   "tache": "Premiere palette sortie",
+   "cause": "Première palette 232/1 = 16h15",
+   "type": "releve"
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "232",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot 232/1 = 20h16",
+   "type": "releve"
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "232",
+   "tache": "Top emballage",
+   "cause": "Top Emballage 232/1 = 13h40",
+   "type": "releve"
+  },
+  {
+   "date": "2026-09-16",
    "ligne": "233",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Réglages robot palettiseur",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "233",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-16",
+   "ligne": "233",
+   "tache": "Premier lot sorti",
+   "cause": "Lot palette (E94) attente libération Qualité",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-17",
+   "ligne": "233",
+   "tache": "Aligneur vide",
+   "cause": "Vide de la ligne entière",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-17",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Renfort équipes x2, bug CoC indexeur,",
    "type": "libre"
   }
  ]
