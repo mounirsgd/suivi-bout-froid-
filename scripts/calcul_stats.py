@@ -130,7 +130,7 @@ LIBELLES = {
 METRIQUES = {
     "T0": "Temps vide de ligne",
     "T1": "Temps pre-reglage",
-    "T2": "Temps de fabrication de 2 lots commercialisables",
+    "T2": "Montée en régime",
 }
 
 # Objectif : pour chaque ligne, on trie ses durees et on fait la moyenne
@@ -236,6 +236,7 @@ def extraire_causes(sessions):
     Chaque commentaire n'est compte qu'une fois, sur sa propre tache.
     """
     causes = []
+    vues = set()          # (date, ligne, cause) deja comptes
     for _, session in sessions.items():
         if not isinstance(session, dict):
             continue
@@ -247,6 +248,12 @@ def extraire_causes(sessions):
         for id_tache, libelle in TACHES_BOUT_FROID:
             _, _, commentaire = lire_creneau(taches.get(id_tache))
             for cause in decouper_causes(commentaire):
+                # une meme cause citee sur plusieurs taches du meme jour et
+                # de la meme ligne ne compte qu'une fois
+                cle = (jour, ligne, cause.lower())
+                if cle in vues:
+                    continue
+                vues.add(cle)
                 causes.append({
                     "date": jour,
                     "ligne": ligne,
