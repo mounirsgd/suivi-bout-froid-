@@ -587,38 +587,35 @@
   }
 
   function resumeMois(metrique, mois) {
-    var somme = 0, nb = 0, parLigne = {};
+    // Toutes les durees du mois, toutes lignes confondues.
+    var durees = [], lignes = {};
     donnees.mesures.forEach(function (m) {
       if (m.metrique !== metrique || m.date.slice(0, 7) !== mois) return;
-      somme += m.duree_min; nb += 1;
-      if (!parLigne[m.ligne]) parLigne[m.ligne] = { somme: 0, nb: 0 };
-      parLigne[m.ligne].somme += m.duree_min;
-      parLigne[m.ligne].nb += 1;
+      durees.push(m.duree_min);
+      lignes[m.ligne] = true;
     });
-    if (!nb) return null;
+    if (!durees.length) return null;
 
-    var targets = donnees.targets[metrique] || {};
-    var lignes = Object.keys(parLigne).map(function (l) {
-      return {
-        ligne: l,
-        valeur: parLigne[l].somme / parLigne[l].nb,
-        nb: parLigne[l].nb,
-        objectif: targets[l] != null ? targets[l] : null
-      };
-    }).sort(function (a, b) { return a.valeur - b.valeur; });
+    // La barre : moyenne simple de toutes ces durees.
+    var somme = 0;
+    durees.forEach(function (d) { somme += d; });
+    var moyenne = somme / durees.length;
 
-    var tenus = lignes.filter(function (l) {
-      return l.objectif != null && l.valeur <= l.objectif;
-    }).length;
-    var evalues = lignes.filter(function (l) { return l.objectif != null; }).length;
-
+    // L'objectif du mois : meme regle que les objectifs par ligne, mais
+    // appliquee au mois entier. On trie les durees du mois et on fait la
+    // moyenne de la moitie la plus rapide.
+    var triees = durees.slice().sort(function (a, b) { return a - b; });
+    var garde = Math.floor(triees.length / 2) || triees.length;
     var sommeObj = 0;
-    lignes.forEach(function (l) { if (l.objectif != null) sommeObj += l.objectif; });
+    for (var i = 0; i < garde; i++) sommeObj += triees[i];
+    var objectif = sommeObj / garde;
 
     return {
-      moyenne: somme / nb, nb: nb, lignes: lignes,
-      objectif: evalues ? sommeObj / evalues : null,
-      tenus: tenus, evalues: evalues
+      moyenne: moyenne,
+      objectif: objectif,
+      nb: durees.length,
+      retenues: garde,
+      nbLignes: Object.keys(lignes).length
     };
   }
 
@@ -636,7 +633,8 @@
 
     var sous = document.createElement("p");
     sous.className = "sous";
-    sous.textContent = "Chaque mois face a son objectif — le trait vert.";
+    sous.textContent = "Toutes lignes confondues. Le trait vert est la moyenne " +
+                       "de la moitie la plus rapide du mois.";
     panneau.appendChild(sous);
 
     Object.keys(donnees.metriques).forEach(function (code) {
@@ -714,9 +712,9 @@
           }
           val.appendChild(ecart);
           val.title = r.nb + " changement" + (r.nb > 1 ? "s" : "") + " sur " +
-                      r.lignes.length + " ligne" + (r.lignes.length > 1 ? "s" : "") +
-                      (r.evalues ? " — " + r.tenus + "/" + r.evalues +
-                                   " a l'objectif" : "");
+                      r.nbLignes + " ligne" + (r.nbLignes > 1 ? "s" : "") +
+                      " — objectif : moyenne des " + r.retenues +
+                      " plus rapides du mois";
         }
         rang.appendChild(val);
 
