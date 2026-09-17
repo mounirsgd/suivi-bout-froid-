@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-09-17T07:29:20",
+ "derniere_maj": "2026-09-17T13:20:27",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-09-17"
@@ -20,21 +20,21 @@
  ],
  "targets": {
   "T0": {
-   "222": 10,
+   "222": 30,
    "233": 33,
-   "235": 29,
+   "235": 30,
    "232": 100,
-   "224": 23,
+   "224": 38,
    "221": 30,
    "236": 130
   },
   "T1": {
    "221": 95,
-   "233": 89,
+   "233": 96,
    "235": 79,
    "224": 109,
    "232": 150,
-   "222": 115,
+   "222": 40,
    "236": 130
   },
   "T2": {
@@ -49,7 +49,7 @@
  "effectifs": {
   "T0": {
    "222": {
-    "total": 3,
+    "total": 2,
     "retenues": 1
    },
    "233": {
@@ -57,16 +57,16 @@
     "retenues": 3
    },
    "235": {
-    "total": 4,
-    "retenues": 2
+    "total": 3,
+    "retenues": 1
    },
    "232": {
     "total": 3,
     "retenues": 1
    },
    "224": {
-    "total": 7,
-    "retenues": 3
+    "total": 5,
+    "retenues": 2
    },
    "221": {
     "total": 1,
@@ -83,8 +83,8 @@
     "retenues": 3
    },
    "233": {
-    "total": 11,
-    "retenues": 5
+    "total": 12,
+    "retenues": 6
    },
    "235": {
     "total": 6,
@@ -99,7 +99,7 @@
     "retenues": 2
    },
    "222": {
-    "total": 4,
+    "total": 5,
     "retenues": 2
    },
    "236": {
@@ -686,13 +686,6 @@
   {
    "date": "2026-07-08",
    "ligne": "235",
-   "metrique": "T0",
-   "duree_min": 28,
-   "details": []
-  },
-  {
-   "date": "2026-07-08",
-   "ligne": "235",
    "metrique": "T1",
    "duree_min": 2,
    "details": []
@@ -754,18 +747,6 @@
     {
      "tache": "Validation de deux lots commercialisables",
      "texte": "Sortie deux premiers lots livrables à 13h39"
-    }
-   ]
-  },
-  {
-   "date": "2026-07-10",
-   "ligne": "224",
-   "metrique": "T0",
-   "duree_min": 25,
-   "details": [
-    {
-     "tache": "T0 : Nettoyage de ligne",
-     "texte": "RAS"
     }
    ]
   },
@@ -1174,13 +1155,6 @@
   {
    "date": "2026-09-09",
    "ligne": "222",
-   "metrique": "T0",
-   "duree_min": 10,
-   "details": []
-  },
-  {
-   "date": "2026-09-09",
-   "ligne": "222",
    "metrique": "T1",
    "duree_min": 210,
    "details": [
@@ -1293,13 +1267,6 @@
   {
    "date": "2026-09-16",
    "ligne": "224",
-   "metrique": "T0",
-   "duree_min": 15,
-   "details": []
-  },
-  {
-   "date": "2026-09-16",
-   "ligne": "224",
    "metrique": "T1",
    "duree_min": 20,
    "details": []
@@ -1349,10 +1316,34 @@
   },
   {
    "date": "2026-09-17",
+   "ligne": "222",
+   "metrique": "T1",
+   "duree_min": 15,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Activation et réglages Hélios (C&S) = 15 min"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-17",
    "ligne": "233",
    "metrique": "T0",
    "duree_min": 40,
    "details": []
+  },
+  {
+   "date": "2026-09-17",
+   "ligne": "233",
+   "metrique": "T1",
+   "duree_min": 130,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Renfort équipes x2, bug CoC indexeur,"
+    }
+   ]
   }
  ],
  "causes": [
@@ -2982,6 +2973,13 @@
   },
   {
    "date": "2026-09-16",
+   "ligne": "232",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Premiers lot livrable 232/1 J+1 = 01h35 (lot 501 bloqué en M82 - 2 moules mini corps et lots suivants en attente libération Qualité)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-16",
    "ligne": "233",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Réglages robot palettiseur",
@@ -3003,6 +3001,20 @@
   },
   {
    "date": "2026-09-17",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Activation et réglages Hélios (C&S) = 15 min",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-17",
+   "ligne": "222",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Soulement machine B",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-17",
    "ligne": "233",
    "tache": "Aligneur vide",
    "cause": "Vide de la ligne entière",
@@ -3013,6 +3025,13 @@
    "ligne": "233",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Renfort équipes x2, bug CoC indexeur,",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-17",
+   "ligne": "233",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Beaucoup de couché sur arche, tombées au transfert conv Aligneur entrée brins",
    "type": "libre"
   }
  ]
