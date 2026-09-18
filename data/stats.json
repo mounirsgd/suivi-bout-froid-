@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-09-18T09:38:26",
+ "derniere_maj": "2026-09-18T13:52:23",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-09-18"
@@ -29,12 +29,12 @@
    "236": 130
   },
   "T1": {
-   "221": 95,
-   "233": 96,
-   "235": 79,
-   "224": 109,
+   "221": 125,
+   "233": 124,
+   "235": 118,
+   "224": 126,
    "232": 150,
-   "222": 40,
+   "222": 165,
    "236": 130
   },
   "T2": {
@@ -79,28 +79,28 @@
   },
   "T1": {
    "221": {
-    "total": 6,
-    "retenues": 3
+    "total": 4,
+    "retenues": 2
    },
    "233": {
-    "total": 12,
-    "retenues": 6
+    "total": 10,
+    "retenues": 5
    },
    "235": {
-    "total": 6,
-    "retenues": 3
+    "total": 5,
+    "retenues": 2
    },
    "224": {
-    "total": 12,
-    "retenues": 6
+    "total": 11,
+    "retenues": 5
    },
    "232": {
     "total": 4,
     "retenues": 2
    },
    "222": {
-    "total": 5,
-    "retenues": 2
+    "total": 3,
+    "retenues": 1
    },
    "236": {
     "total": 1,
@@ -247,18 +247,6 @@
     {
      "tache": "Validation de deux lots commercialisables",
      "texte": "Deux premiers lots livrables = 21h30 (lot 502 bloqué pour défaut dimensionnel). Lots 501 et 503 = OK"
-    }
-   ]
-  },
-  {
-   "date": "2026-06-25",
-   "ligne": "221",
-   "metrique": "T1",
-   "duree_min": 90,
-   "details": [
-    {
-     "tache": "T1 : Duree pre-reglage",
-     "texte": "Abs MEBARKI.A même mécanique de la machine reprise reglage mecanique des sgd et calibrage"
     }
    ]
   },
@@ -519,18 +507,6 @@
   {
    "date": "2026-07-07",
    "ligne": "233",
-   "metrique": "T1",
-   "duree_min": 90,
-   "details": [
-    {
-     "tache": "T1 : Duree pre-reglage",
-     "texte": "Gros manque de personnel aide de la production"
-    }
-   ]
-  },
-  {
-   "date": "2026-07-07",
-   "ligne": "233",
    "metrique": "T2",
    "duree_min": 529,
    "details": [
@@ -682,13 +658,6 @@
      "texte": "Deux premiers lots livrables à 23h15 (10 et 11) / Lots antérieurs bloqués (M80 / M82) - Défauts verre + recyclage"
     }
    ]
-  },
-  {
-   "date": "2026-07-08",
-   "ligne": "235",
-   "metrique": "T1",
-   "duree_min": 2,
-   "details": []
   },
   {
    "date": "2026-07-09",
@@ -875,18 +844,6 @@
    ]
   },
   {
-   "date": "2026-07-16",
-   "ligne": "222",
-   "metrique": "T1",
-   "duree_min": 65,
-   "details": [
-    {
-     "tache": "T1 : Duree pre-reglage",
-     "texte": "Reprise témoins glaçure fond CO centre et CO gauche \nReprise témoins corps sur les trois MCAL"
-    }
-   ]
-  },
-  {
    "date": "2026-07-17",
    "ligne": "224",
    "metrique": "T0",
@@ -1003,18 +960,6 @@
     {
      "tache": "T0 : Nettoyage de ligne",
      "texte": "RAS"
-    }
-   ]
-  },
-  {
-   "date": "2026-07-21",
-   "ligne": "221",
-   "metrique": "T1",
-   "duree_min": 75,
-   "details": [
-    {
-     "tache": "T1 : Duree pre-reglage",
-     "texte": "Manque de personnel"
     }
    ]
   },
@@ -1266,13 +1211,6 @@
   },
   {
    "date": "2026-09-16",
-   "ligne": "224",
-   "metrique": "T1",
-   "duree_min": 20,
-   "details": []
-  },
-  {
-   "date": "2026-09-16",
    "ligne": "232",
    "metrique": "T0",
    "duree_min": 220,
@@ -1301,30 +1239,6 @@
    "metrique": "T0",
    "duree_min": 30,
    "details": []
-  },
-  {
-   "date": "2026-09-16",
-   "ligne": "233",
-   "metrique": "T1",
-   "duree_min": 5,
-   "details": [
-    {
-     "tache": "T1 : Duree pre-reglage",
-     "texte": "Réglages robot palettiseur"
-    }
-   ]
-  },
-  {
-   "date": "2026-09-17",
-   "ligne": "222",
-   "metrique": "T1",
-   "duree_min": 15,
-   "details": [
-    {
-     "tache": "T1 : Duree pre-reglage",
-     "texte": "Activation et réglages Hélios (C&S) = 15 min"
-    }
-   ]
   },
   {
    "date": "2026-09-17",
