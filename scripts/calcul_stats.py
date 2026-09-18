@@ -133,10 +133,13 @@ METRIQUES = {
     "T2": "Montée en régime",
 }
 
-# Sur T0 uniquement : une duree strictement inferieure a ce seuil correspond
-# a un changement d'indice, pas a un vrai changement de ligne. Elle est
-# ecartee partout (barres, objectif, tableau, evolution).
-SEUIL_T0_MIN = 30
+# Seuils de validite, par indicateur. Une duree strictement inferieure
+# correspond a un changement d'indice, pas a un vrai changement : elle est
+# ecartee partout (barres, objectif, tableau de detail, evolution).
+SEUILS_MIN = {
+    "T0": 30,
+    "T1": 100,
+}
 
 # Objectif : pour chaque ligne, on trie ses durees et on fait la moyenne
 # de la moitie la plus rapide (arrondi a l'entier inferieur).
@@ -332,8 +335,8 @@ def extraire_mesures(sessions):
             debut, fin, commentaire = lire_creneau(taches.get(id_tache))
             duree = duree_minutes(debut, fin)
             if duree is not None and duree > 0:
-                # T0 : on ecarte les changements d'indice
-                if code == "T0" and duree < SEUIL_T0_MIN:
+                # on ecarte les changements d'indice
+                if duree < SEUILS_MIN.get(code, 0):
                     continue
                 mesures.append({
                     "date": jour,
