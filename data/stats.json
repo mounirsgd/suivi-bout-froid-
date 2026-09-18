@@ -1,8 +1,8 @@
 {
- "derniere_maj": "2026-09-17T14:44:50",
+ "derniere_maj": "2026-09-18T09:38:26",
  "periode_target": {
   "debut": "2026-06-01",
-  "fin": "2026-09-17"
+  "fin": "2026-09-18"
  },
  "metriques": {
   "T0": "Temps vide de ligne",
@@ -91,8 +91,8 @@
     "retenues": 3
    },
    "224": {
-    "total": 11,
-    "retenues": 5
+    "total": 12,
+    "retenues": 6
    },
    "232": {
     "total": 4,
@@ -1342,6 +1342,18 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Renfort équipes x2, bug CoC indexeur,"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-18",
+   "ligne": "224",
+   "metrique": "T1",
+   "duree_min": 107,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Formation | Intervention maintenance | Doublure Co G, Co D Bug machine, tête de planéité CoD grippée , COD écran atlas bloqué"
     }
    ]
   }
@@ -3010,7 +3022,7 @@
    "date": "2026-09-17",
    "ligne": "222",
    "tache": "Arrivee de toutes sections",
-   "cause": "Soulement machine B",
+   "cause": "Seulement machine B",
    "type": "libre"
   },
   {
@@ -3032,6 +3044,69 @@
    "ligne": "233",
    "tache": "Arrivee deux sections controlables",
    "cause": "Beaucoup de couché sur arche, tombées au transfert conv Aligneur entrée brins",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-18",
+   "ligne": "224",
+   "tache": "Aligneur vide",
+   "cause": "Vide de la ligne entière",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-18",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Formation",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-18",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Intervention maintenance",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-18",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Doublure Co G, Co D Bug machine, tête de planéité CoD grippée , COD écran atlas bloqué",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-18",
+   "ligne": "224",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Réglage équipement BF",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-18",
+   "ligne": "224",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Toujours pas toutes les sections 10h32",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-18",
+   "ligne": "224",
+   "tache": "Montee en regime",
+   "cause": "Problème mécanique",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-18",
+   "ligne": "224",
+   "tache": "Montee en regime",
+   "cause": "Problème réglage",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-18",
+   "ligne": "224",
+   "tache": "Montee en regime",
+   "cause": "Bug soft COD, 6 numéros en éjection",
    "type": "libre"
   }
  ]
