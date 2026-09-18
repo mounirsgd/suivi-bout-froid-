@@ -130,6 +130,8 @@
   .plus-vite { color: var(--vert); font-weight: 600; }
 
   /* ── Evolution mois par mois ──────────────────────────────────────────── */
+  .filtre-evo { margin: 0 0 16px; }
+  .filtre-evo .chip { padding: 4px 11px; font-size: 12.5px; }
   .evolution .bloc + .bloc { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--rule); }
   .evolution .nom {
     font-size: 13.5px; font-weight: 600; color: var(--titre); margin-bottom: 10px;
@@ -242,6 +244,7 @@
   var mode = "mois";
   var periode = null;
   var unite = "min";
+  var ligneEvo = "toutes";   // filtre propre au bloc d'evolution
   var graphes = {};
 
   // ── Dates ─────────────────────────────────────────────────────────────────
@@ -587,15 +590,25 @@
 
   function moisDisponibles() {
     var v = {};
-    donnees.mesures.forEach(function (m) { v[m.date.slice(0, 7)] = true; });
+    donnees.mesures.forEach(function (m) {
+      if (ligneEvo !== "toutes" && m.ligne !== ligneEvo) return;
+      v[m.date.slice(0, 7)] = true;
+    });
     return Object.keys(v).sort();
   }
 
+  function lignesDisponibles() {
+    var v = {};
+    donnees.mesures.forEach(function (m) { v[m.ligne] = true; });
+    return Object.keys(v).sort(function (a, b) { return (+a) - (+b); });
+  }
+
   function resumeMois(metrique, mois) {
-    // Toutes les durees du mois, toutes lignes confondues.
+    // Durees du mois, toutes lignes confondues ou pour la ligne choisie.
     var durees = [], parLigne = {};
     donnees.mesures.forEach(function (m) {
       if (m.metrique !== metrique || m.date.slice(0, 7) !== mois) return;
+      if (ligneEvo !== "toutes" && m.ligne !== ligneEvo) return;
       durees.push(m.duree_min);
       if (!parLigne[m.ligne]) parLigne[m.ligne] = { somme: 0, nb: 0 };
       parLigne[m.ligne].somme += m.duree_min;
@@ -635,7 +648,8 @@
   function dessinerEvolution() {
     var hote = document.getElementById("grille");   // occupe la case libre
     var mois = moisDisponibles();
-    if (mois.length < 2) return;                    // rien a comparer
+    // rien du tout a montrer, tous filtres confondus
+    if (!lignesDisponibles().length) return;
 
     var panneau = document.createElement("section");
     panneau.className = "panneau evolution";
@@ -646,9 +660,23 @@
 
     var sous = document.createElement("p");
     sous.className = "sous";
-    sous.textContent = "Toutes lignes confondues. Le trait vert est la moyenne " +
-                       "de la moitie la plus rapide du mois.";
+    sous.textContent = (ligneEvo === "toutes"
+                          ? "Toutes lignes confondues. "
+                          : "Ligne " + ligneEvo + " seule. ") +
+                       "Le trait vert est la moyenne de la moitie la plus rapide du mois.";
     panneau.appendChild(sous);
+
+    if (mois.length < 2) {
+      var peu = document.createElement("div");
+      peu.className = "vide";
+      peu.style.height = "120px";
+      peu.textContent = mois.length
+        ? "Un seul mois de donnees pour cette ligne : rien a comparer."
+        : "Aucune donnee pour cette ligne.";
+      panneau.appendChild(peu);
+      hote.appendChild(panneau);
+      return;
+    }
 
     Object.keys(donnees.metriques).forEach(function (code) {
       var resumes = mois.map(function (m) { return resumeMois(code, m); });
