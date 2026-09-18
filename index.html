@@ -666,6 +666,27 @@
                        "Le trait vert est la moyenne de la moitie la plus rapide du mois.";
     panneau.appendChild(sous);
 
+    // filtre de ligne, propre a ce bloc
+    var barreFiltre = document.createElement("div");
+    barreFiltre.className = "chips filtre-evo";
+    var choix = [{ valeur: "toutes", libelle: "Toutes" }];
+    lignesDisponibles().forEach(function (l) {
+      choix.push({ valeur: l, libelle: l });
+    });
+    choix.forEach(function (o) {
+      var b = document.createElement("button");
+      b.className = "chip";
+      b.type = "button";
+      b.textContent = o.libelle;
+      b.setAttribute("aria-pressed", o.valeur === ligneEvo ? "true" : "false");
+      b.addEventListener("click", function () {
+        ligneEvo = o.valeur;
+        dessinerTout();
+      });
+      barreFiltre.appendChild(b);
+    });
+    panneau.appendChild(barreFiltre);
+
     if (mois.length < 2) {
       var peu = document.createElement("div");
       peu.className = "vide";
