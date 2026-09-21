@@ -1,8 +1,8 @@
 {
- "derniere_maj": "2026-09-20T13:59:42",
+ "derniere_maj": "2026-09-21T16:18:16",
  "periode_target": {
   "debut": "2026-06-01",
-  "fin": "2026-09-20"
+  "fin": "2026-09-21"
  },
  "metriques": {
   "T0": "Temps vide de ligne",
@@ -24,7 +24,7 @@
    "233": 33,
    "235": 30,
    "232": 100,
-   "224": 38,
+   "224": 35,
    "221": 30,
    "236": 130
   },
@@ -32,7 +32,7 @@
    "221": 125,
    "233": 124,
    "235": 118,
-   "224": 126,
+   "224": 124,
    "232": 150,
    "222": 165,
    "236": 130
@@ -65,8 +65,8 @@
     "retenues": 1
    },
    "224": {
-    "total": 5,
-    "retenues": 2
+    "total": 6,
+    "retenues": 3
    },
    "221": {
     "total": 1,
@@ -91,8 +91,8 @@
     "retenues": 2
    },
    "224": {
-    "total": 11,
-    "retenues": 5
+    "total": 12,
+    "retenues": 6
    },
    "232": {
     "total": 4,
@@ -1268,6 +1268,25 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Formation | Intervention maintenance | Doublure Co G, Co D Bug machine, tête de planéité CoD grippée , COD écran atlas bloqué"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-21",
+   "ligne": "224",
+   "metrique": "T0",
+   "duree_min": 30,
+   "details": []
+  },
+  {
+   "date": "2026-09-21",
+   "ligne": "224",
+   "metrique": "T1",
+   "duree_min": 115,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Formation | Doublure formation COD, cellule table d'accumulation débranché, tête de planéité COG pleine de \"graisse\""
     }
    ]
   }
@@ -3021,6 +3040,48 @@
    "ligne": "224",
    "tache": "Montee en regime",
    "cause": "Bug soft COD, 6 numéros en éjection",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-21",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Formation",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-21",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Doublure formation COD, cellule table d'accumulation débranché, tête de planéité COG pleine de \"graisse\"",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-21",
+   "ligne": "224",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Non utilisable trop de MIC",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-21",
+   "ligne": "224",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Pas d'informations",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-21",
+   "ligne": "224",
+   "tache": "Top qualite",
+   "cause": "6 numéro en éjection, beaucoup de casse sur arche",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-21",
+   "ligne": "224",
+   "tache": "Montee en regime",
+   "cause": "6 numéro en éjection, beaucoup casse sur arche, éjection mince à contrôler, multiples arret BC ,14h recuit NOK",
    "type": "libre"
   }
  ]
