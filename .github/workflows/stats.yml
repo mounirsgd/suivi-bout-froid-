@@ -2,12 +2,15 @@ name: Calcul des stats Bout Froid
 
 on:
   schedule:
-    # 05:07 UTC = 07:07 a Paris en ete (06:07 en hiver)
-    # 10:03 UTC = 12:03 a Paris en ete (11:03 en hiver)
-    # Minute decalee volontairement : GitHub retarde les crons a l'heure ronde.
-    - cron: '7 5 * * *'
-    - cron: '3 10 * * *'
-  workflow_dispatch:        # permet aussi de lancer le calcul a la main
+    # Heures UTC. En ete Paris = UTC+2, en hiver UTC+1.
+    # GitHub declenche les taches planifiees en differe : le retard va de
+    # quelques minutes a plusieurs heures selon sa charge. Quatre creneaux
+    # etales garantissent qu'au moins un passe tot dans la matinee.
+    - cron: '23 23 * * *'    # 01:23 a Paris en ete (00:23 en hiver)
+    - cron: '17 2 * * *'     # 04:17 a Paris en ete (03:17 en hiver)
+    - cron: '9 5 * * *'      # 07:09 a Paris en ete (06:09 en hiver)
+    - cron: '3 10 * * *'     # 12:03 a Paris en ete (11:03 en hiver)
+  workflow_dispatch:         # permet aussi de lancer le calcul a la main
 
 permissions:
   contents: write
