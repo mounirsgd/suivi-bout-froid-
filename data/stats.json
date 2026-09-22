@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-09-22T01:38:55",
+ "derniere_maj": "2026-09-22T07:43:57",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-09-22"
@@ -3083,6 +3083,13 @@
    "tache": "Montee en regime",
    "cause": "6 numéro en éjection, beaucoup casse sur arche, éjection mince à contrôler, multiples arret BC ,14h recuit NOK",
    "type": "libre"
+  },
+  {
+   "date": "2026-09-21",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
   }
  ]
 }
