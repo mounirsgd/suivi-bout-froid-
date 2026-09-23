@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-09-23T07:46:58",
+ "derniere_maj": "2026-09-23T09:56:43",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-09-23"
@@ -23,17 +23,17 @@
    "222": 30,
    "233": 33,
    "235": 30,
-   "232": 100,
+   "232": 95,
    "224": 35,
    "221": 30,
    "236": 130
   },
   "T1": {
    "221": 125,
-   "233": 124,
+   "233": 117,
    "235": 118,
    "224": 124,
-   "232": 150,
+   "232": 142,
    "222": 165,
    "236": 130
   },
@@ -61,8 +61,8 @@
     "retenues": 1
    },
    "232": {
-    "total": 3,
-    "retenues": 1
+    "total": 4,
+    "retenues": 2
    },
    "224": {
     "total": 6,
@@ -83,7 +83,7 @@
     "retenues": 2
    },
    "233": {
-    "total": 10,
+    "total": 11,
     "retenues": 5
    },
    "235": {
@@ -95,7 +95,7 @@
     "retenues": 6
    },
    "232": {
-    "total": 4,
+    "total": 5,
     "retenues": 2
    },
    "222": {
@@ -1287,6 +1287,42 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Formation | Doublure formation COD, cellule table d'accumulation débranché, tête de planéité COG pleine de \"graisse\""
+    }
+   ]
+  },
+  {
+   "date": "2026-09-23",
+   "ligne": "232",
+   "metrique": "T0",
+   "duree_min": 90,
+   "details": [
+    {
+     "tache": "T0 : Nettoyage de ligne",
+     "texte": "Vu avec CPBF et CE"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-23",
+   "ligne": "232",
+   "metrique": "T1",
+   "duree_min": 135,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Formation | COG réglette lyre inversée, COD porte arrière + sécurité porte à refaire"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-23",
+   "ligne": "233",
+   "metrique": "T1",
+   "duree_min": 105,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Réglage Mcal*3 - Carrousel*3 - Multi*3"
     }
    ]
   }
@@ -3095,8 +3131,8 @@
    "date": "2026-09-23",
    "ligne": "232",
    "tache": "T0 : Nettoyage de ligne",
-   "cause": "Nettoyage non terminé",
-   "type": "motif"
+   "cause": "Vu avec CPBF et CE",
+   "type": "libre"
   },
   {
    "date": "2026-09-23",
@@ -3109,7 +3145,14 @@
    "date": "2026-09-23",
    "ligne": "232",
    "tache": "T1 : Duree pre-reglage",
-   "cause": "COG réglette lyre inversée",
+   "cause": "COG réglette lyre inversée, COD porte arrière + sécurité porte à refaire",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-23",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Réglage Mcal*3 - Carrousel*3 - Multi*3",
    "type": "libre"
   }
  ]
