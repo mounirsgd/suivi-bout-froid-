@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-09-23T09:56:43",
+ "derniere_maj": "2026-09-23T14:45:39",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-09-23"
@@ -1310,7 +1310,7 @@
    "details": [
     {
      "tache": "T1 : Duree pre-reglage",
-     "texte": "Formation | COG réglette lyre inversée, COD porte arrière + sécurité porte à refaire"
+     "texte": "Formation | COG réglette lyre inversée, COD porte arrière + sécurité porte à refaire,  COC BUG impossible de charger une nouvelle fiche"
     }
    ]
   },
@@ -3145,7 +3145,14 @@
    "date": "2026-09-23",
    "ligne": "232",
    "tache": "T1 : Duree pre-reglage",
-   "cause": "COG réglette lyre inversée, COD porte arrière + sécurité porte à refaire",
+   "cause": "COG réglette lyre inversée, COD porte arrière + sécurité porte à refaire,  COC BUG impossible de charger une nouvelle fiche",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-23",
+   "ligne": "232",
+   "tache": "Montee en regime",
+   "cause": "Symplex brin G en panne, 2 brins fonctionnelle",
    "type": "libre"
   },
   {
