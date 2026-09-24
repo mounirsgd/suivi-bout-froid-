@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-09-24T07:37:09",
+ "derniere_maj": "2026-09-24T09:57:07",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-09-24"
@@ -30,7 +30,7 @@
   },
   "T1": {
    "221": 125,
-   "233": 117,
+   "233": 120,
    "235": 118,
    "224": 124,
    "232": 142,
@@ -38,7 +38,7 @@
    "236": 130
   },
   "T2": {
-   "232": 239,
+   "232": 401,
    "233": 177,
    "222": 355,
    "235": 466,
@@ -65,7 +65,7 @@
     "retenues": 2
    },
    "224": {
-    "total": 6,
+    "total": 7,
     "retenues": 3
    },
    "221": {
@@ -83,8 +83,8 @@
     "retenues": 2
    },
    "233": {
-    "total": 11,
-    "retenues": 5
+    "total": 12,
+    "retenues": 6
    },
    "235": {
     "total": 5,
@@ -109,8 +109,8 @@
   },
   "T2": {
    "232": {
-    "total": 3,
-    "retenues": 1
+    "total": 4,
+    "retenues": 2
    },
    "233": {
     "total": 5,
@@ -1316,6 +1316,38 @@
   },
   {
    "date": "2026-09-23",
+   "ligne": "232",
+   "metrique": "T2",
+   "duree_min": 563,
+   "details": [
+    {
+     "tache": "T0 : Nettoyage de ligne",
+     "texte": "Vu avec CPBF et CE"
+    },
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Formation | COG réglette lyre inversée, COD porte arrière + sécurité porte à refaire,  COC BUG impossible de charger une nouvelle fiche"
+    },
+    {
+     "tache": "Montee en regime",
+     "texte": "Symplex brin G en panne, 2 brins fonctionnelle"
+    },
+    {
+     "tache": "Premiere palette sortie",
+     "texte": "232/1 : première palette sortie = 14h24"
+    },
+    {
+     "tache": "Premier lot sorti",
+     "texte": "232/1 : premier lot sorti = 16h14"
+    },
+    {
+     "tache": "Validation de deux lots commercialisables",
+     "texte": "232/1 : 2 premiers lots livrables = 22h21 (lots 501 et 503)"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-23",
    "ligne": "233",
    "metrique": "T1",
    "duree_min": 105,
@@ -1328,10 +1360,29 @@
   },
   {
    "date": "2026-09-24",
+   "ligne": "224",
+   "metrique": "T0",
+   "duree_min": 45,
+   "details": []
+  },
+  {
+   "date": "2026-09-24",
    "ligne": "233",
    "metrique": "T0",
    "duree_min": 80,
    "details": []
+  },
+  {
+   "date": "2026-09-24",
+   "ligne": "233",
+   "metrique": "T1",
+   "duree_min": 137,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Matériel NOK | Formation | Réglage non terminé | Manque un jeu de sabres, difficulté calage indexeur COD, mandrin NOK bobine SGD, COD poignée vis d'entrée HS"
+    }
+   ]
   }
  ],
  "causes": [
@@ -3164,9 +3215,51 @@
   },
   {
    "date": "2026-09-23",
+   "ligne": "232",
+   "tache": "Premiere palette sortie",
+   "cause": "232/1 : première palette sortie = 14h24",
+   "type": "releve"
+  },
+  {
+   "date": "2026-09-23",
+   "ligne": "232",
+   "tache": "Premier lot sorti",
+   "cause": "232/1 : premier lot sorti = 16h14",
+   "type": "releve"
+  },
+  {
+   "date": "2026-09-23",
+   "ligne": "232",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "232/1 : 2 premiers lots livrables = 22h21 (lots 501 et 503)",
+   "type": "releve"
+  },
+  {
+   "date": "2026-09-23",
    "ligne": "233",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Réglage Mcal*3 - Carrousel*3 - Multi*3",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-24",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Nettoyage (débris verre)",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-24",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Réglage non terminé",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-24",
+   "ligne": "224",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Tombé sur arche",
    "type": "libre"
   },
   {
@@ -3194,7 +3287,14 @@
    "date": "2026-09-24",
    "ligne": "233",
    "tache": "T1 : Duree pre-reglage",
-   "cause": "Manque un jeu de sabres",
+   "cause": "Réglage non terminé",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-24",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque un jeu de sabres, difficulté calage indexeur COD, mandrin NOK bobine SGD, COD poignée vis d'entrée HS",
    "type": "libre"
   }
  ]
