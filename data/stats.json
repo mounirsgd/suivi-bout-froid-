@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-09-24T01:29:48",
+ "derniere_maj": "2026-09-24T07:37:09",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-09-24"
@@ -21,7 +21,7 @@
  "targets": {
   "T0": {
    "222": 30,
-   "233": 33,
+   "233": 36,
    "235": 30,
    "232": 95,
    "224": 35,
@@ -53,8 +53,8 @@
     "retenues": 1
    },
    "233": {
-    "total": 7,
-    "retenues": 3
+    "total": 8,
+    "retenues": 4
    },
    "235": {
     "total": 3,
@@ -1325,6 +1325,13 @@
      "texte": "Réglage Mcal*3 - Carrousel*3 - Multi*3"
     }
    ]
+  },
+  {
+   "date": "2026-09-24",
+   "ligne": "233",
+   "metrique": "T0",
+   "duree_min": 80,
+   "details": []
   }
  ],
  "causes": [
@@ -3160,6 +3167,34 @@
    "ligne": "233",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Réglage Mcal*3 - Carrousel*3 - Multi*3",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-24",
+   "ligne": "233",
+   "tache": "Aligneur vide",
+   "cause": "Vide de la ligne entière",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-24",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Matériel NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-24",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Formation",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-24",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque un jeu de sabres",
    "type": "libre"
   }
  ]
