@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-09-24T09:57:07",
+ "derniere_maj": "2026-09-24T14:41:07",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-09-24"
@@ -3295,6 +3295,13 @@
    "ligne": "233",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque un jeu de sabres, difficulté calage indexeur COD, mandrin NOK bobine SGD, COD poignée vis d'entrée HS",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-24",
+   "ligne": "233",
+   "tache": "Top qualite",
+   "cause": "4 numéro en éjection",
    "type": "libre"
   }
  ]
