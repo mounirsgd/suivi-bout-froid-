@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-09-25T07:51:07",
+ "derniere_maj": "2026-09-25T10:09:58",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-09-25"
@@ -1330,7 +1330,7 @@
     },
     {
      "tache": "Montee en regime",
-     "texte": "Symplex brin G en panne, 2 brins fonctionnelle"
+     "texte": "Symplex brin G en panne, 2 brins fonctionnelle (sans calcin)"
     },
     {
      "tache": "Premiere palette sortie",
@@ -3210,7 +3210,7 @@
    "date": "2026-09-23",
    "ligne": "232",
    "tache": "Montee en regime",
-   "cause": "Symplex brin G en panne, 2 brins fonctionnelle",
+   "cause": "Symplex brin G en panne, 2 brins fonctionnelle (sans calcin)",
    "type": "libre"
   },
   {
@@ -3260,6 +3260,41 @@
    "ligne": "224",
    "tache": "Arrivee deux sections controlables",
    "cause": "Tombé sur arche",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-24",
+   "ligne": "224",
+   "tache": "Montee en regime",
+   "cause": "Monté en régime aidé par les deux sections bonne de 10h45",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-24",
+   "ligne": "224",
+   "tache": "Premiere palette sortie",
+   "cause": "Mise à jour SAP (2 premiers lots non enregistrés an auto). Première palette enregistrée = 16h18",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-24",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-24",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Défaut qualité",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-24",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Mise à jour SAP (2 premiers lots non enregistrés an auto). Premier lot enregistré = 17h33",
    "type": "libre"
   },
   {
@@ -3344,6 +3379,27 @@
    "ligne": "232",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Arrivé des témoins 8h40",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-25",
+   "ligne": "232",
+   "tache": "Top qualite",
+   "cause": "Changement indice",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-25",
+   "ligne": "232",
+   "tache": "Premiere palette sortie",
+   "cause": "232/1 : première palette sortie = 10h25",
+   "type": "releve"
+  },
+  {
+   "date": "2026-09-25",
+   "ligne": "232",
+   "tache": "Top emballage",
+   "cause": "Changement d'indice",
    "type": "libre"
   }
  ]
