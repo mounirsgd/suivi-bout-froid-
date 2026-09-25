@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-09-25T01:38:18",
+ "derniere_maj": "2026-09-25T07:51:07",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-09-25"
@@ -1342,7 +1342,7 @@
     },
     {
      "tache": "Validation de deux lots commercialisables",
-     "texte": "232/1 : 2 premiers lots livrables = 22h21 (lots 501 et 503)"
+     "texte": "232/1 : 2 premiers lots livrables = 22h21 (lots 501 et 503) Enormément de moule mise en casse multi défauts verre"
     }
    ]
   },
@@ -3231,8 +3231,8 @@
    "date": "2026-09-23",
    "ligne": "232",
    "tache": "Validation de deux lots commercialisables",
-   "cause": "232/1 : 2 premiers lots livrables = 22h21 (lots 501 et 503)",
-   "type": "releve"
+   "cause": "232/1 : 2 premiers lots livrables = 22h21 (lots 501 et 503) Enormément de moule mise en casse multi défauts verre",
+   "type": "libre"
   },
   {
    "date": "2026-09-23",
@@ -3302,6 +3302,48 @@
    "ligne": "233",
    "tache": "Top qualite",
    "cause": "4 numéro en éjection",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-24",
+   "ligne": "233",
+   "tache": "Montee en regime",
+   "cause": "Problème mécanique",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-24",
+   "ligne": "233",
+   "tache": "Montee en regime",
+   "cause": "Sgd D attache rapide cassé",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-24",
+   "ligne": "233",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-24",
+   "ligne": "233",
+   "tache": "Premier lot sorti",
+   "cause": "Défaut qualité",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-24",
+   "ligne": "233",
+   "tache": "Premier lot sorti",
+   "cause": "Temps moyen palette = 45 minutes",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-25",
+   "ligne": "232",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Arrivé des témoins 8h40",
    "type": "libre"
   }
  ]
