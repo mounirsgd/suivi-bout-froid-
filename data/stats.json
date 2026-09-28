@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-09-28T11:39:11",
+ "derniere_maj": "2026-09-28T17:59:52",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-09-28"
@@ -1399,7 +1399,7 @@
    "details": [
     {
      "tache": "T1 : Duree pre-reglage",
-     "texte": "Manque de personnel | Formation | Création fiche Mcal G, un régleur dépannage COD 24, Mandrin bobine non conforme, 11h30 reste COG cause dépannage COD 24,COD ok 12h30"
+     "texte": "Manque de personnel | Formation | Création fiche Mcal G, un régleur dépannage COD 24, Mandrin bobine non conforme, 11h30 reste COG cause dépannage COD 24,COD ok 12h30, Décalage de hauteur sur convoyeur entrée SGD G"
     }
    ]
   }
@@ -3439,14 +3439,56 @@
    "date": "2026-09-28",
    "ligne": "222",
    "tache": "T1 : Duree pre-reglage",
-   "cause": "Création fiche Mcal G, un régleur dépannage COD 24, Mandrin bobine non conforme, 11h30 reste COG cause dépannage COD 24,COD ok 12h30",
+   "cause": "Création fiche Mcal G, un régleur dépannage COD 24, Mandrin bobine non conforme, 11h30 reste COG cause dépannage COD 24,COD ok 12h30, Décalage de hauteur sur convoyeur entrée SGD G",
    "type": "libre"
+  },
+  {
+   "date": "2026-09-28",
+   "ligne": "222",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "90% de tombé",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-28",
+   "ligne": "222",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Retard démarrage",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-28",
+   "ligne": "222",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Top Qualité retardé",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-28",
+   "ligne": "222",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Tombées sur arche",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-28",
+   "ligne": "222",
+   "tache": "Top qualite",
+   "cause": "Démarrage tardif",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-28",
+   "ligne": "222",
+   "tache": "Montee en regime",
+   "cause": "Cadence non atteinte",
+   "type": "motif"
   },
   {
    "date": "2026-09-28",
    "ligne": "224",
    "tache": "T0 : Nettoyage de ligne",
-   "cause": "Mise au troue car traitement chaud nok",
+   "cause": "Mise au calcin car le traitement chaud nok, entre temps nous avons avalé la table qui s'est accumulé à cause de la panne de la machine CO droite pour défaut variateur.",
    "type": "libre"
   },
   {
