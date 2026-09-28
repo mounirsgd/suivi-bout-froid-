@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-09-28T01:46:44",
+ "derniere_maj": "2026-09-28T08:43:09",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-09-28"
@@ -49,7 +49,7 @@
  "effectifs": {
   "T0": {
    "222": {
-    "total": 2,
+    "total": 3,
     "retenues": 1
    },
    "233": {
@@ -1383,6 +1383,13 @@
      "texte": "Matériel NOK | Formation | Réglage non terminé | Manque un jeu de sabres, difficulté calage indexeur COD, mandrin NOK bobine SGD, COD poignée vis d'entrée HS"
     }
    ]
+  },
+  {
+   "date": "2026-09-28",
+   "ligne": "222",
+   "metrique": "T0",
+   "duree_min": 33,
+   "details": []
   }
  ],
  "causes": [
@@ -3400,6 +3407,27 @@
    "ligne": "232",
    "tache": "Top emballage",
    "cause": "Changement d'indice",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-28",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-28",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Formation",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-28",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Création fiche Mcal G, un régleur dépannage COD 24, Mandrin bobine non conforme",
    "type": "libre"
   }
  ]
