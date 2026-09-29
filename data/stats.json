@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-09-29T08:34:07",
+ "derniere_maj": "2026-09-29T11:20:32",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-09-29"
@@ -103,7 +103,7 @@
     "retenues": 2
    },
    "236": {
-    "total": 1,
+    "total": 2,
     "retenues": 1
    }
   },
@@ -1409,6 +1409,18 @@
    "metrique": "T0",
    "duree_min": 60,
    "details": []
+  },
+  {
+   "date": "2026-09-29",
+   "ligne": "236",
+   "metrique": "T1",
+   "duree_min": 202,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Formation | Détachement MAGGIO.D à la prépa, 10h52 reste COC(Formation),Manque clé 455 pour COG"
+    }
+   ]
   }
  ],
  "causes": [
@@ -3487,9 +3499,44 @@
   {
    "date": "2026-09-28",
    "ligne": "222",
+   "tache": "Top qualite",
+   "cause": "Top Qualité = 01h30 (J+1)",
+   "type": "releve"
+  },
+  {
+   "date": "2026-09-28",
+   "ligne": "222",
    "tache": "Montee en regime",
    "cause": "Cadence non atteinte",
    "type": "motif"
+  },
+  {
+   "date": "2026-09-28",
+   "ligne": "222",
+   "tache": "Premiere palette sortie",
+   "cause": "Première palette sortie = 10h53 (J+1)",
+   "type": "releve"
+  },
+  {
+   "date": "2026-09-28",
+   "ligne": "222",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-28",
+   "ligne": "222",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti = 10h53 (J+1)",
+   "type": "releve"
+  },
+  {
+   "date": "2026-09-28",
+   "ligne": "222",
+   "tache": "Top emballage",
+   "cause": "Top Emballage = 03h20 (J+1)",
+   "type": "releve"
   },
   {
    "date": "2026-09-28",
@@ -3514,6 +3561,13 @@
   },
   {
    "date": "2026-09-29",
+   "ligne": "224",
+   "tache": "Arrivee de toutes sections",
+   "cause": "25 minutes de calcin (recuit mauvais)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-29",
    "ligne": "236",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque de personnel",
@@ -3530,7 +3584,7 @@
    "date": "2026-09-29",
    "ligne": "236",
    "tache": "T1 : Duree pre-reglage",
-   "cause": "Détachement MAGGIO.D à la prépa",
+   "cause": "Détachement MAGGIO.D à la prépa, 10h52 reste COC(Formation),Manque clé 455 pour COG",
    "type": "libre"
   }
  ]
