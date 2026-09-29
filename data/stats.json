@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-09-29T11:20:32",
+ "derniere_maj": "2026-09-29T16:22:22",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-09-29"
@@ -3586,6 +3586,27 @@
    "tache": "T1 : Duree pre-reglage",
    "cause": "Détachement MAGGIO.D à la prépa, 10h52 reste COC(Formation),Manque clé 455 pour COG",
    "type": "libre"
+  },
+  {
+   "date": "2026-09-29",
+   "ligne": "236",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Retard arrivée sections",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-29",
+   "ligne": "236",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Retard démarrage",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-29",
+   "ligne": "236",
+   "tache": "Top qualite",
+   "cause": "Démarrage tardif",
+   "type": "motif"
   }
  ]
 }
