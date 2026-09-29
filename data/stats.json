@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-09-29T02:36:46",
+ "derniere_maj": "2026-09-29T08:34:07",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-09-29"
@@ -26,7 +26,7 @@
    "232": 95,
    "224": 35,
    "221": 30,
-   "236": 130
+   "236": 60
   },
   "T1": {
    "221": 125,
@@ -73,7 +73,7 @@
     "retenues": 1
    },
    "236": {
-    "total": 1,
+    "total": 2,
     "retenues": 1
    }
   },
@@ -1402,6 +1402,13 @@
      "texte": "Manque de personnel | Formation | Création fiche Mcal G, un régleur dépannage COD 24, Mandrin bobine non conforme, 11h30 reste COG cause dépannage COD 24,COD ok 12h30, Décalage de hauteur sur convoyeur entrée SGD G"
     }
    ]
+  },
+  {
+   "date": "2026-09-29",
+   "ligne": "236",
+   "metrique": "T0",
+   "duree_min": 60,
+   "details": []
   }
  ],
  "causes": [
@@ -3497,6 +3504,34 @@
    "tache": "T1 : Duree pre-reglage",
    "cause": "RAS",
    "type": "ras"
+  },
+  {
+   "date": "2026-09-28",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-29",
+   "ligne": "236",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-29",
+   "ligne": "236",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Formation",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-29",
+   "ligne": "236",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Détachement MAGGIO.D à la prépa",
+   "type": "libre"
   }
  ]
 }
