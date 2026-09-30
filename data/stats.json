@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-09-30T02:12:10",
+ "derniere_maj": "2026-09-30T08:36:11",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-09-30"
@@ -32,7 +32,7 @@
    "221": 125,
    "233": 120,
    "235": 118,
-   "224": 124,
+   "224": 123,
    "232": 142,
    "222": 165,
    "236": 130
@@ -91,7 +91,7 @@
     "retenues": 2
    },
    "224": {
-    "total": 12,
+    "total": 13,
     "retenues": 6
    },
    "232": {
@@ -1419,6 +1419,18 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Manque de personnel | Formation | Détachement MAGGIO.D à la prépa, 10h52 reste COC(Formation),Manque clé 455 pour COG"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-30",
+   "ligne": "224",
+   "metrique": "T1",
+   "duree_min": 140,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Formation | COG Bug(relancer le PC)"
     }
    ]
   }
@@ -3607,6 +3619,27 @@
    "tache": "Top qualite",
    "cause": "Démarrage tardif",
    "type": "motif"
+  },
+  {
+   "date": "2026-09-30",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-30",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Formation",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-30",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "COG Bug(relancer le PC)",
+   "type": "libre"
   }
  ]
 }
