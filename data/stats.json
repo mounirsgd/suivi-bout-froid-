@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-09-30T08:36:11",
+ "derniere_maj": "2026-09-30T11:08:37",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-09-30"
@@ -3621,6 +3621,27 @@
    "type": "motif"
   },
   {
+   "date": "2026-09-29",
+   "ligne": "236",
+   "tache": "Premiere palette sortie",
+   "cause": "236/1 : première palette sortie = 22h28",
+   "type": "releve"
+  },
+  {
+   "date": "2026-09-29",
+   "ligne": "236",
+   "tache": "Premier lot sorti",
+   "cause": "236/1 : premier lot sorti = 00h12 (J+1)",
+   "type": "releve"
+  },
+  {
+   "date": "2026-09-29",
+   "ligne": "236",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "236/1 : deux premiers lots livrables = 01h30 (J+1)",
+   "type": "releve"
+  },
+  {
    "date": "2026-09-30",
    "ligne": "224",
    "tache": "T1 : Duree pre-reglage",
@@ -3639,6 +3660,41 @@
    "ligne": "224",
    "tache": "T1 : Duree pre-reglage",
    "cause": "COG Bug(relancer le PC)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-30",
+   "ligne": "224",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Recuit NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-30",
+   "ligne": "224",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "40min calcin",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-30",
+   "ligne": "224",
+   "tache": "Montee en regime",
+   "cause": "Problème mécanique",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-30",
+   "ligne": "224",
+   "tache": "Montee en regime",
+   "cause": "Problème réglage",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-30",
+   "ligne": "224",
+   "tache": "Montee en regime",
+   "cause": "Calibrage COD",
    "type": "libre"
   }
  ]
