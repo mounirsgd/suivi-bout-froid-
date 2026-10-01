@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-01T02:13:46",
+ "derniere_maj": "2026-10-01T08:58:23",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-01"
@@ -22,7 +22,7 @@
   "T0": {
    "222": 30,
    "233": 36,
-   "235": 30,
+   "235": 36,
    "232": 95,
    "224": 35,
    "221": 30,
@@ -31,7 +31,7 @@
   "T1": {
    "221": 125,
    "233": 120,
-   "235": 118,
+   "235": 123,
    "224": 123,
    "232": 142,
    "222": 165,
@@ -57,8 +57,8 @@
     "retenues": 4
    },
    "235": {
-    "total": 3,
-    "retenues": 1
+    "total": 4,
+    "retenues": 2
    },
    "232": {
     "total": 4,
@@ -87,8 +87,8 @@
     "retenues": 6
    },
    "235": {
-    "total": 5,
-    "retenues": 2
+    "total": 6,
+    "retenues": 3
    },
    "224": {
     "total": 13,
@@ -1431,6 +1431,25 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Manque de personnel | Formation | COG Bug(relancer le PC)"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-01",
+   "ligne": "235",
+   "metrique": "T0",
+   "duree_min": 75,
+   "details": []
+  },
+  {
+   "date": "2026-10-01",
+   "ligne": "235",
+   "metrique": "T1",
+   "duree_min": 180,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Formation | Manque de personnel | Intervention maintenance"
     }
    ]
   }
@@ -3694,7 +3713,77 @@
    "date": "2026-09-30",
    "ligne": "224",
    "tache": "Montee en regime",
-   "cause": "Calibrage COD",
+   "cause": "Calibrage COD en panne / Procédure Gabarit manuel",
+   "type": "libre"
+  },
+  {
+   "date": "2026-09-30",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-09-30",
+   "ligne": "224",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lots bloqués en E91 (attente contrôle labo)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-01",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Formation",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-01",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-01",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Intervention maintenance",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-01",
+   "ligne": "235",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Recuit NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-01",
+   "ligne": "235",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Flacons légèrement déformé, quelques Flacons cassé, quelques Flacons couchés",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-01",
+   "ligne": "235",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Tombées sur arche",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-01",
+   "ligne": "235",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Réglage BF",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-01",
+   "ligne": "235",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Attente recuit et top qualité",
    "type": "libre"
   }
  ]
