@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-01T08:58:23",
+ "derniere_maj": "2026-10-01T11:35:24",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-01"
@@ -1449,7 +1449,7 @@
    "details": [
     {
      "tache": "T1 : Duree pre-reglage",
-     "texte": "Formation | Manque de personnel | Intervention maintenance"
+     "texte": "Formation | Manque de personnel | Intervention maintenance | Intervention mécanique sur étau limeur fardeleuse"
     }
    ]
   }
@@ -3754,6 +3754,13 @@
   {
    "date": "2026-10-01",
    "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Intervention mécanique sur étau limeur fardeleuse",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-01",
+   "ligne": "235",
    "tache": "Arrivee deux sections controlables",
    "cause": "Recuit NOK",
    "type": "motif"
@@ -3784,6 +3791,27 @@
    "ligne": "235",
    "tache": "Arrivee de toutes sections",
    "cause": "Attente recuit et top qualité",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-01",
+   "ligne": "235",
+   "tache": "Top qualite",
+   "cause": "Top Qualité retardé",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-01",
+   "ligne": "235",
+   "tache": "Top qualite",
+   "cause": "Réduit nok, 100% bouillon",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-01",
+   "ligne": "235",
+   "tache": "Montee en regime",
+   "cause": "Panne roue d'espacement Multi D",
    "type": "libre"
   }
  ]
