@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-02T08:33:56",
+ "derniere_maj": "2026-10-02T11:04:47",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-02"
@@ -34,7 +34,7 @@
    "235": 123,
    "224": 123,
    "232": 142,
-   "222": 165,
+   "222": 150,
    "236": 130
   },
   "T2": {
@@ -99,7 +99,7 @@
     "retenues": 2
    },
    "222": {
-    "total": 4,
+    "total": 5,
     "retenues": 2
    },
    "236": {
@@ -1459,6 +1459,18 @@
    "metrique": "T0",
    "duree_min": 41,
    "details": []
+  },
+  {
+   "date": "2026-10-02",
+   "ligne": "222",
+   "metrique": "T1",
+   "duree_min": 135,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel"
+    }
+   ]
   }
  ],
  "causes": [
@@ -3848,6 +3860,34 @@
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque de personnel",
    "type": "motif"
+  },
+  {
+   "date": "2026-10-02",
+   "ligne": "222",
+   "tache": "Montee en regime",
+   "cause": "Problème réglage",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-02",
+   "ligne": "222",
+   "tache": "Montee en regime",
+   "cause": "Calibrage COC",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-02",
+   "ligne": "236",
+   "tache": "Aligneur vide",
+   "cause": "Personnel occupé sur machines suite changement indice",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-02",
+   "ligne": "236",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Réglage calibrage + robot",
+   "type": "libre"
   }
  ]
 }
