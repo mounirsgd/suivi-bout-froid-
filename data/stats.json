@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-02T11:04:47",
+ "derniere_maj": "2026-10-02T16:08:23",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-02"
@@ -3872,7 +3872,14 @@
    "date": "2026-10-02",
    "ligne": "222",
    "tache": "Montee en regime",
-   "cause": "Calibrage COC",
+   "cause": "Calibrage COC, panne Robot",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-02",
+   "ligne": "222",
+   "tache": "Top emballage",
+   "cause": "Redémarrage Robot 14h15",
    "type": "libre"
   },
   {
