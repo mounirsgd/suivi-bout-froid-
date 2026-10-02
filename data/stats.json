@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-02T02:19:52",
+ "derniere_maj": "2026-10-02T08:33:56",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-02"
@@ -20,7 +20,7 @@
  ],
  "targets": {
   "T0": {
-   "222": 30,
+   "222": 32,
    "233": 36,
    "235": 36,
    "232": 95,
@@ -49,8 +49,8 @@
  "effectifs": {
   "T0": {
    "222": {
-    "total": 3,
-    "retenues": 1
+    "total": 4,
+    "retenues": 2
    },
    "233": {
     "total": 8,
@@ -1452,6 +1452,13 @@
      "texte": "Formation | Manque de personnel | Intervention maintenance | Intervention mécanique sur étau limeur fardeleuse"
     }
    ]
+  },
+  {
+   "date": "2026-10-02",
+   "ligne": "222",
+   "metrique": "T0",
+   "duree_min": 41,
+   "details": []
   }
  ],
  "causes": [
@@ -3813,6 +3820,34 @@
    "tache": "Montee en regime",
    "cause": "Panne roue d'espacement Multi D",
    "type": "libre"
+  },
+  {
+   "date": "2026-10-01",
+   "ligne": "235",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-01",
+   "ligne": "235",
+   "tache": "Premier lot sorti",
+   "cause": "6 première palettes bloquées en M82 (8 moules en mini ouv)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-01",
+   "ligne": "235",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lots bloqués en E91 (attente contrôle labo)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-02",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
   }
  ]
 }
