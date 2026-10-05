@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-05T02:07:36",
+ "derniere_maj": "2026-10-05T09:06:52",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-05"
@@ -34,7 +34,7 @@
    "235": 123,
    "224": 123,
    "232": 142,
-   "222": 150,
+   "222": 155,
    "236": 130
   },
   "T2": {
@@ -49,7 +49,7 @@
  "effectifs": {
   "T0": {
    "222": {
-    "total": 4,
+    "total": 5,
     "retenues": 2
    },
    "233": {
@@ -99,8 +99,8 @@
     "retenues": 2
    },
    "222": {
-    "total": 5,
-    "retenues": 2
+    "total": 6,
+    "retenues": 3
    },
    "236": {
     "total": 2,
@@ -1469,6 +1469,25 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Manque de personnel"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-05",
+   "ligne": "222",
+   "metrique": "T0",
+   "duree_min": 70,
+   "details": []
+  },
+  {
+   "date": "2026-10-05",
+   "ligne": "222",
+   "metrique": "T1",
+   "duree_min": 200,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Réglage 2 brins 1 SGD, pas de lecture n°moule,panne COC, montage brins Gauche 10h00"
     }
    ]
   }
@@ -3878,6 +3897,13 @@
   {
    "date": "2026-10-02",
    "ligne": "222",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-02",
+   "ligne": "222",
    "tache": "Top emballage",
    "cause": "Redémarrage Robot 14h15",
    "type": "libre"
@@ -3894,6 +3920,27 @@
    "ligne": "236",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Réglage calibrage + robot",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-05",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-05",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Réglage 2 brins 1 SGD, pas de lecture n°moule,panne COC, montage brins Gauche 10h00",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-05",
+   "ligne": "222",
+   "tache": "Montee en regime",
+   "cause": "Numéro à la trappe = perte de production",
    "type": "libre"
   }
  ]
