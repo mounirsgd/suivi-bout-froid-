@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-05T12:13:39",
+ "derniere_maj": "2026-10-05T19:06:40",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-05"
@@ -3956,6 +3956,13 @@
    "tache": "Montee en regime",
    "cause": "Numéro à la trappe = perte de production",
    "type": "libre"
+  },
+  {
+   "date": "2026-10-05",
+   "ligne": "222",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
   }
  ]
 }
