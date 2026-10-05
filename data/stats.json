@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-05T09:06:52",
+ "derniere_maj": "2026-10-05T12:13:39",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-05"
@@ -3935,6 +3935,20 @@
    "tache": "T1 : Duree pre-reglage",
    "cause": "Réglage 2 brins 1 SGD, pas de lecture n°moule,panne COC, montage brins Gauche 10h00",
    "type": "libre"
+  },
+  {
+   "date": "2026-10-05",
+   "ligne": "222",
+   "tache": "Montee en regime",
+   "cause": "Problème mécanique",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-05",
+   "ligne": "222",
+   "tache": "Montee en regime",
+   "cause": "Problème réglage",
+   "type": "motif"
   },
   {
    "date": "2026-10-05",
