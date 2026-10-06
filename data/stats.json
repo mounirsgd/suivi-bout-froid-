@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-06T03:08:26",
+ "derniere_maj": "2026-10-06T09:00:27",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-06"
@@ -83,7 +83,7 @@
     "retenues": 2
    },
    "233": {
-    "total": 12,
+    "total": 13,
     "retenues": 6
    },
    "235": {
@@ -1488,6 +1488,18 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Manque de personnel | Réglage 2 brins 1 SGD, pas de lecture n°moule,panne COC, montage brins Gauche 10h00"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-06",
+   "ligne": "233",
+   "metrique": "T1",
+   "duree_min": 155,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Témoins NOK | Teinte témoin"
     }
    ]
   }
@@ -3963,6 +3975,34 @@
    "tache": "Premier lot sorti",
    "cause": "Lot bloqué",
    "type": "motif"
+  },
+  {
+   "date": "2026-10-06",
+   "ligne": "233",
+   "tache": "T0 : Nettoyage de ligne",
+   "cause": "Nettoyage non terminé",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-06",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-06",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Témoins NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-06",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Teinte témoin",
+   "type": "libre"
   }
  ]
 }
