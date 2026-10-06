@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-06T09:00:27",
+ "derniere_maj": "2026-10-06T11:59:51",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-06"
@@ -1499,7 +1499,7 @@
    "details": [
     {
      "tache": "T1 : Duree pre-reglage",
-     "texte": "Manque de personnel | Témoins NOK | Teinte témoin"
+     "texte": "Manque de personnel | Témoins NOK | Teinte témoin, 2 brins puis brin G commencé à 10h15,Brin G réglé 11h30"
     }
    ]
   }
@@ -3986,6 +3986,13 @@
   {
    "date": "2026-10-06",
    "ligne": "233",
+   "tache": "T0 : Nettoyage de ligne",
+   "cause": "Prévenu cpbf pour flacon dans la SGD",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-06",
+   "ligne": "233",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque de personnel",
    "type": "motif"
@@ -4001,8 +4008,15 @@
    "date": "2026-10-06",
    "ligne": "233",
    "tache": "T1 : Duree pre-reglage",
-   "cause": "Teinte témoin",
+   "cause": "Teinte témoin, 2 brins puis brin G commencé à 10h15,Brin G réglé 11h30",
    "type": "libre"
+  },
+  {
+   "date": "2026-10-06",
+   "ligne": "233",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Top Emballage retardé",
+   "type": "motif"
   }
  ]
 }
