@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-07T02:29:21",
+ "derniere_maj": "2026-10-07T08:41:33",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-07"
@@ -20,7 +20,7 @@
  ],
  "targets": {
   "T0": {
-   "222": 32,
+   "222": 33,
    "233": 36,
    "235": 36,
    "232": 95,
@@ -49,8 +49,8 @@
  "effectifs": {
   "T0": {
    "222": {
-    "total": 5,
-    "retenues": 2
+    "total": 6,
+    "retenues": 3
    },
    "233": {
     "total": 8,
@@ -1502,6 +1502,13 @@
      "texte": "Manque de personnel | Témoins NOK | Teinte témoin, 2 brins puis brin G commencé à 10h15,Brin G réglé 11h30"
     }
    ]
+  },
+  {
+   "date": "2026-10-07",
+   "ligne": "222",
+   "metrique": "T0",
+   "duree_min": 43,
+   "details": []
   }
  ],
  "causes": [
@@ -4017,6 +4024,34 @@
    "tache": "Arrivee de toutes sections",
    "cause": "Top Emballage retardé",
    "type": "motif"
+  },
+  {
+   "date": "2026-10-06",
+   "ligne": "233",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-07",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-07",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Matériel NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-07",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Réglage 2 brins + 1 SGD, pas de packs pour reglage machine",
+   "type": "libre"
   }
  ]
 }
