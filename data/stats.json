@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-08T09:00:02",
+ "derniere_maj": "2026-10-08T11:59:52",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-08"
@@ -4097,7 +4097,21 @@
    "date": "2026-10-08",
    "ligne": "233",
    "tache": "T1 : Duree pre-reglage",
-   "cause": "2 Brins en priorité",
+   "cause": "Chariot film NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-08",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Matériel NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-08",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "2 Brins en priorité, manque plateau sur les 2 sgd, nouveau film pas ramener",
    "type": "libre"
   },
   {
@@ -4110,8 +4124,22 @@
   {
    "date": "2026-10-08",
    "ligne": "233",
+   "tache": "Top qualite",
+   "cause": "8 numéro en casse",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-08",
+   "ligne": "233",
    "tache": "Montee en regime",
-   "cause": "2 brins + 1 SGD ok 10h26",
+   "cause": "2 brins + 1 SGD ok à 10h26, 8 numéro en casse",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-08",
+   "ligne": "233",
+   "tache": "Premiere palette sortie",
+   "cause": "Bloqué pour Maxi contre bague",
    "type": "libre"
   }
  ]
