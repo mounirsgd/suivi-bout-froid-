@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-08T02:45:48",
+ "derniere_maj": "2026-10-08T09:00:02",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-08"
@@ -4063,6 +4063,55 @@
    "ligne": "222",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Réglage 2 brins + 1 SGD, pas de packs pour reglage machine",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-07",
+   "ligne": "222",
+   "tache": "Top qualite",
+   "cause": "Démarrage tardif",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-07",
+   "ligne": "222",
+   "tache": "Top qualite",
+   "cause": "Top Qualité = 05h00 (J+1)",
+   "type": "releve"
+  },
+  {
+   "date": "2026-10-07",
+   "ligne": "222",
+   "tache": "Top emballage",
+   "cause": "Top Emballage validé EE (J+1) = 08H22",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-08",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-08",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "2 Brins en priorité",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-08",
+   "ligne": "233",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Beaucoup de tombe sur arche",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-08",
+   "ligne": "233",
+   "tache": "Montee en regime",
+   "cause": "2 brins + 1 SGD ok 10h26",
    "type": "libre"
   }
  ]
