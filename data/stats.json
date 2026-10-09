@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-09T09:07:08",
+ "derniere_maj": "2026-10-09T11:52:01",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-09"
@@ -4199,6 +4199,13 @@
    "ligne": "222",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Ligne non disponible à 7h30, reglage en priorité 2 brins + 1 SGD ( 1 machine)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-09",
+   "ligne": "222",
+   "tache": "Montee en regime",
+   "cause": "7 numéros en casse",
    "type": "libre"
   }
  ]
