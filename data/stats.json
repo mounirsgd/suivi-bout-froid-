@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-09T02:59:13",
+ "derniere_maj": "2026-10-09T09:07:08",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-09"
@@ -20,7 +20,7 @@
  ],
  "targets": {
   "T0": {
-   "222": 33,
+   "222": 31,
    "233": 36,
    "235": 36,
    "232": 95,
@@ -34,7 +34,7 @@
    "235": 123,
    "224": 123,
    "232": 142,
-   "222": 155,
+   "222": 149,
    "236": 130
   },
   "T2": {
@@ -49,7 +49,7 @@
  "effectifs": {
   "T0": {
    "222": {
-    "total": 6,
+    "total": 7,
     "retenues": 3
    },
    "233": {
@@ -99,8 +99,8 @@
     "retenues": 2
    },
    "222": {
-    "total": 7,
-    "retenues": 3
+    "total": 8,
+    "retenues": 4
    },
    "236": {
     "total": 2,
@@ -1519,6 +1519,30 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Manque de personnel | Matériel NOK | Réglage 2 brins + 1 SGD, pas de packs pour reglage machine"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-09",
+   "ligne": "222",
+   "metrique": "T0",
+   "duree_min": 30,
+   "details": [
+    {
+     "tache": "T0 : Nettoyage de ligne",
+     "texte": "Flacon retrouvé dans le retourneur Centre ( prévenu TBF)"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-09",
+   "ligne": "222",
+   "metrique": "T1",
+   "duree_min": 130,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Ligne non disponible à 7h30, reglage en priorité 2 brins + 1 SGD ( 1 machine)"
     }
    ]
   }
@@ -4140,6 +4164,41 @@
    "ligne": "233",
    "tache": "Premiere palette sortie",
    "cause": "Bloqué pour Maxi contre bague",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-08",
+   "ligne": "233",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-08",
+   "ligne": "233",
+   "tache": "Premier lot sorti",
+   "cause": "Défaut qualité",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-09",
+   "ligne": "222",
+   "tache": "T0 : Nettoyage de ligne",
+   "cause": "Flacon retrouvé dans le retourneur Centre ( prévenu TBF)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-09",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-09",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Ligne non disponible à 7h30, reglage en priorité 2 brins + 1 SGD ( 1 machine)",
    "type": "libre"
   }
  ]
