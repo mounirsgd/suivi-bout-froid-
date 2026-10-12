@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-12T02:30:08",
+ "derniere_maj": "2026-10-12T09:15:08",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-12"
@@ -21,10 +21,10 @@
  "targets": {
   "T0": {
    "222": 31,
-   "233": 36,
+   "233": 32,
    "235": 36,
    "232": 95,
-   "224": 35,
+   "224": 38,
    "221": 30,
    "236": 60
   },
@@ -32,7 +32,7 @@
    "221": 125,
    "233": 120,
    "235": 123,
-   "224": 123,
+   "224": 120,
    "232": 142,
    "222": 149,
    "236": 130
@@ -53,7 +53,7 @@
     "retenues": 3
    },
    "233": {
-    "total": 8,
+    "total": 9,
     "retenues": 4
    },
    "235": {
@@ -65,8 +65,8 @@
     "retenues": 2
    },
    "224": {
-    "total": 7,
-    "retenues": 3
+    "total": 8,
+    "retenues": 4
    },
    "221": {
     "total": 1,
@@ -91,8 +91,8 @@
     "retenues": 3
    },
    "224": {
-    "total": 13,
-    "retenues": 6
+    "total": 14,
+    "retenues": 7
    },
    "232": {
     "total": 5,
@@ -1545,6 +1545,37 @@
      "texte": "Manque de personnel | Ligne non disponible à 7h30, reglage en priorité 2 brins + 1 SGD ( 1 machine)"
     }
    ]
+  },
+  {
+   "date": "2026-10-12",
+   "ligne": "224",
+   "metrique": "T0",
+   "duree_min": 90,
+   "details": [
+    {
+     "tache": "T0 : Nettoyage de ligne",
+     "texte": "Manque de personnel"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-12",
+   "ligne": "224",
+   "metrique": "T1",
+   "duree_min": 105,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Pas de tête de calibrage, manque débouchage"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-12",
+   "ligne": "233",
+   "metrique": "T0",
+   "duree_min": 30,
+   "details": []
   }
  ],
  "causes": [
@@ -4206,6 +4237,69 @@
    "ligne": "222",
    "tache": "Montee en regime",
    "cause": "7 numéros en casse",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-12",
+   "ligne": "224",
+   "tache": "Aligneur vide",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-12",
+   "ligne": "224",
+   "tache": "Aligneur vide",
+   "cause": "Arrêt ligne pour manque de personnel ouverture des trappes",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-12",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Pas de tête de calibrage, manque débouchage",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-12",
+   "ligne": "224",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Arche complète, casse sur arche",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-12",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-12",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Témoins NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-12",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Matériel NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-12",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Teinte à voir avec la prod, pas d'étoiles au bon diamètre disponible",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-12",
+   "ligne": "233",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Tombé sur arche",
    "type": "libre"
   }
  ]
