@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-12T09:15:08",
+ "derniere_maj": "2026-10-12T13:06:05",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-12"
@@ -30,7 +30,7 @@
   },
   "T1": {
    "221": 125,
-   "233": 120,
+   "233": 123,
    "235": 123,
    "224": 120,
    "232": 142,
@@ -83,8 +83,8 @@
     "retenues": 2
    },
    "233": {
-    "total": 13,
-    "retenues": 6
+    "total": 14,
+    "retenues": 7
    },
    "235": {
     "total": 6,
@@ -1576,6 +1576,18 @@
    "metrique": "T0",
    "duree_min": 30,
    "details": []
+  },
+  {
+   "date": "2026-10-12",
+   "ligne": "233",
+   "metrique": "T1",
+   "duree_min": 165,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Témoins NOK | Matériel NOK | Teinte à voir avec la prod, pas d'étoiles au bon diamètre disponible"
+    }
+   ]
   }
  ],
  "causes": [
@@ -4300,6 +4312,13 @@
    "ligne": "233",
    "tache": "Arrivee deux sections controlables",
    "cause": "Tombé sur arche",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-12",
+   "ligne": "233",
+   "tache": "Montee en regime",
+   "cause": "Beaucoup de tombé, 9 numéro en casse",
    "type": "libre"
   }
  ]
