@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-13T03:39:28",
+ "derniere_maj": "2026-10-13T09:27:03",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-13"
@@ -23,7 +23,7 @@
    "222": 31,
    "233": 32,
    "235": 36,
-   "232": 95,
+   "232": 75,
    "224": 38,
    "221": 30,
    "236": 60
@@ -33,7 +33,7 @@
    "233": 123,
    "235": 123,
    "224": 120,
-   "232": 142,
+   "232": 145,
    "222": 149,
    "236": 130
   },
@@ -61,7 +61,7 @@
     "retenues": 2
    },
    "232": {
-    "total": 4,
+    "total": 5,
     "retenues": 2
    },
    "224": {
@@ -95,8 +95,8 @@
     "retenues": 7
    },
    "232": {
-    "total": 5,
-    "retenues": 2
+    "total": 6,
+    "retenues": 3
    },
    "222": {
     "total": 8,
@@ -1586,6 +1586,25 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Manque de personnel | Témoins NOK | Matériel NOK | Teinte à voir avec la prod, pas d'étoiles au bon diamètre disponible"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-13",
+   "ligne": "232",
+   "metrique": "T0",
+   "duree_min": 60,
+   "details": []
+  },
+  {
+   "date": "2026-10-13",
+   "ligne": "232",
+   "metrique": "T1",
+   "duree_min": 150,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Formation | Matériel NOK | Erreurs premier emballage, renfort équipe 1brin vidéo"
     }
    ]
   }
@@ -4318,7 +4337,56 @@
    "date": "2026-10-12",
    "ligne": "233",
    "tache": "Montee en regime",
-   "cause": "Beaucoup de tombé, 9 numéro en casse",
+   "cause": "Problème mécanique",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-12",
+   "ligne": "233",
+   "tache": "Montee en regime",
+   "cause": "Problème réglage",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-12",
+   "ligne": "233",
+   "tache": "Montee en regime",
+   "cause": "Beaucoup de tombé, 9 numéro en casse, problème tambour de sortie COD changement sabre de sortie + intervention mécanique",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-13",
+   "ligne": "232",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-13",
+   "ligne": "232",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Formation",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-13",
+   "ligne": "232",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Matériel NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-13",
+   "ligne": "232",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Erreurs premier emballage, renfort équipe 1brin vidéo",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-13",
+   "ligne": "232",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Beaucoup de bouillon + Tombés",
    "type": "libre"
   }
  ]
