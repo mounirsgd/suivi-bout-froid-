@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-13T09:27:03",
+ "derniere_maj": "2026-10-13T12:40:29",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-13"
@@ -1604,7 +1604,7 @@
    "details": [
     {
      "tache": "T1 : Duree pre-reglage",
-     "texte": "Manque de personnel | Formation | Matériel NOK | Erreurs premier emballage, renfort équipe 1brin vidéo"
+     "texte": "Manque de personnel | Formation | Matériel NOK | Erreurs premier emballage tunnel sgd NOK, renfort équipe 1brin vidéo"
     }
    ]
   }
@@ -4379,7 +4379,7 @@
    "date": "2026-10-13",
    "ligne": "232",
    "tache": "T1 : Duree pre-reglage",
-   "cause": "Erreurs premier emballage, renfort équipe 1brin vidéo",
+   "cause": "Erreurs premier emballage tunnel sgd NOK, renfort équipe 1brin vidéo",
    "type": "libre"
   },
   {
