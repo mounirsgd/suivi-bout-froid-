@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-14T02:00:00",
+ "derniere_maj": "2026-10-14T07:39:51",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-14"
@@ -4387,6 +4387,34 @@
    "ligne": "232",
    "tache": "Arrivee de toutes sections",
    "cause": "Beaucoup de bouillon + Tombés",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-14",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-14",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Formation",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-14",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Matériel NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-14",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Doublure sur COC, mauvais matériel pour SGD",
    "type": "libre"
   }
  ]
