@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-14T07:39:51",
+ "derniere_maj": "2026-10-14T10:08:20",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-14"
@@ -20,7 +20,7 @@
  ],
  "targets": {
   "T0": {
-   "222": 31,
+   "222": 32,
    "233": 32,
    "235": 36,
    "232": 75,
@@ -34,7 +34,7 @@
    "235": 123,
    "224": 120,
    "232": 145,
-   "222": 149,
+   "222": 138,
    "236": 130
   },
   "T2": {
@@ -49,8 +49,8 @@
  "effectifs": {
   "T0": {
    "222": {
-    "total": 7,
-    "retenues": 3
+    "total": 8,
+    "retenues": 4
    },
    "233": {
     "total": 9,
@@ -99,7 +99,7 @@
     "retenues": 3
    },
    "222": {
-    "total": 8,
+    "total": 9,
     "retenues": 4
    },
    "236": {
@@ -1605,6 +1605,25 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Manque de personnel | Formation | Matériel NOK | Erreurs premier emballage tunnel sgd NOK, renfort équipe 1brin vidéo"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-14",
+   "ligne": "222",
+   "metrique": "T0",
+   "duree_min": 40,
+   "details": []
+  },
+  {
+   "date": "2026-10-14",
+   "ligne": "222",
+   "metrique": "T1",
+   "duree_min": 120,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Formation | Matériel NOK | Doublure sur COC, mauvais matériel pour SGD,COC non réglé, SGD D non réglé"
     }
    ]
   }
@@ -4390,6 +4409,34 @@
    "type": "libre"
   },
   {
+   "date": "2026-10-13",
+   "ligne": "232",
+   "tache": "Top qualite",
+   "cause": "Démarrage tardif",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-13",
+   "ligne": "232",
+   "tache": "Top qualite",
+   "cause": "Top Qualité 232/1 à 10h30 (J+1)",
+   "type": "releve"
+  },
+  {
+   "date": "2026-10-13",
+   "ligne": "232",
+   "tache": "Premiere palette sortie",
+   "cause": "232/1 : première palette sortie = 10h01 (J+1)",
+   "type": "releve"
+  },
+  {
+   "date": "2026-10-13",
+   "ligne": "232",
+   "tache": "Top emballage",
+   "cause": "Top Emballage 232/1 à 10h40 (J+1)",
+   "type": "releve"
+  },
+  {
    "date": "2026-10-14",
    "ligne": "222",
    "tache": "T1 : Duree pre-reglage",
@@ -4414,7 +4461,14 @@
    "date": "2026-10-14",
    "ligne": "222",
    "tache": "T1 : Duree pre-reglage",
-   "cause": "Doublure sur COC, mauvais matériel pour SGD",
+   "cause": "Doublure sur COC, mauvais matériel pour SGD,COC non réglé, SGD D non réglé",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-14",
+   "ligne": "222",
+   "tache": "Top qualite",
+   "cause": "4 numéro en casse",
    "type": "libre"
   }
  ]
