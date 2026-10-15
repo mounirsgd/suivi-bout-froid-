@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-15T07:28:15",
+ "derniere_maj": "2026-10-15T09:51:14",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-15"
@@ -103,7 +103,7 @@
     "retenues": 4
    },
    "236": {
-    "total": 2,
+    "total": 3,
     "retenues": 1
    }
   },
@@ -1633,6 +1633,18 @@
    "metrique": "T0",
    "duree_min": 55,
    "details": []
+  },
+  {
+   "date": "2026-10-15",
+   "ligne": "236",
+   "metrique": "T1",
+   "duree_min": 135,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Matériel NOK | Manque roue d'espacement"
+    }
+   ]
   }
  ],
  "causes": [
@@ -4484,6 +4496,20 @@
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque de personnel",
    "type": "motif"
+  },
+  {
+   "date": "2026-10-15",
+   "ligne": "236",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Matériel NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-15",
+   "ligne": "236",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque roue d'espacement",
+   "type": "libre"
   }
  ]
 }
