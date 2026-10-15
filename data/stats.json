@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-15T01:34:42",
+ "derniere_maj": "2026-10-15T07:28:15",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-15"
@@ -26,7 +26,7 @@
    "232": 75,
    "224": 38,
    "221": 30,
-   "236": 60
+   "236": 55
   },
   "T1": {
    "221": 125,
@@ -73,7 +73,7 @@
     "retenues": 1
    },
    "236": {
-    "total": 2,
+    "total": 3,
     "retenues": 1
    }
   },
@@ -1626,6 +1626,13 @@
      "texte": "Manque de personnel | Formation | Matériel NOK | Doublure sur COC, mauvais matériel pour SGD,COC non réglé, SGD D non réglé"
     }
    ]
+  },
+  {
+   "date": "2026-10-15",
+   "ligne": "236",
+   "metrique": "T0",
+   "duree_min": 55,
+   "details": []
   }
  ],
  "causes": [
@@ -4470,6 +4477,13 @@
    "tache": "Top qualite",
    "cause": "4 numéro en casse",
    "type": "libre"
+  },
+  {
+   "date": "2026-10-15",
+   "ligne": "236",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
   }
  ]
 }
