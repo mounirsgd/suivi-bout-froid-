@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-15T09:51:14",
+ "derniere_maj": "2026-10-15T14:43:44",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-15"
@@ -4510,6 +4510,27 @@
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque roue d'espacement",
    "type": "libre"
+  },
+  {
+   "date": "2026-10-15",
+   "ligne": "236",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Flacons cassé,  tombé repartis sur toute la largeur de l'arche",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-15",
+   "ligne": "236",
+   "tache": "Top qualite",
+   "cause": "Encore Beaucoup de tombés",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-15",
+   "ligne": "236",
+   "tache": "Top emballage",
+   "cause": "236/1 : Top Emballage = 15h15",
+   "type": "releve"
   }
  ]
 }
