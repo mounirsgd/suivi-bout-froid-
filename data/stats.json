@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-16T09:43:33",
+ "derniere_maj": "2026-10-16T14:37:05",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-16"
@@ -4597,7 +4597,21 @@
    "date": "2026-10-16",
    "ligne": "224",
    "tache": "Arrivee deux sections controlables",
-   "cause": "6 sections, casse sur arche",
+   "cause": "6 sections, casse sur arche, 12h15 arrivée 2 section suite arrêt BC",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-16",
+   "ligne": "224",
+   "tache": "Top qualite",
+   "cause": "Top Qualité retardé",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-16",
+   "ligne": "224",
+   "tache": "Top qualite",
+   "cause": "13 numéro en casse",
    "type": "libre"
   }
  ]
