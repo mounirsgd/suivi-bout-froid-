@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-16T01:30:39",
+ "derniere_maj": "2026-10-16T07:12:02",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-16"
@@ -65,7 +65,7 @@
     "retenues": 2
    },
    "224": {
-    "total": 8,
+    "total": 9,
     "retenues": 4
    },
    "221": {
@@ -1645,6 +1645,13 @@
      "texte": "Manque de personnel | Matériel NOK | Manque roue d'espacement"
     }
    ]
+  },
+  {
+   "date": "2026-10-16",
+   "ligne": "224",
+   "metrique": "T0",
+   "duree_min": 60,
+   "details": []
   }
  ],
  "causes": [
@@ -4531,6 +4538,20 @@
    "tache": "Top emballage",
    "cause": "236/1 : Top Emballage = 15h15",
    "type": "releve"
+  },
+  {
+   "date": "2026-10-16",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-16",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Création fiche",
+   "type": "motif"
   }
  ]
 }
