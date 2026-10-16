@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-16T07:12:02",
+ "derniere_maj": "2026-10-16T09:43:33",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-16"
@@ -91,7 +91,7 @@
     "retenues": 3
    },
    "224": {
-    "total": 14,
+    "total": 15,
     "retenues": 7
    },
    "232": {
@@ -1650,8 +1650,20 @@
    "date": "2026-10-16",
    "ligne": "224",
    "metrique": "T0",
-   "duree_min": 60,
+   "duree_min": 140,
    "details": []
+  },
+  {
+   "date": "2026-10-16",
+   "ligne": "224",
+   "metrique": "T1",
+   "duree_min": 150,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Création fiche | Article fabriqué sur L225 habituellement"
+    }
+   ]
   }
  ],
  "causes": [
@@ -4535,6 +4547,27 @@
   {
    "date": "2026-10-15",
    "ligne": "236",
+   "tache": "Premiere palette sortie",
+   "cause": "236/1 : Première palette sortie = 17h56",
+   "type": "releve"
+  },
+  {
+   "date": "2026-10-15",
+   "ligne": "236",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-15",
+   "ligne": "236",
+   "tache": "Premier lot sorti",
+   "cause": "236/1 : Premier lot sorti = 22h05",
+   "type": "releve"
+  },
+  {
+   "date": "2026-10-15",
+   "ligne": "236",
    "tache": "Top emballage",
    "cause": "236/1 : Top Emballage = 15h15",
    "type": "releve"
@@ -4552,6 +4585,20 @@
    "tache": "T1 : Duree pre-reglage",
    "cause": "Création fiche",
    "type": "motif"
+  },
+  {
+   "date": "2026-10-16",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Article fabriqué sur L225 habituellement",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-16",
+   "ligne": "224",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "6 sections, casse sur arche",
+   "type": "libre"
   }
  ]
 }
