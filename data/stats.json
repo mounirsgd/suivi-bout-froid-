@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-19T01:24:44",
+ "derniere_maj": "2026-10-19T07:48:41",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-19"
@@ -21,10 +21,10 @@
  "targets": {
   "T0": {
    "222": 32,
-   "233": 32,
+   "233": 34,
    "235": 36,
    "232": 75,
-   "224": 38,
+   "224": 40,
    "221": 30,
    "236": 55
   },
@@ -32,7 +32,7 @@
    "221": 125,
    "233": 123,
    "235": 123,
-   "224": 120,
+   "224": 121,
    "232": 145,
    "222": 138,
    "236": 130
@@ -53,8 +53,8 @@
     "retenues": 4
    },
    "233": {
-    "total": 9,
-    "retenues": 4
+    "total": 10,
+    "retenues": 5
    },
    "235": {
     "total": 4,
@@ -65,8 +65,8 @@
     "retenues": 2
    },
    "224": {
-    "total": 9,
-    "retenues": 4
+    "total": 10,
+    "retenues": 5
    },
    "221": {
     "total": 1,
@@ -91,8 +91,8 @@
     "retenues": 3
    },
    "224": {
-    "total": 15,
-    "retenues": 7
+    "total": 16,
+    "retenues": 8
    },
    "232": {
     "total": 6,
@@ -1664,6 +1664,32 @@
      "texte": "Manque de personnel | Création fiche | Article fabriqué sur L225 habituellement"
     }
    ]
+  },
+  {
+   "date": "2026-10-19",
+   "ligne": "224",
+   "metrique": "T0",
+   "duree_min": 50,
+   "details": []
+  },
+  {
+   "date": "2026-10-19",
+   "ligne": "224",
+   "metrique": "T1",
+   "duree_min": 125,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Création fiche | Vide de ligne en cours a 7h30"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-19",
+   "ligne": "233",
+   "metrique": "T0",
+   "duree_min": 40,
+   "details": []
   }
  ],
  "causes": [
@@ -4612,6 +4638,20 @@
    "ligne": "224",
    "tache": "Top qualite",
    "cause": "13 numéro en casse",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-19",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Création fiche",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-19",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Vide de ligne en cours a 7h30",
    "type": "libre"
   }
  ]
