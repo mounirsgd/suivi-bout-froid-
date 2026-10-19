@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-19T07:48:41",
+ "derniere_maj": "2026-10-19T10:42:26",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-19"
@@ -30,7 +30,7 @@
   },
   "T1": {
    "221": 125,
-   "233": 123,
+   "233": 121,
    "235": 123,
    "224": 121,
    "232": 145,
@@ -83,7 +83,7 @@
     "retenues": 2
    },
    "233": {
-    "total": 14,
+    "total": 15,
     "retenues": 7
    },
    "235": {
@@ -1690,6 +1690,18 @@
    "metrique": "T0",
    "duree_min": 40,
    "details": []
+  },
+  {
+   "date": "2026-10-19",
+   "ligne": "233",
+   "metrique": "T1",
+   "duree_min": 125,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Bug écran figé COG(redémarrage PC)"
+    }
+   ]
   }
  ],
  "causes": [
@@ -4652,6 +4664,20 @@
    "ligne": "224",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Vide de ligne en cours a 7h30",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-19",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Bug écran figé COG(redémarrage PC)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-19",
+   "ligne": "233",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Beaucoup de flacon tombé",
    "type": "libre"
   }
  ]
