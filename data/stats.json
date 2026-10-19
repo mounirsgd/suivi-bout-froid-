@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-19T10:42:26",
+ "derniere_maj": "2026-10-19T16:50:43",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-19"
@@ -4664,6 +4664,13 @@
    "ligne": "224",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Vide de ligne en cours a 7h30",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-19",
+   "ligne": "224",
+   "tache": "Top qualite",
+   "cause": "Pas de contrôles calibrage",
    "type": "libre"
   },
   {
