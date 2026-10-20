@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-20T01:55:55",
+ "derniere_maj": "2026-10-20T07:36:41",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-20"
@@ -57,7 +57,7 @@
     "retenues": 5
    },
    "235": {
-    "total": 4,
+    "total": 5,
     "retenues": 2
    },
    "232": {
@@ -1702,6 +1702,13 @@
      "texte": "Bug écran figé COG(redémarrage PC)"
     }
    ]
+  },
+  {
+   "date": "2026-10-20",
+   "ligne": "235",
+   "metrique": "T0",
+   "duree_min": 46,
+   "details": []
   }
  ],
  "causes": [
@@ -4675,6 +4682,27 @@
   },
   {
    "date": "2026-10-19",
+   "ligne": "224",
+   "tache": "Montee en regime",
+   "cause": "Cadence non atteinte",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-19",
+   "ligne": "224",
+   "tache": "Montee en regime",
+   "cause": "Fabrication difficile flacon instable",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-19",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-19",
    "ligne": "233",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Bug écran figé COG(redémarrage PC)",
@@ -4685,6 +4713,27 @@
    "ligne": "233",
    "tache": "Arrivee deux sections controlables",
    "cause": "Beaucoup de flacon tombé",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-20",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-20",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Intervention maintenance",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-20",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Support Codeur Multi G, changement alimentation 24v, support MGI",
    "type": "libre"
   }
  ]
