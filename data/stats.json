@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-20T07:36:41",
+ "derniere_maj": "2026-10-20T09:59:18",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-20"
@@ -34,7 +34,7 @@
    "235": 123,
    "224": 121,
    "232": 145,
-   "222": 138,
+   "222": 135,
    "236": 130
   },
   "T2": {
@@ -49,7 +49,7 @@
  "effectifs": {
   "T0": {
    "222": {
-    "total": 8,
+    "total": 9,
     "retenues": 4
    },
    "233": {
@@ -87,7 +87,7 @@
     "retenues": 7
    },
    "235": {
-    "total": 6,
+    "total": 7,
     "retenues": 3
    },
    "224": {
@@ -99,8 +99,8 @@
     "retenues": 3
    },
    "222": {
-    "total": 9,
-    "retenues": 4
+    "total": 10,
+    "retenues": 5
    },
    "236": {
     "total": 3,
@@ -1705,10 +1705,41 @@
   },
   {
    "date": "2026-10-20",
+   "ligne": "222",
+   "metrique": "T0",
+   "duree_min": 45,
+   "details": []
+  },
+  {
+   "date": "2026-10-20",
+   "ligne": "222",
+   "metrique": "T1",
+   "duree_min": 125,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Intervention maintenance | Changement distributeur frein V"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-20",
    "ligne": "235",
    "metrique": "T0",
    "duree_min": 46,
    "details": []
+  },
+  {
+   "date": "2026-10-20",
+   "ligne": "235",
+   "metrique": "T1",
+   "duree_min": 140,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Intervention maintenance | Support Codeur Multi G, changement alimentation 24v, support MGI"
+    }
+   ]
   }
  ],
  "causes": [
@@ -4713,6 +4744,27 @@
    "ligne": "233",
    "tache": "Arrivee deux sections controlables",
    "cause": "Beaucoup de flacon tombé",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-20",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-20",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Intervention maintenance",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-20",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Changement distributeur frein V",
    "type": "libre"
   },
   {
