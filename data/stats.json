@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-21T07:41:10",
+ "derniere_maj": "2026-10-21T10:04:40",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-21"
@@ -32,10 +32,10 @@
    "221": 125,
    "233": 121,
    "235": 123,
-   "224": 121,
+   "224": 116,
    "232": 145,
    "222": 135,
-   "236": 130
+   "236": 132
   },
   "T2": {
    "232": 401,
@@ -65,7 +65,7 @@
     "retenues": 2
    },
    "224": {
-    "total": 10,
+    "total": 11,
     "retenues": 5
    },
    "221": {
@@ -91,7 +91,7 @@
     "retenues": 3
    },
    "224": {
-    "total": 16,
+    "total": 17,
     "retenues": 8
    },
    "232": {
@@ -103,8 +103,8 @@
     "retenues": 5
    },
    "236": {
-    "total": 3,
-    "retenues": 1
+    "total": 4,
+    "retenues": 2
    }
   },
   "T2": {
@@ -1738,6 +1738,37 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Manque de personnel | Intervention maintenance | Support Codeur Multi G, changement alimentation 24v, support MGI"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-21",
+   "ligne": "224",
+   "metrique": "T0",
+   "duree_min": 90,
+   "details": []
+  },
+  {
+   "date": "2026-10-21",
+   "ligne": "224",
+   "metrique": "T1",
+   "duree_min": 115,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-21",
+   "ligne": "236",
+   "metrique": "T1",
+   "duree_min": 140,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Matériel NOK | Demande de renfort, COG tête de mince usé par une rotation"
     }
    ]
   }
@@ -4790,6 +4821,13 @@
   },
   {
    "date": "2026-10-21",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-21",
    "ligne": "236",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque de personnel",
@@ -4806,7 +4844,7 @@
    "date": "2026-10-21",
    "ligne": "236",
    "tache": "T1 : Duree pre-reglage",
-   "cause": "Renfort Mr JUFFROY, pas de packs de réglage, COG tête de mince usiné par une rotation",
+   "cause": "Demande de renfort, COG tête de mince usé par une rotation",
    "type": "libre"
   }
  ]
