@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-21T10:04:40",
+ "derniere_maj": "2026-10-21T14:54:50",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-21"
@@ -26,7 +26,7 @@
    "232": 75,
    "224": 40,
    "221": 30,
-   "236": 55
+   "236": 42
   },
   "T1": {
    "221": 125,
@@ -73,8 +73,8 @@
     "retenues": 1
    },
    "236": {
-    "total": 3,
-    "retenues": 1
+    "total": 4,
+    "retenues": 2
    }
   },
   "T1": {
@@ -1759,6 +1759,13 @@
      "texte": "Manque de personnel"
     }
    ]
+  },
+  {
+   "date": "2026-10-21",
+   "ligne": "236",
+   "metrique": "T0",
+   "duree_min": 30,
+   "details": []
   },
   {
    "date": "2026-10-21",
@@ -4846,6 +4853,20 @@
    "tache": "T1 : Duree pre-reglage",
    "cause": "Demande de renfort, COG tête de mince usé par une rotation",
    "type": "libre"
+  },
+  {
+   "date": "2026-10-21",
+   "ligne": "236",
+   "tache": "Premiere palette sortie",
+   "cause": "236/1 : Première palette sortie = 11h47",
+   "type": "releve"
+  },
+  {
+   "date": "2026-10-21",
+   "ligne": "236",
+   "tache": "Premier lot sorti",
+   "cause": "236/1 : Premier lot sorti = 13h59",
+   "type": "releve"
   }
  ]
 }
