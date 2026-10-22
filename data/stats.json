@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-22T01:37:56",
+ "derniere_maj": "2026-10-22T07:36:55",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-22"
@@ -21,7 +21,7 @@
  "targets": {
   "T0": {
    "222": 32,
-   "233": 34,
+   "233": 32,
    "235": 36,
    "232": 75,
    "224": 40,
@@ -53,7 +53,7 @@
     "retenues": 4
    },
    "233": {
-    "total": 10,
+    "total": 11,
     "retenues": 5
    },
    "235": {
@@ -1776,6 +1776,18 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Manque de personnel | Matériel NOK | Demande de renfort, COG tête de mince usé par une rotation"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-22",
+   "ligne": "233",
+   "metrique": "T0",
+   "duree_min": 30,
+   "details": [
+    {
+     "tache": "T0 : Nettoyage de ligne",
+     "texte": "Manque de personnel"
     }
    ]
   }
@@ -4867,6 +4879,27 @@
    "tache": "Premier lot sorti",
    "cause": "236/1 : Premier lot sorti = 13h59",
    "type": "releve"
+  },
+  {
+   "date": "2026-10-22",
+   "ligne": "233",
+   "tache": "T0 : Nettoyage de ligne",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-22",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Matériel NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-22",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Vide de ligne en cours, étoile, moyeux, renfort Mr JUFFROY",
+   "type": "libre"
   }
  ]
 }
