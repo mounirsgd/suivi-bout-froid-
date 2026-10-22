@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-22T07:36:55",
+ "derniere_maj": "2026-10-22T10:07:00",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-22"
@@ -30,7 +30,7 @@
   },
   "T1": {
    "221": 125,
-   "233": 121,
+   "233": 123,
    "235": 123,
    "224": 116,
    "232": 145,
@@ -83,8 +83,8 @@
     "retenues": 2
    },
    "233": {
-    "total": 15,
-    "retenues": 7
+    "total": 16,
+    "retenues": 8
    },
    "235": {
     "total": 7,
@@ -1788,6 +1788,18 @@
     {
      "tache": "T0 : Nettoyage de ligne",
      "texte": "Manque de personnel"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-22",
+   "ligne": "233",
+   "metrique": "T1",
+   "duree_min": 140,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Matériel NOK | Vide de ligne en cours, étoile, moyeux"
     }
    ]
   }
@@ -4898,7 +4910,14 @@
    "date": "2026-10-22",
    "ligne": "233",
    "tache": "T1 : Duree pre-reglage",
-   "cause": "Vide de ligne en cours, étoile, moyeux, renfort Mr JUFFROY",
+   "cause": "Vide de ligne en cours, étoile, moyeux",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-22",
+   "ligne": "233",
+   "tache": "Montee en regime",
+   "cause": "9 numéro en casse",
    "type": "libre"
   }
  ]
