@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-23T01:39:11",
+ "derniere_maj": "2026-10-23T07:34:10",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-23"
@@ -24,7 +24,7 @@
    "233": 32,
    "235": 36,
    "232": 75,
-   "224": 40,
+   "224": 38,
    "221": 30,
    "236": 42
   },
@@ -65,8 +65,8 @@
     "retenues": 2
    },
    "224": {
-    "total": 11,
-    "retenues": 5
+    "total": 12,
+    "retenues": 6
    },
    "221": {
     "total": 1,
@@ -1802,6 +1802,13 @@
      "texte": "Manque de personnel | Matériel NOK | Vide de ligne en cours, étoile, moyeux"
     }
    ]
+  },
+  {
+   "date": "2026-10-23",
+   "ligne": "224",
+   "metrique": "T0",
+   "duree_min": 30,
+   "details": []
   }
  ],
  "causes": [
@@ -4918,6 +4925,20 @@
    "ligne": "233",
    "tache": "Montee en regime",
    "cause": "9 numéro en casse",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-23",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-23",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Normalement prévu en 2ème",
    "type": "libre"
   }
  ]
