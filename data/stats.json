@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-23T10:00:12",
+ "derniere_maj": "2026-10-23T14:42:57",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-23"
@@ -1858,7 +1858,7 @@
    "details": [
     {
      "tache": "T1 : Duree pre-reglage",
-     "texte": "Manque de personnel | Matériel NOK"
+     "texte": "Manque de personnel | Matériel NOK | Témoins NOK | Teinte"
     }
    ]
   }
@@ -5052,8 +5052,29 @@
   {
    "date": "2026-10-23",
    "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Témoins NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-23",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Teinte",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-23",
+   "ligne": "235",
    "tache": "Arrivee deux sections controlables",
    "cause": "Fond non conforme",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-23",
+   "ligne": "235",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Arrivé avec les bon fonds",
    "type": "libre"
   }
  ]
