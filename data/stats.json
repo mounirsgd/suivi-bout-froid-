@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-23T07:34:10",
+ "derniere_maj": "2026-10-23T10:00:12",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-23"
@@ -31,15 +31,15 @@
   "T1": {
    "221": 125,
    "233": 123,
-   "235": 123,
-   "224": 116,
+   "235": 126,
+   "224": 117,
    "232": 145,
    "222": 135,
    "236": 132
   },
   "T2": {
    "232": 401,
-   "233": 177,
+   "233": 192,
    "222": 355,
    "235": 466,
    "224": 166,
@@ -87,12 +87,12 @@
     "retenues": 8
    },
    "235": {
-    "total": 7,
-    "retenues": 3
+    "total": 8,
+    "retenues": 4
    },
    "224": {
-    "total": 17,
-    "retenues": 8
+    "total": 18,
+    "retenues": 9
    },
    "232": {
     "total": 6,
@@ -113,8 +113,8 @@
     "retenues": 2
    },
    "233": {
-    "total": 5,
-    "retenues": 2
+    "total": 6,
+    "retenues": 3
    },
    "222": {
     "total": 2,
@@ -1804,11 +1804,63 @@
    ]
   },
   {
+   "date": "2026-10-22",
+   "ligne": "233",
+   "metrique": "T2",
+   "duree_min": 334,
+   "details": [
+    {
+     "tache": "T0 : Nettoyage de ligne",
+     "texte": "Manque de personnel"
+    },
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Matériel NOK | Vide de ligne en cours, étoile, moyeux"
+    },
+    {
+     "tache": "Montee en regime",
+     "texte": "9 numéro en casse"
+    },
+    {
+     "tache": "Premier lot sorti",
+     "texte": "Lot bloqué"
+    },
+    {
+     "tache": "Validation de deux lots commercialisables",
+     "texte": "Deux premiers lots livrables = 15h52"
+    }
+   ]
+  },
+  {
    "date": "2026-10-23",
    "ligne": "224",
    "metrique": "T0",
    "duree_min": 30,
    "details": []
+  },
+  {
+   "date": "2026-10-23",
+   "ligne": "224",
+   "metrique": "T1",
+   "duree_min": 125,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Normalement prévu en 2ème, COD en panne"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-23",
+   "ligne": "235",
+   "metrique": "T1",
+   "duree_min": 135,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Matériel NOK"
+    }
+   ]
   }
  ],
  "causes": [
@@ -4928,6 +4980,20 @@
    "type": "libre"
   },
   {
+   "date": "2026-10-22",
+   "ligne": "233",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-22",
+   "ligne": "233",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Deux premiers lots livrables = 15h52",
+   "type": "releve"
+  },
+  {
    "date": "2026-10-23",
    "ligne": "224",
    "tache": "T1 : Duree pre-reglage",
@@ -4938,7 +5004,56 @@
    "date": "2026-10-23",
    "ligne": "224",
    "tache": "T1 : Duree pre-reglage",
-   "cause": "Normalement prévu en 2ème",
+   "cause": "Normalement prévu en 2ème, COD en panne",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-23",
+   "ligne": "224",
+   "tache": "Montee en regime",
+   "cause": "Problème mécanique",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-23",
+   "ligne": "224",
+   "tache": "Montee en regime",
+   "cause": "Problème réglage",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-23",
+   "ligne": "224",
+   "tache": "Montee en regime",
+   "cause": "Cadence non atteinte",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-23",
+   "ligne": "224",
+   "tache": "Montee en regime",
+   "cause": "COD en panne",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-23",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-23",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Matériel NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-23",
+   "ligne": "235",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Fond non conforme",
    "type": "libre"
   }
  ]
