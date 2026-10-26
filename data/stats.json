@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-26T07:49:30",
+ "derniere_maj": "2026-10-26T11:01:42",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-26"
@@ -20,7 +20,7 @@
  ],
  "targets": {
   "T0": {
-   "222": 32,
+   "222": 33,
    "233": 32,
    "235": 36,
    "232": 75,
@@ -34,7 +34,7 @@
    "235": 126,
    "224": 117,
    "232": 145,
-   "222": 135,
+   "222": 126,
    "236": 132
   },
   "T2": {
@@ -49,8 +49,8 @@
  "effectifs": {
   "T0": {
    "222": {
-    "total": 9,
-    "retenues": 4
+    "total": 10,
+    "retenues": 5
    },
    "233": {
     "total": 11,
@@ -99,7 +99,7 @@
     "retenues": 3
    },
    "222": {
-    "total": 10,
+    "total": 11,
     "retenues": 5
    },
    "236": {
@@ -1859,6 +1859,25 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Manque de personnel | Matériel NOK | Témoins NOK | Teinte"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-26",
+   "ligne": "222",
+   "metrique": "T0",
+   "duree_min": 35,
+   "details": []
+  },
+  {
+   "date": "2026-10-26",
+   "ligne": "222",
+   "metrique": "T1",
+   "duree_min": 120,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "3brins + 1SGD réglé"
     }
    ]
   }
@@ -5075,6 +5094,27 @@
    "ligne": "235",
    "tache": "Arrivee de toutes sections",
    "cause": "Arrivé avec les bon fonds",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-26",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "3brins + 1SGD réglé",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-26",
+   "ligne": "222",
+   "tache": "Montee en regime",
+   "cause": "7 numéro en casse",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-26",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Reprise réglage témoins MX4 (équipes 5*8)",
    "type": "libre"
   }
  ]
