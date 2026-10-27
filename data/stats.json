@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-27T07:54:17",
+ "derniere_maj": "2026-10-27T10:29:41",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-27"
@@ -83,7 +83,7 @@
     "retenues": 2
    },
    "233": {
-    "total": 16,
+    "total": 17,
     "retenues": 8
    },
    "235": {
@@ -1887,6 +1887,18 @@
    "metrique": "T0",
    "duree_min": 40,
    "details": []
+  },
+  {
+   "date": "2026-10-27",
+   "ligne": "233",
+   "metrique": "T1",
+   "duree_min": 157,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Matériel NOK | Témoins NOK | Manque galets sur portion CO, Problème de teinte"
+    }
+   ]
   }
  ],
  "causes": [
