@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-27T02:10:21",
+ "derniere_maj": "2026-10-27T07:54:17",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-27"
@@ -21,7 +21,7 @@
  "targets": {
   "T0": {
    "222": 33,
-   "233": 32,
+   "233": 33,
    "235": 36,
    "232": 75,
    "224": 38,
@@ -53,8 +53,8 @@
     "retenues": 5
    },
    "233": {
-    "total": 11,
-    "retenues": 5
+    "total": 12,
+    "retenues": 6
    },
    "235": {
     "total": 5,
@@ -1880,6 +1880,13 @@
      "texte": "3brins + 1SGD réglé"
     }
    ]
+  },
+  {
+   "date": "2026-10-27",
+   "ligne": "233",
+   "metrique": "T0",
+   "duree_min": 40,
+   "details": []
   }
  ],
  "causes": [
@@ -5112,9 +5119,44 @@
   },
   {
    "date": "2026-10-26",
+   "ligne": "222",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lots bloqués (attente libération qualité)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-26",
    "ligne": "235",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Reprise réglage témoins MX4 (équipes 5*8)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-26",
+   "ligne": "235",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lots bloqués (contrôle labo)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-27",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Matériel NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-27",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Témoins NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-27",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque galets sur portion CO, Problème de teinte",
    "type": "libre"
   }
  ]
