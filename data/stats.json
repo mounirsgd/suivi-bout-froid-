@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-28T11:17:56",
+ "derniere_maj": "2026-10-28T16:28:02",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-28"
@@ -5230,6 +5230,20 @@
    "ligne": "236",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Tunnel sgd NOK, Teinte témoin vidéo",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-28",
+   "ligne": "236",
+   "tache": "Premiere palette sortie",
+   "cause": "236/1 : première palette = 13h52",
+   "type": "releve"
+  },
+  {
+   "date": "2026-10-28",
+   "ligne": "236",
+   "tache": "Premier lot sorti",
+   "cause": "236/1 : premier lot sorti =",
    "type": "libre"
   }
  ]
