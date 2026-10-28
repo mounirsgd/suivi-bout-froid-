@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-28T08:35:38",
+ "derniere_maj": "2026-10-28T11:17:56",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-28"
@@ -26,7 +26,7 @@
    "232": 75,
    "224": 38,
    "221": 30,
-   "236": 42
+   "236": 32
   },
   "T1": {
    "221": 125,
@@ -35,7 +35,7 @@
    "224": 117,
    "232": 145,
    "222": 126,
-   "236": 132
+   "236": 125
   },
   "T2": {
    "232": 401,
@@ -65,7 +65,7 @@
     "retenues": 2
    },
    "224": {
-    "total": 12,
+    "total": 13,
     "retenues": 6
    },
    "221": {
@@ -73,7 +73,7 @@
     "retenues": 1
    },
    "236": {
-    "total": 4,
+    "total": 5,
     "retenues": 2
    }
   },
@@ -103,7 +103,7 @@
     "retenues": 5
    },
    "236": {
-    "total": 4,
+    "total": 5,
     "retenues": 2
    }
   },
@@ -1897,6 +1897,32 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Matériel NOK | Témoins NOK | Manque galets sur portion CO, Problème de teinte"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-28",
+   "ligne": "224",
+   "metrique": "T0",
+   "duree_min": 50,
+   "details": []
+  },
+  {
+   "date": "2026-10-28",
+   "ligne": "236",
+   "metrique": "T0",
+   "duree_min": 35,
+   "details": []
+  },
+  {
+   "date": "2026-10-28",
+   "ligne": "236",
+   "metrique": "T1",
+   "duree_min": 120,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Matériel NOK | Témoins NOK | Tunnel sgd NOK, Teinte témoin vidéo"
     }
    ]
   }
@@ -5169,6 +5195,20 @@
    "ligne": "233",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque galets sur portion CO, Problème de teinte",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-28",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Intervention maintenance",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-28",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Support codeur COD, pas de lecture numéro de moule",
    "type": "libre"
   },
   {
