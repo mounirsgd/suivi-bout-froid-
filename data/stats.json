@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-28T02:26:00",
+ "derniere_maj": "2026-10-28T08:35:38",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-28"
@@ -5169,6 +5169,27 @@
    "ligne": "233",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque galets sur portion CO, Problème de teinte",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-28",
+   "ligne": "236",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Matériel NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-28",
+   "ligne": "236",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Témoins NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-28",
+   "ligne": "236",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Tunnel sgd NOK, Teinte témoin vidéo",
    "type": "libre"
   }
  ]
