@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-29T08:30:56",
+ "derniere_maj": "2026-10-29T11:28:49",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-29"
@@ -43,7 +43,8 @@
    "222": 355,
    "235": 466,
    "224": 166,
-   "221": 297
+   "221": 297,
+   "236": 292
   }
  },
  "effectifs": {
@@ -129,6 +130,10 @@
     "retenues": 1
    },
    "221": {
+    "total": 1,
+    "retenues": 1
+   },
+   "236": {
     "total": 1,
     "retenues": 1
    }
@@ -1923,6 +1928,30 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Matériel NOK | Témoins NOK | Tunnel sgd NOK, Teinte témoin vidéo"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-28",
+   "ligne": "236",
+   "metrique": "T2",
+   "duree_min": 292,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Matériel NOK | Témoins NOK | Tunnel sgd NOK, Teinte témoin vidéo"
+    },
+    {
+     "tache": "Premiere palette sortie",
+     "texte": "236/1 : première palette = 13h52"
+    },
+    {
+     "tache": "Premier lot sorti",
+     "texte": "236/1 : premier lot sorti = 15h45"
+    },
+    {
+     "tache": "Validation de deux lots commercialisables",
+     "texte": "236/1 : Deux premiers lots livrables = 17h20"
     }
    ]
   }
@@ -5213,6 +5242,27 @@
   },
   {
    "date": "2026-10-28",
+   "ligne": "224",
+   "tache": "Arrivee de toutes sections",
+   "cause": "5 sections",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-28",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-28",
+   "ligne": "224",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lots bloqués (glaçure + gravure mal venue)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-28",
    "ligne": "236",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Matériel NOK",
@@ -5243,8 +5293,15 @@
    "date": "2026-10-28",
    "ligne": "236",
    "tache": "Premier lot sorti",
-   "cause": "236/1 : premier lot sorti =",
-   "type": "libre"
+   "cause": "236/1 : premier lot sorti = 15h45",
+   "type": "releve"
+  },
+  {
+   "date": "2026-10-28",
+   "ligne": "236",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "236/1 : Deux premiers lots livrables = 17h20",
+   "type": "releve"
   }
  ]
 }
