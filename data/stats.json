@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-30T02:42:37",
+ "derniere_maj": "2026-10-30T08:40:40",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-30"
@@ -5302,6 +5302,34 @@
    "tache": "Validation de deux lots commercialisables",
    "cause": "236/1 : Deux premiers lots livrables = 17h20",
    "type": "releve"
+  },
+  {
+   "date": "2026-10-30",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-30",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Matériel NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-30",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Nettoyage (débris verre)",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-30",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque pack de réglage machine, débris de verre dans les CO",
+   "type": "libre"
   }
  ]
 }
