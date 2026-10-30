@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-10-30T08:40:40",
+ "derniere_maj": "2026-10-30T11:21:19",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-10-30"
@@ -32,7 +32,7 @@
    "221": 125,
    "233": 123,
    "235": 126,
-   "224": 117,
+   "224": 116,
    "232": 145,
    "222": 126,
    "236": 125
@@ -92,7 +92,7 @@
     "retenues": 4
    },
    "224": {
-    "total": 18,
+    "total": 19,
     "retenues": 9
    },
    "232": {
@@ -1952,6 +1952,18 @@
     {
      "tache": "Validation de deux lots commercialisables",
      "texte": "236/1 : Deux premiers lots livrables = 17h20"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "ligne": "224",
+   "metrique": "T1",
+   "duree_min": 125,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Matériel NOK | Nettoyage (débris verre) | Manque pack de réglage machine, débris de verre dans les CO"
     }
    ]
   }
@@ -5330,6 +5342,20 @@
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque pack de réglage machine, débris de verre dans les CO",
    "type": "libre"
+  },
+  {
+   "date": "2026-10-30",
+   "ligne": "224",
+   "tache": "Top qualite",
+   "cause": "5 numéro en casse",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-30",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
   }
  ]
 }
