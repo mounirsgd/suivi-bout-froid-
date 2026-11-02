@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-02T02:37:03",
+ "derniere_maj": "2026-11-02T09:32:15",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-02"
@@ -5352,10 +5352,59 @@
   },
   {
    "date": "2026-10-30",
+   "ligne": "224",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-10-30",
+   "ligne": "224",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lots bloqués (attente PDS)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-30",
    "ligne": "235",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque de personnel",
    "type": "motif"
+  },
+  {
+   "date": "2026-10-30",
+   "ligne": "235",
+   "tache": "Top qualite",
+   "cause": "Top Qualité J+1 = 18h00",
+   "type": "releve"
+  },
+  {
+   "date": "2026-10-30",
+   "ligne": "235",
+   "tache": "Premiere palette sortie",
+   "cause": "Première palette sortie à J+1 (19h27)",
+   "type": "releve"
+  },
+  {
+   "date": "2026-10-30",
+   "ligne": "235",
+   "tache": "Premier lot sorti",
+   "cause": "Premier lot sorti à J+1 (20h13)",
+   "type": "releve"
+  },
+  {
+   "date": "2026-10-30",
+   "ligne": "235",
+   "tache": "Top emballage",
+   "cause": "Top Emballage J+1 = 19h25",
+   "type": "releve"
+  },
+  {
+   "date": "2026-10-30",
+   "ligne": "235",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lots bloqués (attente contrôle labo)",
+   "type": "libre"
   }
  ]
 }
