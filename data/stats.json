@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-03T09:34:48",
+ "derniere_maj": "2026-11-03T12:44:35",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-03"
@@ -5348,6 +5348,13 @@
    "ligne": "224",
    "tache": "Top qualite",
    "cause": "5 numéro en casse",
+   "type": "libre"
+  },
+  {
+   "date": "2026-10-30",
+   "ligne": "224",
+   "tache": "Montee en regime",
+   "cause": "Montée en régime impacté par la qualité des produits(arrêts des brins pour équilibrage et réglage des défauts)",
    "type": "libre"
   },
   {
