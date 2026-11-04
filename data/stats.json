@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-04T03:03:39",
+ "derniere_maj": "2026-11-04T09:16:17",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-04"
@@ -5411,6 +5411,34 @@
    "ligne": "235",
    "tache": "Validation de deux lots commercialisables",
    "cause": "Lots bloqués (attente contrôle labo)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-04",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-04",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Nettoyage (débris verre)",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-04",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Intervention maintenance",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-04",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Débris de verre sous les étoiles CO, remise en état mécanique tête atlas, écran atlas figé au chargement de la nouvelle prod",
    "type": "libre"
   }
  ]
