@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-04T09:16:17",
+ "derniere_maj": "2026-11-04T12:57:04",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-04"
@@ -32,7 +32,7 @@
    "221": 125,
    "233": 123,
    "235": 126,
-   "224": 116,
+   "224": 118,
    "232": 145,
    "222": 126,
    "236": 125
@@ -92,8 +92,8 @@
     "retenues": 4
    },
    "224": {
-    "total": 19,
-    "retenues": 9
+    "total": 20,
+    "retenues": 10
    },
    "232": {
     "total": 6,
@@ -1964,6 +1964,18 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Manque de personnel | Matériel NOK | Nettoyage (débris verre) | Manque pack de réglage machine, débris de verre dans les CO"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-04",
+   "ligne": "224",
+   "metrique": "T1",
+   "duree_min": 170,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Nettoyage (débris verre) | Intervention maintenance | Débris de verre sous les étoiles CO, remise en état mécanique tête atlas, écran atlas figé au chargement de la nouvelle prod, COD colonel calibrage HS procédure gabarit manuel, COD souris atlas non fonctionnelle"
     }
    ]
   }
@@ -5416,7 +5428,7 @@
   {
    "date": "2026-11-04",
    "ligne": "224",
-   "tache": "T1 : Duree pre-reglage",
+   "tache": "Aligneur vide",
    "cause": "Manque de personnel",
    "type": "motif"
   },
@@ -5438,7 +5450,21 @@
    "date": "2026-11-04",
    "ligne": "224",
    "tache": "T1 : Duree pre-reglage",
-   "cause": "Débris de verre sous les étoiles CO, remise en état mécanique tête atlas, écran atlas figé au chargement de la nouvelle prod",
+   "cause": "Débris de verre sous les étoiles CO, remise en état mécanique tête atlas, écran atlas figé au chargement de la nouvelle prod, COD colonel calibrage HS procédure gabarit manuel, COD souris atlas non fonctionnelle",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-04",
+   "ligne": "224",
+   "tache": "Top qualite",
+   "cause": "5 numéro en casse, pas de cpbf",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-04",
+   "ligne": "224",
+   "tache": "Montee en regime",
+   "cause": "Flacons cassé et flacons avec ailettes bloque les CO, flacons collé",
    "type": "libre"
   }
  ]
