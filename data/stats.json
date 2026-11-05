@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-05T13:08:13",
+ "derniere_maj": "2026-11-05T17:53:06",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-05"
@@ -5513,6 +5513,27 @@
    "tache": "T1 : Duree pre-reglage",
    "cause": "COG remise en état rotation articles",
    "type": "libre"
+  },
+  {
+   "date": "2026-11-05",
+   "ligne": "222",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Retard démarrage",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-05",
+   "ligne": "222",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Tombées sur arche",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-05",
+   "ligne": "222",
+   "tache": "Top qualite",
+   "cause": "Démarrage tardif",
+   "type": "motif"
   }
  ]
 }
