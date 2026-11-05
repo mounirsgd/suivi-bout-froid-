@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-05T03:34:10",
+ "derniere_maj": "2026-11-05T09:31:29",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-05"
@@ -50,7 +50,7 @@
  "effectifs": {
   "T0": {
    "222": {
-    "total": 10,
+    "total": 11,
     "retenues": 5
    },
    "233": {
@@ -1978,6 +1978,13 @@
      "texte": "Manque de personnel | Nettoyage (débris verre) | Intervention maintenance | Débris de verre sous les étoiles CO, remise en état mécanique tête atlas, écran atlas figé au chargement de la nouvelle prod, COD colonel calibrage HS procédure gabarit manuel, COD souris atlas non fonctionnelle"
     }
    ]
+  },
+  {
+   "date": "2026-11-05",
+   "ligne": "222",
+   "metrique": "T0",
+   "duree_min": 80,
+   "details": []
   }
  ],
  "causes": [
@@ -5466,6 +5473,27 @@
    "tache": "Montee en regime",
    "cause": "Flacons cassé et flacons avec ailettes bloque les CO, flacons collé",
    "type": "libre"
+  },
+  {
+   "date": "2026-11-04",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-04",
+   "ligne": "224",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lots bloqués (1 et 2 pour glaçures bagues puis attente résultats thermoscellage).",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-05",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
   }
  ]
 }
