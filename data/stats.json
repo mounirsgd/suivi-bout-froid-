@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-05T09:31:29",
+ "derniere_maj": "2026-11-05T13:08:13",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-05"
@@ -34,7 +34,7 @@
    "235": 126,
    "224": 118,
    "232": 145,
-   "222": 126,
+   "222": 132,
    "236": 125
   },
   "T2": {
@@ -100,8 +100,8 @@
     "retenues": 3
    },
    "222": {
-    "total": 11,
-    "retenues": 5
+    "total": 12,
+    "retenues": 6
    },
    "236": {
     "total": 5,
@@ -1985,6 +1985,18 @@
    "metrique": "T0",
    "duree_min": 80,
    "details": []
+  },
+  {
+   "date": "2026-11-05",
+   "ligne": "222",
+   "metrique": "T1",
+   "duree_min": 210,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | COG remise en état rotation articles"
+    }
+   ]
   }
  ],
  "causes": [
@@ -5494,6 +5506,13 @@
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque de personnel",
    "type": "motif"
+  },
+  {
+   "date": "2026-11-05",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "COG remise en état rotation articles",
+   "type": "libre"
   }
  ]
 }
