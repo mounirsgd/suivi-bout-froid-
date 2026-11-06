@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-06T12:54:01",
+ "derniere_maj": "2026-11-06T17:14:00",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-06"
@@ -5520,6 +5520,13 @@
    "tache": "Arrivee de toutes sections",
    "cause": "Arrivée des flacons = 11h00 (problème moulerie)",
    "type": "libre"
+  },
+  {
+   "date": "2026-11-06",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
   },
   {
    "date": "2026-11-06",
