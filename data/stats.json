@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-06T03:29:14",
+ "derniere_maj": "2026-11-06T09:26:15",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-06"
@@ -22,7 +22,7 @@
   "T0": {
    "222": 33,
    "233": 33,
-   "235": 36,
+   "235": 34,
    "232": 75,
    "224": 38,
    "221": 30,
@@ -34,7 +34,7 @@
    "235": 126,
    "224": 118,
    "232": 145,
-   "222": 132,
+   "222": 126,
    "236": 125
   },
   "T2": {
@@ -50,7 +50,7 @@
  "effectifs": {
   "T0": {
    "222": {
-    "total": 11,
+    "total": 10,
     "retenues": 5
    },
    "233": {
@@ -58,8 +58,8 @@
     "retenues": 6
    },
    "235": {
-    "total": 5,
-    "retenues": 2
+    "total": 6,
+    "retenues": 3
    },
    "232": {
     "total": 5,
@@ -88,7 +88,7 @@
     "retenues": 8
    },
    "235": {
-    "total": 8,
+    "total": 9,
     "retenues": 4
    },
    "224": {
@@ -100,8 +100,8 @@
     "retenues": 3
    },
    "222": {
-    "total": 12,
-    "retenues": 6
+    "total": 11,
+    "retenues": 5
    },
    "236": {
     "total": 5,
@@ -1980,21 +1980,21 @@
    ]
   },
   {
-   "date": "2026-11-05",
-   "ligne": "222",
+   "date": "2026-11-06",
+   "ligne": "235",
    "metrique": "T0",
-   "duree_min": 80,
+   "duree_min": 30,
    "details": []
   },
   {
-   "date": "2026-11-05",
-   "ligne": "222",
+   "date": "2026-11-06",
+   "ligne": "235",
    "metrique": "T1",
-   "duree_min": 210,
+   "duree_min": 140,
    "details": [
     {
      "tache": "T1 : Duree pre-reglage",
-     "texte": "Manque de personnel | COG remise en état rotation articles"
+     "texte": "Manque de personnel | Essai mise en place plaque anti rebond"
     }
    ]
   }
@@ -5501,39 +5501,18 @@
    "type": "libre"
   },
   {
-   "date": "2026-11-05",
-   "ligne": "222",
+   "date": "2026-11-06",
+   "ligne": "235",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque de personnel",
    "type": "motif"
   },
   {
-   "date": "2026-11-05",
-   "ligne": "222",
+   "date": "2026-11-06",
+   "ligne": "235",
    "tache": "T1 : Duree pre-reglage",
-   "cause": "COG remise en état rotation articles",
+   "cause": "Essai mise en place plaque anti rebond",
    "type": "libre"
-  },
-  {
-   "date": "2026-11-05",
-   "ligne": "222",
-   "tache": "Arrivee de toutes sections",
-   "cause": "Retard démarrage",
-   "type": "motif"
-  },
-  {
-   "date": "2026-11-05",
-   "ligne": "222",
-   "tache": "Arrivee de toutes sections",
-   "cause": "Tombées sur arche",
-   "type": "motif"
-  },
-  {
-   "date": "2026-11-05",
-   "ligne": "222",
-   "tache": "Top qualite",
-   "cause": "Démarrage tardif",
-   "type": "motif"
   }
  ]
 }
