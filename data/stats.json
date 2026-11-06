@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-06T09:26:15",
+ "derniere_maj": "2026-11-06T12:54:01",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-06"
@@ -24,7 +24,7 @@
    "233": 33,
    "235": 34,
    "232": 75,
-   "224": 38,
+   "224": 40,
    "221": 30,
    "236": 32
   },
@@ -66,8 +66,8 @@
     "retenues": 2
    },
    "224": {
-    "total": 13,
-    "retenues": 6
+    "total": 14,
+    "retenues": 7
    },
    "221": {
     "total": 1,
@@ -1981,6 +1981,13 @@
   },
   {
    "date": "2026-11-06",
+   "ligne": "224",
+   "metrique": "T0",
+   "duree_min": 73,
+   "details": []
+  },
+  {
+   "date": "2026-11-06",
    "ligne": "235",
    "metrique": "T0",
    "duree_min": 30,
@@ -1994,7 +2001,7 @@
    "details": [
     {
      "tache": "T1 : Duree pre-reglage",
-     "texte": "Manque de personnel | Essai mise en place plaque anti rebond"
+     "texte": "Manque de personnel | Essai mise en place plaque anti rebond, non concluant"
     }
    ]
   }
@@ -5502,6 +5509,27 @@
   },
   {
    "date": "2026-11-06",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Réglages machines BF (hors apprentissage)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-06",
+   "ligne": "224",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Arrivée des flacons = 11h00 (problème moulerie)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-06",
+   "ligne": "224",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lots bloqués (attente contrôle labo)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-06",
    "ligne": "235",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque de personnel",
@@ -5511,7 +5539,21 @@
    "date": "2026-11-06",
    "ligne": "235",
    "tache": "T1 : Duree pre-reglage",
-   "cause": "Essai mise en place plaque anti rebond",
+   "cause": "Essai mise en place plaque anti rebond, non concluant",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-06",
+   "ligne": "235",
+   "tache": "Montee en regime",
+   "cause": "Problème mécanique",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-06",
+   "ligne": "235",
+   "tache": "Montee en regime",
+   "cause": "Convoyeur COD vis entrée",
    "type": "libre"
   }
  ]
