@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-09T02:45:07",
+ "derniere_maj": "2026-11-09T09:49:48",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-09"
@@ -5532,7 +5532,7 @@
    "date": "2026-11-06",
    "ligne": "224",
    "tache": "Validation de deux lots commercialisables",
-   "cause": "Lots bloqués (attente contrôle labo)",
+   "cause": "Lots bloqués (lots 1/1 et 1/2 : erreurs gravures 6 moules + attente contrôle labo)",
    "type": "libre"
   },
   {
@@ -5561,6 +5561,20 @@
    "ligne": "235",
    "tache": "Montee en regime",
    "cause": "Convoyeur COD vis entrée",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-06",
+   "ligne": "235",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-06",
+   "ligne": "235",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lots bloqués Qualité (non libérés au 09/11)",
    "type": "libre"
   }
  ]
