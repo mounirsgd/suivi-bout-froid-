@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-09T09:49:48",
+ "derniere_maj": "2026-11-09T13:50:19",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-09"
@@ -50,7 +50,7 @@
  "effectifs": {
   "T0": {
    "222": {
-    "total": 10,
+    "total": 11,
     "retenues": 5
    },
    "233": {
@@ -2004,6 +2004,13 @@
      "texte": "Manque de personnel | Essai mise en place plaque anti rebond, non concluant"
     }
    ]
+  },
+  {
+   "date": "2026-11-09",
+   "ligne": "222",
+   "metrique": "T0",
+   "duree_min": 40,
+   "details": []
   }
  ],
  "causes": [
