@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-10T13:25:43",
+ "derniere_maj": "2026-11-10T17:31:43",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-10"
@@ -5622,6 +5622,27 @@
    "ligne": "222",
    "tache": "Validation de deux lots commercialisables",
    "cause": "Lots bloqués (E91 - attente contrôle labo)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-10",
+   "ligne": "232",
+   "tache": "Premiere palette sortie",
+   "cause": "232/1 : Première palette sortie = 10h41",
+   "type": "releve"
+  },
+  {
+   "date": "2026-11-10",
+   "ligne": "232",
+   "tache": "Premier lot sorti",
+   "cause": "232/1 : Premier lot sorti = 11h50",
+   "type": "releve"
+  },
+  {
+   "date": "2026-11-10",
+   "ligne": "232",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lots bloqués (en attente libération Qualité)",
    "type": "libre"
   },
   {
