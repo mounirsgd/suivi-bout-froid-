@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-10T09:52:52",
+ "derniere_maj": "2026-11-10T13:25:43",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-10"
@@ -31,7 +31,7 @@
   "T1": {
    "221": 125,
    "233": 123,
-   "235": 126,
+   "235": 129,
    "224": 118,
    "232": 145,
    "222": 126,
@@ -88,8 +88,8 @@
     "retenues": 8
    },
    "235": {
-    "total": 9,
-    "retenues": 4
+    "total": 10,
+    "retenues": 5
    },
    "224": {
     "total": 20,
@@ -2011,6 +2011,18 @@
    "metrique": "T0",
    "duree_min": 40,
    "details": []
+  },
+  {
+   "date": "2026-11-10",
+   "ligne": "235",
+   "metrique": "T1",
+   "duree_min": 180,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Intervention convoyeur co"
+    }
+   ]
   }
  ],
  "causes": [
@@ -5610,6 +5622,20 @@
    "ligne": "222",
    "tache": "Validation de deux lots commercialisables",
    "cause": "Lots bloqués (E91 - attente contrôle labo)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-10",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-10",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Intervention convoyeur co",
    "type": "libre"
   }
  ]
