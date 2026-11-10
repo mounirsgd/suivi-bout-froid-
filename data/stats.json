@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-10T04:41:06",
+ "derniere_maj": "2026-11-10T09:52:52",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-10"
@@ -5582,6 +5582,34 @@
    "ligne": "235",
    "tache": "Validation de deux lots commercialisables",
    "cause": "Lots bloqués Qualité (non libérés au 09/11)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-09",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-09",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Helios NOK (remis en état maint jour). Config Helios silc G+C+D par équipe 5*8. Multi G+C+D réglage équipe 5*8",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-09",
+   "ligne": "222",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-09",
+   "ligne": "222",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lots bloqués (E91 - attente contrôle labo)",
    "type": "libre"
   }
  ]
