@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-12T09:51:37",
+ "derniere_maj": "2026-11-12T13:43:17",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-12"
@@ -5680,6 +5680,20 @@
   },
   {
    "date": "2026-11-12",
+   "ligne": "224",
+   "tache": "Aligneur vide",
+   "cause": "RAS",
+   "type": "ras"
+  },
+  {
+   "date": "2026-11-12",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Reprise complète software CO/Simplex - 11h32 reste que témoin virtuel",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-12",
    "ligne": "232",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque de personnel",
@@ -5697,6 +5711,13 @@
    "ligne": "232",
    "tache": "T1 : Duree pre-reglage",
    "cause": "CoD tête de mince Haute abîmé, intervention ERMI sécurité porte CO, essai config électeurs COC",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-12",
+   "ligne": "232",
+   "tache": "Montee en regime",
+   "cause": "Passage en lecteur sur CO mauvaise lecture Symplex",
    "type": "libre"
   }
  ]
