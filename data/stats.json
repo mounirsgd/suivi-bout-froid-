@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-12T03:56:08",
+ "derniere_maj": "2026-11-12T09:51:37",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-12"
@@ -23,7 +23,7 @@
    "222": 33,
    "233": 33,
    "235": 34,
-   "232": 75,
+   "232": 73,
    "224": 40,
    "221": 30,
    "236": 32
@@ -62,8 +62,8 @@
     "retenues": 3
    },
    "232": {
-    "total": 5,
-    "retenues": 2
+    "total": 6,
+    "retenues": 3
    },
    "224": {
     "total": 14,
@@ -96,7 +96,7 @@
     "retenues": 10
    },
    "232": {
-    "total": 6,
+    "total": 7,
     "retenues": 3
    },
    "222": {
@@ -2021,6 +2021,25 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Manque de personnel | Intervention convoyeur co"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-12",
+   "ligne": "232",
+   "metrique": "T0",
+   "duree_min": 70,
+   "details": []
+  },
+  {
+   "date": "2026-11-12",
+   "ligne": "232",
+   "metrique": "T1",
+   "duree_min": 150,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Nettoyage (débris verre) | CoD tête de mince Haute abîmé, intervention ERMI sécurité porte CO, essai config électeurs COC"
     }
    ]
   }
@@ -5657,6 +5676,27 @@
    "ligne": "235",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Intervention convoyeur co",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-12",
+   "ligne": "232",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-12",
+   "ligne": "232",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Nettoyage (débris verre)",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-12",
+   "ligne": "232",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "CoD tête de mince Haute abîmé, intervention ERMI sécurité porte CO, essai config électeurs COC",
    "type": "libre"
   }
  ]
