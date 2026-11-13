@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-13T09:33:24",
+ "derniere_maj": "2026-11-13T13:02:22",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-13"
@@ -35,7 +35,7 @@
    "224": 118,
    "232": 145,
    "222": 126,
-   "236": 125
+   "236": 118
   },
   "T2": {
    "232": 401,
@@ -104,8 +104,8 @@
     "retenues": 5
    },
    "236": {
-    "total": 5,
-    "retenues": 2
+    "total": 6,
+    "retenues": 3
    }
   },
   "T2": {
@@ -2049,6 +2049,18 @@
    "metrique": "T0",
    "duree_min": 87,
    "details": []
+  },
+  {
+   "date": "2026-11-13",
+   "ligne": "236",
+   "metrique": "T1",
+   "duree_min": 105,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Matériel NOK | Tunnel SGD nok"
+    }
+   ]
   }
  ],
  "causes": [
@@ -5725,6 +5737,27 @@
    "ligne": "232",
    "tache": "Montee en regime",
    "cause": "Passage en lecteur sur CO mauvaise lecture Symplex",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-13",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-13",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Matériel NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-13",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Màque galets, manque vis d'entrée",
    "type": "libre"
   },
   {
