@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-13T03:27:22",
+ "derniere_maj": "2026-11-13T09:33:24",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-13"
@@ -26,7 +26,7 @@
    "232": 73,
    "224": 40,
    "221": 30,
-   "236": 32
+   "236": 40
   },
   "T1": {
    "221": 125,
@@ -74,8 +74,8 @@
     "retenues": 1
    },
    "236": {
-    "total": 5,
-    "retenues": 2
+    "total": 6,
+    "retenues": 3
    }
   },
   "T1": {
@@ -2042,6 +2042,13 @@
      "texte": "Manque de personnel | Nettoyage (débris verre) | CoD tête de mince Haute abîmé, intervention ERMI sécurité porte CO, essai config électeurs COC"
     }
    ]
+  },
+  {
+   "date": "2026-11-13",
+   "ligne": "236",
+   "metrique": "T0",
+   "duree_min": 87,
+   "details": []
   }
  ],
  "causes": [
@@ -5718,6 +5725,27 @@
    "ligne": "232",
    "tache": "Montee en regime",
    "cause": "Passage en lecteur sur CO mauvaise lecture Symplex",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-13",
+   "ligne": "236",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-13",
+   "ligne": "236",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Matériel NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-13",
+   "ligne": "236",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Tunnel SGD nok",
    "type": "libre"
   }
  ]
