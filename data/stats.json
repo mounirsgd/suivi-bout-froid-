@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-16T02:52:43",
+ "derniere_maj": "2026-11-16T09:46:41",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-16"
@@ -92,7 +92,7 @@
     "retenues": 5
    },
    "224": {
-    "total": 20,
+    "total": 21,
     "retenues": 10
    },
    "232": {
@@ -2059,6 +2059,18 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Manque de personnel | Matériel NOK | Tunnel SGD nok"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-16",
+   "ligne": "224",
+   "metrique": "T1",
+   "duree_min": 150,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Nettoyage (débris verre) | COD poignée réglage mécanique tête atlas cassé a la prise de poste"
     }
    ]
   }
@@ -5779,6 +5791,34 @@
    "ligne": "236",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Tunnel SGD nok",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-16",
+   "ligne": "224",
+   "tache": "Aligneur vide",
+   "cause": "Ouverture des trappes jusqu'à l'arrêt complet",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-16",
+   "ligne": "224",
+   "tache": "T0 : Nettoyage de ligne",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-16",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Nettoyage (débris verre)",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-16",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "COD poignée réglage mécanique tête atlas cassé a la prise de poste",
    "type": "libre"
   }
  ]
