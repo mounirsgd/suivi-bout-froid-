@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-16T09:46:41",
+ "derniere_maj": "2026-11-16T13:34:37",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-16"
@@ -2070,7 +2070,7 @@
    "details": [
     {
      "tache": "T1 : Duree pre-reglage",
-     "texte": "Manque de personnel | Nettoyage (débris verre) | COD poignée réglage mécanique tête atlas cassé a la prise de poste"
+     "texte": "Manque de personnel | Nettoyage (débris verre) | COD poignée réglage mécanique tête atlas cassé a la prise de poste / deuxième microcoupure à 09h10"
     }
    ]
   }
@@ -5797,7 +5797,7 @@
    "date": "2026-11-16",
    "ligne": "224",
    "tache": "Aligneur vide",
-   "cause": "Ouverture des trappes jusqu'à l'arrêt complet",
+   "cause": "Ouverture des trappes jusqu'à l'arrêt complet / Microcoupure à 06h20 / Arrêt machine à 05h00 (manque personnel)",
    "type": "libre"
   },
   {
@@ -5818,7 +5818,14 @@
    "date": "2026-11-16",
    "ligne": "224",
    "tache": "T1 : Duree pre-reglage",
-   "cause": "COD poignée réglage mécanique tête atlas cassé a la prise de poste",
+   "cause": "COD poignée réglage mécanique tête atlas cassé a la prise de poste / deuxième microcoupure à 09h10",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-16",
+   "ligne": "224",
+   "tache": "Top qualite",
+   "cause": "7 numéro en casse",
    "type": "libre"
   }
  ]
