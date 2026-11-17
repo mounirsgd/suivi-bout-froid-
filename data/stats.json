@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-17T14:19:14",
+ "derniere_maj": "2026-11-17T18:58:38",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-17"
@@ -6012,6 +6012,20 @@
    "tache": "Arrivee de toutes sections",
    "cause": "Tombées sur arche",
    "type": "motif"
+  },
+  {
+   "date": "2026-11-17",
+   "ligne": "222",
+   "tache": "Montee en regime",
+   "cause": "Changement indice pack sur changement production !!!!!!",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-17",
+   "ligne": "222",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lots bloqués (défauts verriers + attente contrôle labo)",
+   "type": "libre"
   }
  ]
 }
