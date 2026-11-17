@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-17T05:07:51",
+ "derniere_maj": "2026-11-17T10:45:22",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-17"
@@ -20,7 +20,7 @@
  ],
  "targets": {
   "T0": {
-   "222": 33,
+   "222": 34,
    "233": 33,
    "235": 34,
    "232": 73,
@@ -34,7 +34,7 @@
    "235": 129,
    "224": 118,
    "232": 145,
-   "222": 126,
+   "222": 125,
    "236": 118
   },
   "T2": {
@@ -44,14 +44,14 @@
    "235": 466,
    "224": 166,
    "221": 297,
-   "236": 292
+   "236": 234
   }
  },
  "effectifs": {
   "T0": {
    "222": {
-    "total": 11,
-    "retenues": 5
+    "total": 12,
+    "retenues": 6
    },
    "233": {
     "total": 12,
@@ -100,8 +100,8 @@
     "retenues": 3
    },
    "222": {
-    "total": 11,
-    "retenues": 5
+    "total": 12,
+    "retenues": 6
    },
    "236": {
     "total": 6,
@@ -134,7 +134,7 @@
     "retenues": 1
    },
    "236": {
-    "total": 1,
+    "total": 2,
     "retenues": 1
    }
   }
@@ -2058,7 +2058,35 @@
    "details": [
     {
      "tache": "T1 : Duree pre-reglage",
-     "texte": "Manque de personnel | Matériel NOK | Tunnel SGD nok"
+     "texte": "Manque de personnel | Matériel NOK | Tunnel SGD nokm"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-13",
+   "ligne": "236",
+   "metrique": "T2",
+   "duree_min": 234,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Matériel NOK | Tunnel SGD nokm"
+    },
+    {
+     "tache": "Montee en regime",
+     "texte": "Démarrage tardif"
+    },
+    {
+     "tache": "Premiere palette sortie",
+     "texte": "236/1 : Première palette sortie = 14h37"
+    },
+    {
+     "tache": "Premier lot sorti",
+     "texte": "236/1 : Premier lot sorti = 15h33"
+    },
+    {
+     "tache": "Validation de deux lots commercialisables",
+     "texte": "236/1 : deux premiers lots livrables = 17h07"
     }
    ]
   },
@@ -2071,6 +2099,30 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Manque de personnel | Nettoyage (débris verre) | COD poignée réglage mécanique tête atlas cassé a la prise de poste / deuxième microcoupure à 09h10"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-17",
+   "ligne": "222",
+   "metrique": "T0",
+   "duree_min": 60,
+   "details": [
+    {
+     "tache": "T0 : Nettoyage de ligne",
+     "texte": "Manque de personnel | Nettoyage non terminé | Flacon ancienne production présent sur la ligne"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-17",
+   "ligne": "222",
+   "metrique": "T1",
+   "duree_min": 120,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Matériel NOK | Tunnel SGD mauvais sens, cellules de mise en charge SGD droite hs"
     }
    ]
   }
@@ -5774,6 +5826,34 @@
   },
   {
    "date": "2026-11-13",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-13",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Défaut qualité",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-13",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Déformation grossière (4 moules)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-13",
+   "ligne": "224",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Défauts verriers (4 premiers lots). +E91 (attente contrôle labo)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-13",
    "ligne": "236",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque de personnel",
@@ -5790,8 +5870,36 @@
    "date": "2026-11-13",
    "ligne": "236",
    "tache": "T1 : Duree pre-reglage",
-   "cause": "Tunnel SGD nok",
+   "cause": "Tunnel SGD nokm",
    "type": "libre"
+  },
+  {
+   "date": "2026-11-13",
+   "ligne": "236",
+   "tache": "Montee en regime",
+   "cause": "Démarrage tardif",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-13",
+   "ligne": "236",
+   "tache": "Premiere palette sortie",
+   "cause": "236/1 : Première palette sortie = 14h37",
+   "type": "releve"
+  },
+  {
+   "date": "2026-11-13",
+   "ligne": "236",
+   "tache": "Premier lot sorti",
+   "cause": "236/1 : Premier lot sorti = 15h33",
+   "type": "releve"
+  },
+  {
+   "date": "2026-11-13",
+   "ligne": "236",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "236/1 : deux premiers lots livrables = 17h07",
+   "type": "releve"
   },
   {
    "date": "2026-11-16",
@@ -5827,6 +5935,83 @@
    "tache": "Top qualite",
    "cause": "7 numéro en casse",
    "type": "libre"
+  },
+  {
+   "date": "2026-11-16",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-16",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Défaut qualité",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-16",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Arrachements fonds (4 moules)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-16",
+   "ligne": "224",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Attente PDS",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-17",
+   "ligne": "222",
+   "tache": "Aligneur vide",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-17",
+   "ligne": "222",
+   "tache": "T0 : Nettoyage de ligne",
+   "cause": "Nettoyage non terminé",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-17",
+   "ligne": "222",
+   "tache": "T0 : Nettoyage de ligne",
+   "cause": "Flacon ancienne production présent sur la ligne",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-17",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Matériel NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-17",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Tunnel SGD mauvais sens, cellules de mise en charge SGD droite hs",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-17",
+   "ligne": "222",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Flacons tachés de rouille non utilisable risque de pollution des convoyeurs ligne",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-17",
+   "ligne": "222",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Tombées sur arche",
+   "type": "motif"
   }
  ]
 }
