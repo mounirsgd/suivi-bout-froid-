@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-18T10:12:08",
+ "derniere_maj": "2026-11-18T13:53:36",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-18"
@@ -22,7 +22,7 @@
   "T0": {
    "222": 34,
    "233": 33,
-   "235": 34,
+   "235": 30,
    "232": 73,
    "224": 40,
    "221": 30,
@@ -58,7 +58,7 @@
     "retenues": 6
    },
    "235": {
-    "total": 6,
+    "total": 7,
     "retenues": 3
    },
    "232": {
@@ -2125,6 +2125,13 @@
      "texte": "Manque de personnel | Matériel NOK | Tunnel SGD mauvais sens, cellules de mise en charge SGD droite hs"
     }
    ]
+  },
+  {
+   "date": "2026-11-18",
+   "ligne": "235",
+   "metrique": "T0",
+   "duree_min": 30,
+   "details": []
   },
   {
    "date": "2026-11-18",
@@ -6058,6 +6065,13 @@
    "ligne": "235",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Extracteur calibrage nok",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-18",
+   "ligne": "235",
+   "tache": "Arrivee deux sections controlables",
+   "cause": "Arrivée machine complète",
    "type": "libre"
   },
   {
