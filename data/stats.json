@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-19T10:23:08",
+ "derniere_maj": "2026-11-19T14:22:12",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-19"
@@ -6115,6 +6115,27 @@
    "type": "libre"
   },
   {
+   "date": "2026-11-18",
+   "ligne": "235",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-18",
+   "ligne": "235",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lots bloqués (en attente libération Qualité)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-19",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Réglage machines packs * 2 + robot",
+   "type": "libre"
+  },
+  {
    "date": "2026-11-19",
    "ligne": "224",
    "tache": "T1 : Duree pre-reglage",
@@ -6127,6 +6148,13 @@
    "tache": "Top qualite",
    "cause": "8 numéro en casse",
    "type": "libre"
+  },
+  {
+   "date": "2026-11-19",
+   "ligne": "224",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
   }
  ]
 }
