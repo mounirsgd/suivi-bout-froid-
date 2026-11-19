@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-19T04:15:58",
+ "derniere_maj": "2026-11-19T10:23:08",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-19"
@@ -32,7 +32,7 @@
    "221": 125,
    "233": 123,
    "235": 127,
-   "224": 118,
+   "224": 119,
    "232": 145,
    "222": 125,
    "236": 118
@@ -66,7 +66,7 @@
     "retenues": 3
    },
    "224": {
-    "total": 14,
+    "total": 15,
     "retenues": 7
    },
    "221": {
@@ -92,8 +92,8 @@
     "retenues": 5
    },
    "224": {
-    "total": 21,
-    "retenues": 10
+    "total": 22,
+    "retenues": 11
    },
    "232": {
     "total": 7,
@@ -2142,6 +2142,25 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Manque de personnel | Matériel NOK | Extracteur calibrage nok"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-19",
+   "ligne": "224",
+   "metrique": "T0",
+   "duree_min": 130,
+   "details": []
+  },
+  {
+   "date": "2026-11-19",
+   "ligne": "224",
+   "metrique": "T1",
+   "duree_min": 125,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel"
     }
    ]
   }
@@ -6093,6 +6112,20 @@
    "ligne": "235",
    "tache": "Montee en regime",
    "cause": "Calibrage MX4 D",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-19",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-19",
+   "ligne": "224",
+   "tache": "Top qualite",
+   "cause": "8 numéro en casse",
    "type": "libre"
   }
  ]
