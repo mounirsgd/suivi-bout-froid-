@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-20T04:04:09",
+ "derniere_maj": "2026-11-20T10:03:15",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-20"
@@ -54,7 +54,7 @@
     "retenues": 6
    },
    "233": {
-    "total": 12,
+    "total": 13,
     "retenues": 6
    },
    "235": {
@@ -84,8 +84,8 @@
     "retenues": 2
    },
    "233": {
-    "total": 17,
-    "retenues": 8
+    "total": 18,
+    "retenues": 9
    },
    "235": {
     "total": 11,
@@ -2161,6 +2161,25 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Manque de personnel"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-20",
+   "ligne": "233",
+   "metrique": "T0",
+   "duree_min": 53,
+   "details": []
+  },
+  {
+   "date": "2026-11-20",
+   "ligne": "233",
+   "metrique": "T1",
+   "duree_min": 120,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Matériel NOK | Chariot film NOK | Manque extracteur CO"
     }
    ]
   }
@@ -6137,6 +6156,13 @@
   },
   {
    "date": "2026-11-19",
+   "ligne": "222",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lots bloqués E94 (attente libération Qualité)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-19",
    "ligne": "224",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque de personnel",
@@ -6152,9 +6178,79 @@
   {
    "date": "2026-11-19",
    "ligne": "224",
+   "tache": "Montee en regime",
+   "cause": "Problème Robot redémarrage 15h43",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-19",
+   "ligne": "224",
    "tache": "Premier lot sorti",
    "cause": "Lot bloqué",
    "type": "motif"
+  },
+  {
+   "date": "2026-11-19",
+   "ligne": "224",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lots bloqués M51 (défauts à retrier) + attente libération lots Qualité (E94)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-20",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-20",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Matériel NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-20",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Chariot film NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-20",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque extracteur CO",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-20",
+   "ligne": "233",
+   "tache": "Arrivee de toutes sections",
+   "cause": "Tombées sur arche",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-20",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-20",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Matériel NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-20",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Vis d'entrée nok",
+   "type": "libre"
   }
  ]
 }
