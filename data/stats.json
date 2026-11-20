@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-20T10:03:15",
+ "derniere_maj": "2026-11-20T13:57:56",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-20"
@@ -22,7 +22,7 @@
   "T0": {
    "222": 34,
    "233": 33,
-   "235": 30,
+   "235": 31,
    "232": 73,
    "224": 40,
    "221": 30,
@@ -31,7 +31,7 @@
   "T1": {
    "221": 125,
    "233": 123,
-   "235": 127,
+   "235": 128,
    "224": 119,
    "232": 145,
    "222": 125,
@@ -58,8 +58,8 @@
     "retenues": 6
    },
    "235": {
-    "total": 7,
-    "retenues": 3
+    "total": 8,
+    "retenues": 4
    },
    "232": {
     "total": 6,
@@ -88,8 +88,8 @@
     "retenues": 9
    },
    "235": {
-    "total": 11,
-    "retenues": 5
+    "total": 12,
+    "retenues": 6
    },
    "224": {
     "total": 22,
@@ -2180,6 +2180,25 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Manque de personnel | Matériel NOK | Chariot film NOK | Manque extracteur CO"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-20",
+   "ligne": "235",
+   "metrique": "T0",
+   "duree_min": 33,
+   "details": []
+  },
+  {
+   "date": "2026-11-20",
+   "ligne": "235",
+   "metrique": "T1",
+   "duree_min": 130,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Matériel NOK | Vis d'entrée nok,"
     }
    ]
   }
@@ -6233,6 +6252,20 @@
   },
   {
    "date": "2026-11-20",
+   "ligne": "233",
+   "tache": "Montee en regime",
+   "cause": "Problème mécanique",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-20",
+   "ligne": "233",
+   "tache": "Montee en regime",
+   "cause": "COD problème planéité, équilibrage des brins, ajustements des réglages",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-20",
    "ligne": "235",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque de personnel",
@@ -6249,7 +6282,7 @@
    "date": "2026-11-20",
    "ligne": "235",
    "tache": "T1 : Duree pre-reglage",
-   "cause": "Vis d'entrée nok",
+   "cause": "Vis d'entrée nok,",
    "type": "libre"
   }
  ]
