@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-23T10:47:57",
+ "derniere_maj": "2026-11-23T15:54:17",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-23"
@@ -6330,6 +6330,20 @@
    "ligne": "236",
    "tache": "T1 : Duree pre-reglage",
    "cause": "SGD G barre changer, SGD D barre a changer, arrivé d'air SGD D déconnecté",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-23",
+   "ligne": "236",
+   "tache": "Top qualite",
+   "cause": "8 numéro en casse",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-23",
+   "ligne": "236",
+   "tache": "Top emballage",
+   "cause": "Pas de CPBF",
    "type": "libre"
   }
  ]
