@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-23T03:49:18",
+ "derniere_maj": "2026-11-23T10:47:57",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-23"
@@ -74,7 +74,7 @@
     "retenues": 1
    },
    "236": {
-    "total": 6,
+    "total": 7,
     "retenues": 3
    }
   },
@@ -104,7 +104,7 @@
     "retenues": 6
    },
    "236": {
-    "total": 6,
+    "total": 7,
     "retenues": 3
    }
   },
@@ -2199,6 +2199,25 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Manque de personnel | Matériel NOK | Vis d'entrée nok,"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-23",
+   "ligne": "236",
+   "metrique": "T0",
+   "duree_min": 55,
+   "details": []
+  },
+  {
+   "date": "2026-11-23",
+   "ligne": "236",
+   "metrique": "T1",
+   "duree_min": 165,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | SGD G barre changer, SGD D barre a changer, arrivé d'air SGD D déconnecté"
     }
    ]
   }
@@ -6266,6 +6285,20 @@
   },
   {
    "date": "2026-11-20",
+   "ligne": "233",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué en M51 (à retrier)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-20",
+   "ligne": "233",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lots bloqués en E93 (attente contrôle PDS)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-20",
    "ligne": "235",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque de personnel",
@@ -6283,6 +6316,20 @@
    "ligne": "235",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Vis d'entrée nok,",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-23",
+   "ligne": "236",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-23",
+   "ligne": "236",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "SGD G barre changer, SGD D barre a changer, arrivé d'air SGD D déconnecté",
    "type": "libre"
   }
  ]
