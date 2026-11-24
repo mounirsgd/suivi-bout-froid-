@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-24T12:31:08",
+ "derniere_maj": "2026-11-24T15:47:45",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-24"
@@ -6395,6 +6395,13 @@
   },
   {
    "date": "2026-11-24",
+   "ligne": "224",
+   "tache": "Montee en regime",
+   "cause": "Passage en lecteur de moule CO lecture de perle difficile en symplex",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-24",
    "ligne": "233",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque de personnel",
@@ -6419,6 +6426,20 @@
    "ligne": "233",
    "tache": "Montee en regime",
    "cause": "Multi Centre en panne redémarrage 11h00(Défaut carte calia)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-24",
+   "ligne": "235",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-24",
+   "ligne": "235",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Premiers lots bloqués M51 (épaule déformée)",
    "type": "libre"
   }
  ]
