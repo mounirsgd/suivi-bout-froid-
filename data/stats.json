@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-24T06:58:59",
+ "derniere_maj": "2026-11-24T12:31:08",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-24"
@@ -21,7 +21,7 @@
  "targets": {
   "T0": {
    "222": 34,
-   "233": 33,
+   "233": 34,
    "235": 31,
    "232": 73,
    "224": 40,
@@ -30,7 +30,7 @@
   },
   "T1": {
    "221": 125,
-   "233": 123,
+   "233": 120,
    "235": 128,
    "224": 119,
    "232": 145,
@@ -54,8 +54,8 @@
     "retenues": 6
    },
    "233": {
-    "total": 13,
-    "retenues": 6
+    "total": 14,
+    "retenues": 7
    },
    "235": {
     "total": 8,
@@ -84,7 +84,7 @@
     "retenues": 2
    },
    "233": {
-    "total": 18,
+    "total": 19,
     "retenues": 9
    },
    "235": {
@@ -2218,6 +2218,25 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Manque de personnel | SGD G barre changer, SGD D barre a changer, arrivé d'air SGD D déconnecté"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-24",
+   "ligne": "233",
+   "metrique": "T0",
+   "duree_min": 50,
+   "details": []
+  },
+  {
+   "date": "2026-11-24",
+   "ligne": "233",
+   "metrique": "T1",
+   "duree_min": 110,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Témoins NOK | Teinte, SGD D barre non entretenue"
     }
    ]
   }
@@ -6342,8 +6361,64 @@
   {
    "date": "2026-11-23",
    "ligne": "236",
+   "tache": "Premiere palette sortie",
+   "cause": "236/1 : Première palette sortie = 14h37",
+   "type": "releve"
+  },
+  {
+   "date": "2026-11-23",
+   "ligne": "236",
+   "tache": "Premier lot sorti",
+   "cause": "236/1 : Premier lot sorti = 18h28",
+   "type": "releve"
+  },
+  {
+   "date": "2026-11-23",
+   "ligne": "236",
    "tache": "Top emballage",
    "cause": "Pas de CPBF",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-23",
+   "ligne": "236",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lot bloqué en M51 (à retrier) puis E93 (attente PDS)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-24",
+   "ligne": "224",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-24",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-24",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Témoins NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-24",
+   "ligne": "233",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Teinte, SGD D barre non entretenue",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-24",
+   "ligne": "233",
+   "tache": "Montee en regime",
+   "cause": "Multi Centre en panne redémarrage 11h00(Défaut carte calia)",
    "type": "libre"
   }
  ]
