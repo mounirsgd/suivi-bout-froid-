@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-25T05:30:49",
+ "derniere_maj": "2026-11-25T11:19:26",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-25"
@@ -32,7 +32,7 @@
    "221": 125,
    "233": 120,
    "235": 128,
-   "224": 119,
+   "224": 117,
    "232": 145,
    "222": 125,
    "236": 118
@@ -50,7 +50,7 @@
  "effectifs": {
   "T0": {
    "222": {
-    "total": 12,
+    "total": 13,
     "retenues": 6
    },
    "233": {
@@ -92,7 +92,7 @@
     "retenues": 6
    },
    "224": {
-    "total": 22,
+    "total": 23,
     "retenues": 11
    },
    "232": {
@@ -100,7 +100,7 @@
     "retenues": 3
    },
    "222": {
-    "total": 12,
+    "total": 13,
     "retenues": 6
    },
    "236": {
@@ -2223,6 +2223,18 @@
   },
   {
    "date": "2026-11-24",
+   "ligne": "224",
+   "metrique": "T1",
+   "duree_min": 120,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-24",
    "ligne": "233",
    "metrique": "T0",
    "duree_min": 50,
@@ -2237,6 +2249,25 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Manque de personnel | Témoins NOK | Teinte, SGD D barre non entretenue"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-25",
+   "ligne": "222",
+   "metrique": "T0",
+   "duree_min": 55,
+   "details": []
+  },
+  {
+   "date": "2026-11-25",
+   "ligne": "222",
+   "metrique": "T1",
+   "duree_min": 145,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Matériel NOK | Manque pack de réglage, vidage des brins en cours a 7h45"
     }
    ]
   }
@@ -6397,7 +6428,21 @@
    "date": "2026-11-24",
    "ligne": "224",
    "tache": "Montee en regime",
-   "cause": "Passage en lecteur de moule CO lecture de perle difficile en symplex",
+   "cause": "Problème réglage",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-24",
+   "ligne": "224",
+   "tache": "Montee en regime",
+   "cause": "Passage en lecteur de moule CO lecture de perle difficile en symplex, difficulté de réglage COD lecteur de moule perle réglage ok a 15h45",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-24",
+   "ligne": "224",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Lots bloqués (E94 - Attente libération Qualité + M51 - À retrier)",
    "type": "libre"
   },
   {
@@ -6440,6 +6485,27 @@
    "ligne": "235",
    "tache": "Validation de deux lots commercialisables",
    "cause": "Premiers lots bloqués M51 (épaule déformée)",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-25",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-25",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Matériel NOK",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-25",
+   "ligne": "222",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque pack de réglage, vidage des brins en cours a 7h45",
    "type": "libre"
   }
  ]
