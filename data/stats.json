@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-25T11:19:26",
+ "derniere_maj": "2026-11-25T15:31:33",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-25"
@@ -6506,6 +6506,20 @@
    "ligne": "222",
    "tache": "T1 : Duree pre-reglage",
    "cause": "Manque pack de réglage, vidage des brins en cours a 7h45",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-25",
+   "ligne": "222",
+   "tache": "Top qualite",
+   "cause": "Top Q machine B = 12h53 / Top Q machine A = 1358",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-25",
+   "ligne": "222",
+   "tache": "Montee en regime",
+   "cause": "11 numéro en casse",
    "type": "libre"
   }
  ]
