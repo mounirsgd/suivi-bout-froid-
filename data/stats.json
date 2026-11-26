@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-26T10:55:57",
+ "derniere_maj": "2026-11-26T15:06:10",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-26"
@@ -30,7 +30,7 @@
   },
   "T1": {
    "221": 125,
-   "233": 120,
+   "233": 122,
    "235": 128,
    "224": 117,
    "232": 145,
@@ -84,8 +84,8 @@
     "retenues": 2
    },
    "233": {
-    "total": 19,
-    "retenues": 9
+    "total": 20,
+    "retenues": 10
    },
    "235": {
     "total": 12,
@@ -2277,6 +2277,18 @@
    "metrique": "T0",
    "duree_min": 35,
    "details": []
+  },
+  {
+   "date": "2026-11-26",
+   "ligne": "233",
+   "metrique": "T1",
+   "duree_min": 140,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Témoins NOK | Matériel NOK | Teinte nok, manque roues d'espacement"
+    }
+   ]
   }
  ],
  "causes": [
@@ -6568,7 +6580,21 @@
    "date": "2026-11-26",
    "ligne": "233",
    "tache": "Arrivee de toutes sections",
+   "cause": "Tombées sur arche",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-26",
+   "ligne": "233",
+   "tache": "Arrivee de toutes sections",
    "cause": "Beaucoup de tombés",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-26",
+   "ligne": "233",
+   "tache": "Montee en regime",
+   "cause": "Numéro mal gravé, 12 Numéro en casse, arrêt BC 14h30-14h50",
    "type": "libre"
   }
  ]
