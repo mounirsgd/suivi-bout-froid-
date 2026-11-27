@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-27T05:10:02",
+ "derniere_maj": "2026-11-27T10:53:57",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-27"
@@ -58,7 +58,7 @@
     "retenues": 7
    },
    "235": {
-    "total": 8,
+    "total": 9,
     "retenues": 4
    },
    "232": {
@@ -88,7 +88,7 @@
     "retenues": 10
    },
    "235": {
-    "total": 12,
+    "total": 13,
     "retenues": 6
    },
    "224": {
@@ -2287,6 +2287,25 @@
     {
      "tache": "T1 : Duree pre-reglage",
      "texte": "Manque de personnel | Témoins NOK | Matériel NOK | Teinte nok, manque roues d'espacement"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-27",
+   "ligne": "235",
+   "metrique": "T0",
+   "duree_min": 35,
+   "details": []
+  },
+  {
+   "date": "2026-11-27",
+   "ligne": "235",
+   "metrique": "T1",
+   "duree_min": 150,
+   "details": [
+    {
+     "tache": "T1 : Duree pre-reglage",
+     "texte": "Manque de personnel | Pas de contrôles calibrage"
     }
    ]
   }
@@ -6595,6 +6614,48 @@
    "ligne": "233",
    "tache": "Montee en regime",
    "cause": "Numéro mal gravé, 12 Numéro en casse, arrêt BC 14h30-14h50",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-26",
+   "ligne": "233",
+   "tache": "Premier lot sorti",
+   "cause": "Lot bloqué",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-26",
+   "ligne": "233",
+   "tache": "Premier lot sorti",
+   "cause": "Problème regroupement lots (SAP <-> VERTECH).",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-26",
+   "ligne": "233",
+   "tache": "Validation de deux lots commercialisables",
+   "cause": "Problème regroupement lots (SAP <-> VERTECH). Lots 3 palettes",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-27",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Manque de personnel",
+   "type": "motif"
+  },
+  {
+   "date": "2026-11-27",
+   "ligne": "235",
+   "tache": "T1 : Duree pre-reglage",
+   "cause": "Pas de contrôles calibrage",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-27",
+   "ligne": "235",
+   "tache": "Montee en regime",
+   "cause": "En attente four rétractation SGD",
    "type": "libre"
   }
  ]
