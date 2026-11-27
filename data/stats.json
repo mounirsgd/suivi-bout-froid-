@@ -1,5 +1,5 @@
 {
- "derniere_maj": "2026-11-27T10:53:57",
+ "derniere_maj": "2026-11-27T14:58:24",
  "periode_target": {
   "debut": "2026-06-01",
   "fin": "2026-11-27"
@@ -6634,7 +6634,7 @@
    "date": "2026-11-26",
    "ligne": "233",
    "tache": "Validation de deux lots commercialisables",
-   "cause": "Problème regroupement lots (SAP <-> VERTECH). Lots 3 palettes",
+   "cause": "Problème regroupement lots (SAP <-> VERTECH). Lots 3 palettes. 10 palettes produites / OK après chgt indice 00771 32",
    "type": "libre"
   },
   {
@@ -6656,6 +6656,13 @@
    "ligne": "235",
    "tache": "Montee en regime",
    "cause": "En attente four rétractation SGD",
+   "type": "libre"
+  },
+  {
+   "date": "2026-11-27",
+   "ligne": "235",
+   "tache": "Top emballage",
+   "cause": "Top emballage tardif / Panne tapis four / Reprise paramètres variateur automation-MGI",
    "type": "libre"
   }
  ]
